@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Subject Video</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white min-h-screen p-6">
+  <div class="max-w-4xl mx-auto">
+    <a href="javascript:history.back()" class="text-blue-400 hover:underline">&larr; Back</a>
+    <h1 id="subjectTitle" class="text-3xl font-bold my-6 text-center"></h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" id="videoList"></div>
+  </div>
+
+  <!---script>
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get('code');
+    const name = decodeURIComponent(params.get('name'));
+    document.getElementById('subjectTitle').textContent = `${name} (Code: ${code})`;
+
+    const container = document.getElementById('videoList');
+    for (let i = 1; i <= 12; i++) {
+      const padded = i.toString().padStart(3, '0');
+      const link = `http://onlinelecture.nu.ac.bd/dashboard/upload/2/23/${code}-${padded}.mp4`;
+      const card = document.createElement('div');
+      card.className = "bg-gradient-to-br from-gray-800 to-gray-700 rounded-2xl p-5 shadow-xl hover:shadow-2xl transition transform hover:scale-105";
+
+      card.innerHTML = `
+        <div class="flex items-center justify-center mb-4">
+          <div class="bg-blue-600 text-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg text-xl font-bold">
+            ${i}
+          </div>
+        </div>
+        <h2 class="text-xl font-semibold text-center">Class ${i}</h2>
+        <p class="text-sm text-center text-gray-400 mb-3">Lecture Video</p>
+        <a href="${link}" target="_blank" class="block text-center mt-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition">Open Video</a>
+      `;
+
+      container.appendChild(card);
+    }
+  </script--->
+  
+  
+  
+  <script>
+  const params = new URLSearchParams(window.location.search);
+  const code = params.get('code');
+  const name = decodeURIComponent(params.get('name'));
+  document.getElementById('subjectTitle').textContent = `${name} (Code: ${code})`;
+
+  // Define class count for each subject code
+  const subjectClassCounts = {
+    '232309': 14,  // Advertising & Promotion - 14 videos
+    '232301': 13,  // Principles of Marketing-II - 13 videos
+    // Add more custom counts as needed
+  };
+
+  // Default to 12 videos if not specified
+  const totalClasses = subjectClassCounts[code] || 12;
+
+  const container = document.getElementById('videoList');
+  for (let i = 1; i <= totalClasses; i++) {
+    const padded = i.toString().padStart(3, '0');
+    const link = `http://onlinelecture.nu.ac.bd/dashboard/upload/2/23/${code}-${padded}.mp4`;
+    const card = document.createElement('div');
+    card.className = "bg-gradient-to-br from-gray-800 to-gray-700 rounded-2xl p-5 shadow-xl hover:shadow-2xl transition transform hover:scale-105";
+    card.innerHTML = `
+      <div class="flex items-center justify-center mb-4">
+        <div class="bg-blue-600 text-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg text-xl font-bold">
+          ${i}
+        </div>
+      </div>
+      <h2 class="text-xl font-semibold text-center">Class ${i}</h2>
+      <p class="text-sm text-center text-gray-400 mb-3">Lecture Video</p>
+      <a href="${link}" target="_blank" class="block text-center mt-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition">Open Video</a>
+    `;
+    container.appendChild(card);
+  }
+</script>
+</body>
+</html>

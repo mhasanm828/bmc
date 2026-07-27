@@ -1,0 +1,79 @@
+
+<!-- subjects.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Subjects</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white min-h-screen p-6">
+  <div class="max-w-5xl mx-auto">
+    <a href="semester.html" class="text-blue-400 hover:underline">&larr; Back to Semesters</a>
+    
+    <br /><br />
+    <h1 id="subjectHeading" class="text-3xl font-bold text-center mt-4 mb-6"></h1>
+    <div id="subjectList" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+  
+  
+
+  </div>
+
+  <script>
+    const semesterSubjects = {
+      1: [
+        ['Introduction to Business', '212301'],
+        ['Principles of Marketing-I', '212303'],
+        ['Financial Accounting', '212305'],
+        ['Principles of Management', '212307'],
+        ['Introduction to Computer', '212309'],
+        ['History of the Emergence of Independent Bangladesh', '211501']
+      ],
+      2: [
+        ['Business Communication (in English)', '222301'],
+        ['Fundamentals of Finance', '222303'],
+        ['Business Statistics-I (in English)', '222305'],
+        ['Business Mathematics', '222307'],
+        ['Insurance and Risk Management', '222309'],
+        ['Micro Economics', '222311'],
+        ['Agricultural Marketing', '222313']
+      ],
+      3: [
+        ['Principles of Marketing-II', '232301'],
+        ['Organizational Behavior', '232303'],
+        ['Financial Management', '232305'],
+        ['Business Statistics-II', '232307'],
+        ['Advertising & Promotion', '232309'],
+        ['Legal Aspects of Marketing', '232311'],
+        ['Macro Economics', '232313'],
+        ['Taxation in Bangladesh', '232315']
+      ],
+      4: [
+        ['Marketing Management', '242301'],
+        ['Human Resource Management', '242303'],
+        ['International Business', '242305'],
+        ['Consumer Behavior', '242307'],
+        ['Sales Management', '242309'],
+        ['Brand Management', '242311'],
+        ['Entrepreneurship Development', '242313'],
+        ['Bangladesh Economics', '242315'],
+        ['Marketing Research', '242317'],
+        ['Viva-voce', '242318']
+      ]
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const sem = params.get('sem');
+    document.getElementById('subjectHeading').textContent = `Subjects of ${sem} Semester`;
+
+    const container = document.getElementById('subjectList');
+    semesterSubjects[sem].forEach(([name, code]) => {
+      const el = document.createElement('a');
+      el.href = `subject.html?code=${code}&name=${encodeURIComponent(name)}`;
+      el.className = "block bg-gray-800 p-6 rounded-xl hover:bg-blue-700 hover:scale-105 transition";
+      el.innerHTML = `<h2 class="text-xl font-bold">${name}</h2><p class="text-gray-300 mt-1">Code: ${code}</p>`;
+      container.appendChild(el);
+    });
+  </script>
+</body>
+</html>

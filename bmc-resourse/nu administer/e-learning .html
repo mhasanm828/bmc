@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>E-learning and Earning Project</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center px-4 space-y-10">
+
+  <!-- 🔰 Header -->
+  <div class="text-center">
+    <h1 class="text-3xl font-bold mb-2">E-learning and Earning Project</h1>
+    <p class="text-lg text-gray-400">Admit Card Download</p>
+  </div>
+
+  <!-- 📱 Input Section -->
+  <div class="bg-gray-800 p-8 rounded-2xl shadow-lg max-w-md w-full">
+    <label for="phone" class="block mb-2 font-semibold">Enter 11-digit Phone Number</label>
+    <input
+      id="phone"
+      type="text"
+      maxlength="11"
+      class="w-full p-3 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-blue-400"
+      placeholder="e.g., 01788070737"
+    />
+    <button
+      onclick="getPdf()"
+      class="mt-4 w-full bg-blue-600 hover:bg-blue-700 transition p-3 rounded-lg font-bold"
+    >
+      Get Admit Card
+    </button>
+    <p id="error" class="text-red-500 mt-3 hidden"></p>
+  </div>
+
+  <!-- 📜 Link to JS -->
+  <script src="main.js"></script>
+
+</body>
+</html>

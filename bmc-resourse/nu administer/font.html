@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>SutonnyMJ Font Converter</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'SutonnyMJ';
+      src: url('SutonnyMJ.ttf') format('truetype');
+    }
+    .sutonny { font-family: 'SutonnyMJ', sans-serif; }
+  </style>
+</head>
+<body class="bg-gray-100 p-4">
+  <div class="max-w-2xl mx-auto bg-white p-6 shadow-lg rounded">
+    <h1 class="text-2xl font-bold mb-4">📝 SutonnyMJ Font Converter</h1>
+
+    <textarea id="inputText" rows="8" class="w-full border p-2 rounded mb-4" placeholder="Enter Bangla text..."></textarea>
+
+    <div class="mb-4 sutonny border p-4 rounded bg-gray-50">
+      <p id="previewText">কনভার্ট হওয়া টেক্সট এখানে দেখাবে...</p>
+    </div>
+
+    <div class="space-x-2">
+      <button onclick="downloadTxt()" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">Download TXT</button>
+      <button onclick="downloadDocx()" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded">Download DOCX</button>
+      <button onclick="downloadPDF()" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded">Download PDF</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/docx/8.0.0/docx.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script>
+    const input = document.getElementById('inputText');
+    const preview = document.getElementById('previewText');
+
+    input.addEventListener('input', () => {
+      preview.innerText = input.value;
+    });
+
+    function downloadTxt() {
+      const blob = new Blob([input.value], { type: "text/plain" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "converted.txt";
+      link.click();
+    }
+
+    async function downloadDocx() {
+      const { Document, Packer, Paragraph, TextRun } = window.docx;
+
+      const doc = new Document({
+        sections: [{
+          children: [
+            new Paragraph({
+              children: [
+                new TextRun({
+                  text: input.value,
+                  font: "SutonnyMJ",
+                  size: 28
+                })
+              ]
+            })
+          ]
+        }]
+      });
+
+      const blob = await Packer.toBlob(doc);
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "converted.docx";
+      link.click();
+    }
+
+    async function downloadPDF() {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+      doc.setFont("times", "normal");
+      doc.setFontSize(14);
+      doc.text(input.value, 10, 10);
+      doc.save("converted.pdf");
+    }
+  </script>
+</body>
+</html>

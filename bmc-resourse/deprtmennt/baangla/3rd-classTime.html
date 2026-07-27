@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ব্রজমোহন কলেজ - মার্কেটিং বিভাগ ৩য় বর্ষের ক্লাস রুটিন</title>
+  <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/htHb9W6c/Screenshot-2025-06-18-08-26-14-132-com-android-chrome-edit.jpg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Hind Siliguri', sans-serif;
+      background-color: #efefef;
+      animation: fadeIn 1s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .routine-table th, .routine-table td {
+      text-align: center;
+      vertical-align: middle;
+    }
+    .today {
+      background-color: #e1f5fe !important;
+      font-weight: bold;
+    }
+    .card {
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+      border-left: 5px solid #28a745;
+      animation: slideUp 0.6s ease-in;
+    }
+    @keyframes slideUp {
+      0% { transform: translateY(20px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+    .timer {
+      font-size: 2.3rem;
+      color: #dc3545;
+      font-weight: 600;
+    }
+    .logo {
+      width: 80px;
+      height: 80px;
+    }
+    footer {
+      background-color: #dedede;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container my-4">
+    <div class="text-center mb-4">
+      <img src="https://i.postimg.cc/htHb9W6c/Screenshot-2025-06-18-08-26-14-132-com-android-chrome-edit.jpg" alt="College Logo" class="logo mb-2">
+      <h2 class="fw-bold text-success">সরকারী ব্রজমোহন কলেজ</h2>
+      <h4 class="text-muted">মার্কেটিং বিভাগ - অনার্স ৩য় বর্ষ (ক্লাস রুটিন)</h4>
+      <p class="text-primary fw-semibold">📅 <span id="todayDate"></span></p>
+    </div>
+
+    <div class="card p-3 mb-4 bg-white">
+      <h5 class="text-success mb-2">📌 পরবর্তী ক্লাস:</h5>
+      <p id="nextClassText">⏳ পরবর্তী ক্লাস লোড হচ্ছে...</p>
+    </div>
+
+    <div class="card p-3 mb-4 bg-white">
+      <h5 class="text-info mb-2">📚 আজকের ক্লাসসমূহ:</h5>
+      <ul id="todayClassList"></ul>
+    </div>
+
+    <div class="card p-3 mb-4 bg-white">
+      <h5 class="text-dark mb-3">🗓️ পূর্ণ সপ্তাহের ক্লাস রুটিন</h5>
+      <div class="table-responsive">
+        <table class="table table-bordered routine-table">
+          <thead class="table-success">
+            <tr>
+              <th>দিন/সময়</th>
+              <th>10.00-10.45</th>
+              <th>10.45-11.30</th>
+              <th>12.15-1.00</th>
+              <th>1.30-2.15</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>রবিবার</td><td>Micro Economic</td><td>Taxation In Bangladesh</td><td>-</td><td>Financial Management</td></tr>
+            <tr><td>সোমবার</td><td>-</td><td>-</td><td>Organizational Behaviour</td><td>Principal of Marketing 2</td></tr>
+            <tr><td>মঙ্গলবার</td><td>-</td><td>Business Statistics 2</td><td>Macro Economics</td><td>-</td></tr>
+            <tr class=""><td>বুধবার</td><td>-</td><td>Taxation In Bangladesh</td><td>Legal Aspect of Marketing</td><td>-</td></tr>
+            <tr><td>বৃহস্পতিবার</td><td>-</td><td>Advertisement and Promotion</td><td>Business Statistics 2</td><td>Legal Aspect of Marketing</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ডেভেলপার -->
+    <div class="card p-4 mb-4 bg-white text-center">
+      <h5 class="text-success">👨‍💻 ডেভেলপার</h5>
+      <h6 class="fw-bold mb-1">MD Hasan Mahmud</h6>
+      <p class="text-muted mb-2">BBA Student, Marketing Dept.<br>Government BM College, Barisal</p>
+      <div>
+        <a href="https://facebook.com/mhasanm828" target="_blank" class="btn btn-sm btn-primary me-2">Facebook</a>
+        <a href="Https://wa.me/+8801723477809" class="btn btn-sm btn-success me-2">WhatsApp</a>
+        <a href="mailto:mhasanm828@gmail.com" class="btn btn-sm btn-dark">Email</a>
+      </div>
+    </div>
+
+    <div class="text-center text-muted my-4">
+      <p>আপনি এই সাইটটি <span id="visitCount">0</span> বার ভিজিট করেছেন</p>
+      <p>সর্বশেষ ভিজিট: <span id="lastVisit">-</span></p>
+    </div>
+
+    <footer class="text-center text-secondary small">
+      © ২০২৫ সরকারী ব্রজমোহন কলেজ - মার্কেটিং বিভাগ
+    </footer>
+  </div>
+
+  <script>
+    const routine = {
+      "রবিবার": [
+        { time: "10.00-10.45", subject: "Micro Economic" },
+        { time: "10.45-11.30", subject: "Taxation In Bangladesh" },
+        { time: "1.30-2.15", subject: "Financial Management" }
+      ],
+      "সোমবার": [
+        { time: "12.15-1.00", subject: "Organizational Behaviour" },
+        { time: "1.30-2.15", subject: "Principal of Marketing 2" }
+      ],
+      "মঙ্গলবার": [
+        { time: "10.45-11.30", subject: "Business Statistics 2" },
+        { time: "12.15-1.00", subject: "Macro Economics" }
+      ],
+      "বুধবার": [
+        { time: "10.45-11.30", subject: "Taxation In Bangladesh" },
+        { time: "12.15-1.00", subject: "Legal Aspect of Marketing" }
+      ],
+      "বৃহস্পতিবার": [
+        { time: "10.45-11.30", subject: "Advertisement and Promotion" },
+        { time: "12.15-1.00", subject: "Business Statistics 2" },
+        { time: "1.30-2.15", subject: "Legal Aspect of Marketing" }
+      ]
+    };
+
+    const banglaDays = ["রবিবার", "সোমবার", "মঙ্গলবার", "বুধবার", "বৃহস্পতিবার", "শুক্রবার", "শনিবার"];
+
+    function banglaNumber(n) {
+      return n.toString().replace(/\d/g, d => '০১২৩৪৫৬৭৮৯'[d]);
+    }
+
+    function startCountdown(hour, minute, text, subject) {
+      const target = new Date();
+      target.setHours(hour, minute, 0, 0);
+
+      const interval = setInterval(() => {
+        const now = new Date();
+        const diff = target - now;
+        const isNow = now.getHours() === hour && now.getMinutes() >= minute && now.getMinutes() < minute + 45;
+
+        if (diff <= 0 && !isNow) {
+          document.getElementById("nextClassText").innerHTML = "✅ আজ আর কোনো ক্লাস নেই";
+          clearInterval(interval);
+        } else if (isNow) {
+          document.getElementById("nextClassText").innerHTML = `🔴 ${text} - ${subject}<br><span class="timer">ক্লাস চলছে!</span>`;
+        } else {
+          const h = Math.floor(diff / 3600000);
+          const m = Math.floor((diff % 3600000) / 60000);
+          const s = Math.floor((diff % 60000) / 1000);
+          document.getElementById("nextClassText").innerHTML = `<strong>${text}</strong> - ${subject}<br><span class="timer">${h}h ${m}m ${s}s</span>`;
+        }
+      }, 1000);
+    }
+
+    function getNextClass() {
+      const now = new Date();
+      const todayIndex = now.getDay();
+      const todayBanglaDay = banglaDays[todayIndex];
+      const todayRoutine = routine[todayBanglaDay] || [];
+      const currentMinutes = now.getHours() * 60 + now.getMinutes();
+
+      const next = todayRoutine.find(cls => {
+        const [hour, minute] = cls.time.split('-')[0].split('.').map(Number);
+        return hour * 60 + minute > currentMinutes;
+      });
+
+      if (next) {
+        document.getElementById("nextClassText").innerHTML = `<strong>${next.time}</strong> - ${next.subject}`;
+        const [hour, minute] = next.time.split('-')[0].split('.').map(Number);
+        startCountdown(hour, minute, next.time, next.subject);
+      } else {
+        document.getElementById("nextClassText").innerHTML = "✅ আজ আর কোনো ক্লাস নেই";
+      }
+    }
+
+    function renderTodayClassList() {
+      const todayIndex = new Date().getDay();
+      const todayBanglaDay = banglaDays[todayIndex];
+      const todayRoutine = routine[todayBanglaDay] || [];
+
+      const ul = document.getElementById("todayClassList");
+      ul.innerHTML = "";
+
+      if (todayRoutine.length > 0) {
+        todayRoutine.forEach(cls => {
+          const li = document.createElement("li");
+          li.textContent = `${cls.time} - ${cls.subject}`;
+          ul.appendChild(li);
+        });
+      } else {
+        const li = document.createElement("li");
+        li.textContent = "আজ কোনো ক্লাস নেই।";
+        ul.appendChild(li);
+      }
+    }
+
+        // Voice message
+    function convertTimeToBangla(text) {
+      const [start, end] = text.split('-');
+      const [sh, sm] = start.split('.');
+      const [eh, em] = end.split('.');
+      const banglaStart = `${banglaNumber(sh)}টা ${banglaNumber(sm)}`;
+      const banglaEnd = `${banglaNumber(eh)}টা ${banglaNumber(em)}`;
+      return `${banglaStart} থেকে ${banglaEnd}`;
+    }
+
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const todayIndex = new Date().getDay();
+        const todayBanglaDay = banglaDays[todayIndex];
+        const todayRoutine = routine[todayBanglaDay];
+        let message = `আসসালামু আলাইকুম, আজ ${todayBanglaDay}-এর ক্লাস: `;
+
+        if (todayRoutine && todayRoutine.length > 0) {
+          todayRoutine.forEach(cls => {
+            const time = convertTimeToBangla(cls.time);
+            message += `${time} - ${cls.subject}, `;
+          });
+          message += ` । আর মাত্র ৪ দিন পর ইনকোর্স পরীক্ষা, তাই ক্লাস ফাঁকি না দিয়ে চলে আসো। ধন্যবাদ। `;
+        } else {
+          message = `আজ ${todayBanglaDay}-এ কোন ক্লাস নেই।`;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(message);
+        utterance.lang = "bn-BD";
+        utterance.rate = 0.85;
+        utterance.onerror = () => {
+          document.body.addEventListener('click', () => {
+            window.speechSynthesis.speak(utterance);
+          }, { once: true });
+        };
+        window.speechSynthesis.speak(utterance);
+      }, 3000);
+
+      getNextClass();
+    });
+
+
+function highlightCurrentDayAndClass() {
+  const now = new Date();
+  const currentDayIndex = now.getDay(); // 0 = Sunday, 1 = Monday...
+  const banglaDay = banglaDays[currentDayIndex];
+  const tableRows = document.querySelectorAll(".routine-table tbody tr");
+
+  tableRows.forEach(row => {
+    const dayName = row.cells[0].innerText.trim();
+    if (dayName === banglaDay) {
+      row.classList.add("table-warning"); // highlight current day row
+      // Highlight current class cell
+      const currentTime = now.getHours() * 60 + now.getMinutes();
+      for (let i = 1; i < row.cells.length; i++) {
+        const subjectText = row.cells[i].innerText.trim();
+        if (subjectText !== "-") {
+          const timeSlot = document.querySelector(".routine-table thead tr th:nth-child(" + (i + 1) + ")").innerText;
+          const [startHour, startMinute] = timeSlot.split("-")[0].split('.').map(Number);
+          const [endHour, endMinute] = timeSlot.split("-")[1].split('.').map(Number);
+          const start = startHour * 60 + startMinute;
+          const end = endHour * 60 + endMinute;
+
+          if (currentTime >= start && currentTime <= end) {
+            row.cells[i].classList.add("bg-success", "text-white", "fw-bold");
+          }
+        }
+      }
+    }
+  });
+}
+
+
+
+
+
+
+    function setDate() {
+      const today = new Date();
+      const options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+      document.getElementById("todayDate").textContent = today.toLocaleDateString("bn-BD", options);
+    }
+
+    function trackVisit() {
+      let count = localStorage.getItem("visitCount") || 0;
+      count++;
+      localStorage.setItem("visitCount", count);
+      document.getElementById("visitCount").innerText = count;
+
+      const lastVisit = localStorage.getItem("lastVisit") || "প্রথম বার";
+      document.getElementById("lastVisit").innerText = lastVisit;
+
+      const now = new Date();
+      const nowStr = now.toLocaleString("bn-BD", { hour12: true });
+      localStorage.setItem("lastVisit", nowStr);
+    }
+window.addEventListener('load', () => {
+  setDate();
+  trackVisit();
+  renderTodayClassList();
+  getNextClass();
+  highlightCurrentDayAndClass(); // 👈 added here
+  setTimeout(speakTodayClass, 3000);
+});
+
+
+  </script>
+</body>
+</html>

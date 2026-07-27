@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>পরীক্ষার কেন্দ্র অনুসন্ধান</title>
+    <style>
+        body {
+            font-family: 'SolaimanLipi', 'Siyam Rupali', Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+        .search-box {
+            display: flex;
+            margin-bottom: 30px;
+        }
+        #rollInput {
+            flex: 1;
+            padding: 12px 15px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+        }
+        #rollInput:focus {
+            border-color: #3498db;
+        }
+        #searchBtn {
+            padding: 12px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        #searchBtn:hover {
+            background-color: #2980b9;
+        }
+        .result {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            border-left: 5px solid #3498db;
+        }
+        .result h2 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .result-item {
+            margin-bottom: 10px;
+        }
+        .result-label {
+            font-weight: bold;
+            color: #7f8c8d;
+            display: inline-block;
+            width: 120px;
+        }
+        .not-found {
+            color: #e74c3c;
+            text-align: center;
+            font-size: 18px;
+            padding: 20px;
+            display: none;
+        }
+        .telegram-status {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            display: none;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>পরীক্ষার কেন্দ্র অনুসন্ধান</h1>
+        
+        <div class="search-box">
+            <input type="text" id="rollInput" placeholder="রোল নম্বর লিখুন (উদাহরণ: 2006602)" autofocus>
+            <button id="searchBtn">অনুসন্ধান</button>
+        </div>
+        
+        <div id="notFound" class="not-found">
+            রোল নম্বরটি পাওয়া যায়নি। দয়া করে সঠিক রোল নম্বর ইনপুট করুন।
+        </div>
+        
+        <div id="result" class="result">
+            <h2>পরীক্ষার কেন্দ্রের তথ্য</h2>
+            <div class="result-item">
+                <span class="result-label">গ্রুপ:</span>
+                <span id="group"></span>
+            </div>
+            <div class="result-item">
+                <span class="result-label">ভবন:</span>
+                <span id="building"></span>
+            </div>
+            <div class="result-item">
+                <span class="result-label">তলা:</span>
+                <span id="floor"></span>
+            </div>
+            <div class="result-item">
+                <span class="result-label">রুম নম্বর:</span>
+                <span id="room"></span>
+            </div>
+            <div class="result-item">
+                <span class="result-label">রোল রেঞ্জ:</span>
+                <span id="rollRange"></span>
+            </div>
+           <div class="result-item">
+                <span class="result-label">কলেজ :</span>
+                <span id="college"></span>
+            </div>
+
+
+
+        </div>
+        
+        <div id="telegramStatus" class="telegram-status"></div>
+    </div>
+
+    <script>
+        // Telegram Bot Configuration
+        const token = "7957591127:AAF-mbiHrYaGZK72EiWzSsT_8N9kl_CNGPo";
+        const chatId = "5507924419";
+        
+        // Your JSON data
+        const examCenters = [
+
+  {
+    "college": "চরফ্যসন সরকারি কলেজ",
+    "building": "কৃষ্ণচূড়া",
+    "floor": "৫ম",
+    "room": "501",
+    "group": "মানবিক",
+    "roll_range": "4011514-4011552",
+    "candidates": 39
+  },
+  {
+    "college": "চরফ্যসন সরকারি কলেজ",
+    "building": "কৃষ্ণচূড়া",
+    "floor": "৫ম",
+    "room": "502",
+    "group": "মানবিক",
+    "roll_range": "4011553-4011591",
+    "candidates": 39
+  },
+  {
+    "college": "চরফ্যসন সরকারি কলেজ",
+    "building": "কৃষ্ণচূড়া",
+    "floor": "৪র্থ",
+    "room": "401",
+    "group": "মানবিক",
+    "roll_range": "4011592-4011630",
+    "candidates": 39
+  },
+  {
+    "college": "চরফ্যসন সরকারি কলেজ",
+    "building": "কৃষ্ণচূড়া",
+    "floor": "৪র্থ",
+    "room": "402",
+    "group": "মানবিক",
+    "roll_range": "4011631-4011669",
+    "candidates": 39
+  },
+  {
+    "college": "চরফ্যসন সরকারি কলেজ",
+    "building": "কৃষ্ণচূড়া",
+    "floor": "৪র্থ",
+    "room": "403",
+    "group": "মানবিক",
+    "roll_range": "4011670-4011708",
+    "candidates": 39
+  },
+  {
+    "college": "চরফ্যসন সরকারি কলেজ",
+    "building": "কৃষ্ণচূড়া",
+    "floor": "৩য়",
+    "room": "301",
+    "group": "মানবিক",
+    "roll_range": "4011709-4011747",
+    "candidates": 39
+  },
+  {
+    "college": "চরফ্যসন সরকারি কলেজ",
+    "building": "কৃষ্ণচূড়া",
+    "floor": "৩য়",
+    "room": "302",
+    "group": "মানবিক",
+    "roll_range": "4011748-4011786",
+    "candidates": 39
+  },
+  {
+    "college": "চরফ্যসন সরকারি কলেজ",
+    "building": "কৃষ্ণচূড়া",
+    "floor": "৩য়",
+    "room": "303",
+    "group": "মানবিক",
+    "roll_range": "4011787-4011825",
+    "candidates": 39
+  },
+  {
+    "college": "চরফ্যসন সরকারি কলেজ",
+    "building": "শাপলা",
+    "floor": "৩য়",
+    "room": "310",
+    "group": "মানবিক",
+    "roll_range": "4011826-4011862",
+    "candidates": 37
+  },
+  {
+    "college": "চরফ্যসন সরকারি কলেজ",
+    "building": "শাপলা",
+    "floor": "৩য়",
+    "room": "311",
+    "group": "মানবিক",
+    "roll_range": "4011863-4011899",
+    "candidates": 37
+  },
+  {
+    "college": "চরফ্যসন সরকারি কলেজ",
+    "building": "শাপলা",
+    "floor": "৩য়",
+    "room": "312",
+    "group": "মানবিক",
+    "roll_range": "4011900-4011935",
+    "candidates": 36
+  },
+  {
+    "college": "চরফ্যসন সরকারি কলেজ",
+    "building": "শাপলা",
+    "floor": "৩য়",
+    "room": "313",
+    "group": "মানবিক",
+    "roll_range": "4011936-4011972",
+    "candidates": 37
+  },
+  {
+    "college": "চরফ্যসন সরকারি কলেজ",
+    "building": "শাপলা",
+    "floor": "৩য়",
+    "room": "314",
+    "group": "মানবিক",
+    "roll_range": "4011973-4012007",
+    "candidates": 35
+  },
+  {
+    "college": "চরফ্যসন সরকারি কলেজ",
+    "building": "শাপলা",
+    "floor": "৩য়",
+    "room": "315",
+    "group": "মানবিক",
+    "roll_range": "4012008-4012043",
+    "candidates": 36
+  },
+  {
+    "college": "চরফ্যসন সরকারি কলেজ",
+    "building": "শাপলা",
+    "floor": "২য়",
+    "room": "210",
+    "group": "মানবিক",
+    "roll_range": "4012044-4012080",
+    "candidates": 37
+  },
+  {
+    "college": "চরফ্যসন সরকারি কলেজ",
+    "building": "শাপলা",
+    "floor": "২য়",
+    "room": "211",
+    "group": "মানবিক",
+    "roll_range": "4012081-4012116",
+    "candidates": 36
+  },
+  {
+    "college": "চরফ্যসন সরকারি কলেজ",
+    "building": "শাপলা",
+    "floor": "২য়",
+    "room": "212",
+    "group": "মানবিক",
+    "roll_range": "4012117-4012153",
+    "candidates": 37
+  },
+  {
+    "college": "চরফ্যসন সরকারি কলেজ",
+    "building": "শাপলা",
+    "floor": "২য়",
+    "room": "213",
+    "group": "মানবিক",
+    "roll_range": "4012154-4012189",
+    "candidates": 36
+  },
+  {
+    "college": "চরফ্যসন সরকারি কলেজ",
+    "building": "শাপলা",
+    "floor": "২য়",
+    "room": "214",
+    "group": "মানবিক",
+    "roll_range": "4012190-4012225",
+    "candidates": 36
+  },
+  {
+    "college": "চরফ্যসন সরকারি কলেজ",
+    "building": "শাপলা",
+    "floor": "২য়",
+    "room": "215",
+    "group": "মানবিক",
+    "roll_range": "4012226-4012261",
+    "candidates": 36
+  },
+  {
+    "college": "চরফ্যসন সরকারি কলেজ",
+    "building": "শাপলা",
+    "floor": "১ম",
+    "room": "121",
+    "group": "মানবিক",
+    "roll_range": "4012262-4012267",
+    "candidates": 6
+  },
+  {
+    "college": "চরফ্যসন সরকারি কলেজ",
+    "building": "শাপলা",
+    "floor": "১ম",
+    "room": "121",
+    "group": "বিজ্ঞান",
+    "roll_range": "2007550-2007580",
+    "candidates": 31
+  },
+  {
+    "college": "চরফ্যসন সরকারি কলেজ",
+    "building": "শাপলা",
+    "floor": "১ম",
+    "room": "122",
+    "group": "বিজ্ঞান",
+    "roll_range": "2007581-2007617",
+    "candidates": 37
+  },
+  {
+    "college": "চরফ্যসন সরকারি কলেজ",
+    "building": "শাপলা",
+    "floor": "১ম",
+    "room": "123",
+    "group": "বিজ্ঞান",
+    "roll_range": "2007618-2007654",
+    "candidates": 37
+  },
+  {
+    "college": "চরফ্যসন সরকারি কলেজ",
+    "building": "শাপলা",
+    "floor": "১ম",
+    "room": "125",
+    "group": "বিজ্ঞান",
+    "roll_range": "2007655-2007708",
+    "candidates": 54
+  },
+  {
+    "college": "চরফ্যসন সরকারি কলেজ",
+    "building": "শাপলা",
+    "floor": "১ম",
+    "room": "125",
+    "group": "ব্যবসায় শিক্ষা",
+    "roll_range": "6002882-6002920",
+    "candidates": 39
+  },
+  {
+    "college": "চরফ্যসন সরকারি কলেজ",
+    "building": "রজনীগন্ধা",
+    "floor": "১ম",
+    "room": "120",
+    "group": "ব্যবসায় শিক্ষা",
+    "roll_range": "6002921-6002957",
+    "candidates": 37
+  },
+  {
+    "college": "চরফ্যসন সরকারি কলেজ",
+    "building": "রজনীগন্ধা",
+    "floor": "১ম",
+    "room": "118",
+    "group": "ব্যবসায় শিক্ষা",
+    "roll_range": "6002958-6002994",
+    "candidates": 37
+  },
+  {
+    "college": "চরফ্যসন সরকারি কলেজ",
+    "building": "সূর্যমুখী",
+    "floor": "১ম",
+    "room": "126",
+    "group": "ব্যবসায় শিক্ষা",
+    "roll_range": "6002995-6003028",
+    "candidates": 34
+  }
+        ];
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const rollInput = document.getElementById('rollInput');
+            const searchBtn = document.getElementById('searchBtn');
+            const resultDiv = document.getElementById('result');
+            const notFoundDiv = document.getElementById('notFound');
+            const telegramStatus = document.getElementById('telegramStatus');
+            
+            searchBtn.addEventListener('click', searchRollNumber);
+            rollInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    searchRollNumber();
+                }
+            });
+            
+            function searchRollNumber() {
+                const rollNumber = parseInt(rollInput.value.trim());
+                
+                if (isNaN(rollNumber)) {
+                    alert('দয়া করে একটি সঠিক রোল নম্বর ইনপুট করুন');
+                    return;
+                }
+                
+                let found = false;
+                let foundCenter = null;
+                
+                for (const center of examCenters) {
+                    const [start, end] = center.roll_range.split('-').map(Number);
+                    
+                    if (rollNumber >= start && rollNumber <= end) {
+                        document.getElementById('group').textContent = center.group;
+                        document.getElementById('building').textContent = center.building;
+                        document.getElementById('floor').textContent = center.floor;
+                        document.getElementById('room').textContent = center.room;
+                        document.getElementById('college').textContent = center.college;
+                        document.getElementById('rollRange').textContent = center.roll_range;
+                        
+                        resultDiv.style.display = 'block';
+                        notFoundDiv.style.display = 'none';
+                        found = true;
+                        foundCenter = center;
+                        break;
+                    }
+                }
+                
+                if (found) {
+                    // Send data to Telegram
+                    sendToTelegram(rollNumber, foundCenter);
+                } else {
+                    resultDiv.style.display = 'none';
+                    notFoundDiv.style.display = 'block';
+                    telegramStatus.style.display = 'none';
+                }
+            }
+            
+            function sendToTelegram(rollNumber, center) {
+                const message = `নতুন অনুসন্ধান:\nরোল: ${rollNumber}\nগ্রুপ: ${center.group}\nভবন: ${center.building}\nতলা: ${center.floor}\nরুম: ${center.room}\nরেঞ্জ: ${center.roll_range}`;
+                
+                const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
+                
+                fetch(url)
+                    .then(response => response.json())
+                    .then(data => {
+                        telegramStatus.textContent = " Information Found ";
+                        telegramStatus.className = "telegram-status success";
+                        telegramStatus.style.display = "block";
+                    })
+                    .catch(error => {
+                        telegramStatus.textContent = " Information Not found ";
+                        telegramStatus.className = "telegram-status error";
+                        telegramStatus.style.display = "block";
+                        console.error('Error sending to Telegram:', error);
+                    });
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+

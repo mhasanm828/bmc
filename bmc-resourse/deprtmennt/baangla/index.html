@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marketing Department - Govt. BM College</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    @keyframes gradientMove {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    .animated-gradient {
+      background: linear-gradient(-45deg, #0f172a, #1e293b, #334155, #0f172a);
+      background-size: 400% 400%;
+      animation: gradientMove 12s ease infinite;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+  <!-- Marquee -->
+  <div class="bg-red-600 text-white text-center py-2 font-semibold">
+    <marquee>📢 Important: Final exam routine is out! Scroll down to check details.</marquee>
+  </div>
+
+  <!-- Hero -->
+  <section class="animated-gradient min-h-screen flex items-center justify-center text-center px-6">
+    <div data-aos="zoom-in">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">Department of Marketing</h1>
+      <p class="text-xl mb-6">Government Brojomohan College, Barishal</p>
+      <a href="/semester.html" class="bg-yellow-400 text-black font-semibold px-6 py-3 rounded-full hover:bg-yellow-300 transition">🎥 Access Video Classes</a>
+    </div>
+  </section>
+
+  <!-- Notices -->
+<!-- 📋 Notices Section -->
+<section id="notices" class="py-16 px-6 bg-gray-900 text-white">
+  <h2 class="text-3xl font-semibold text-center mb-10">📋 Latest Notices</h2>
+  <div id="notice-list" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"></div>
+</section>
+
+<script>
+  fetch('https://bm-marketer.vercel.app/notice.json')
+    .then(res => res.json())
+    .then(data => {
+      const list = document.getElementById("notice-list");
+
+      data.forEach(notice => {
+        const tagColor = notice.type === "important" ? "bg-red-600" : "bg-blue-600";
+        const div = document.createElement("div");
+        div.className = "bg-gray-800 p-6 rounded-lg shadow-lg relative overflow-hidden";
+
+        div.innerHTML = `
+          <span class="absolute top-4 right-4 px-3 py-1 text-xs font-semibold rounded-full ${tagColor}">${notice.type.toUpperCase()}</span>
+          <h3 class="text-xl font-bold mb-2">${notice.title}</h3>
+          <p class="text-sm text-gray-400 mb-4">${notice.date}</p>
+          <p class="text-gray-300 text-sm">${notice.description.slice(0, 100)}...</p>
+          <a href="${notice.link}" class="inline-block mt-4 text-yellow-400 hover:underline text-sm">🔗 Read More</a>
+        `;
+
+        list.appendChild(div);
+      });
+    });
+</script>
+
+
+  <!-- About -->
+
+<!-- 💼 About the Department -->
+<section class="py-20 px-6 bg-gray-800 text-white">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+    
+    <!-- Left: Text Content -->
+    <div data-aos="fade-right">
+      <h2 class="text-4xl font-bold mb-6">💼 About the Marketing Department</h2>
+      <p class="text-gray-300 mb-6">
+        The Department of Marketing at Government Brojomohan College is dedicated to developing future business leaders by offering a mix of traditional marketing knowledge and modern digital tools. Our curriculum, guided by experienced faculty, focuses on strategic thinking, communication, analytics, and real-world application.
+      </p>
+      <ul class="space-y-4 text-gray-200">
+        <li class="flex items-start gap-3">
+          <span class="text-yellow-400 text-xl">📘</span> 
+          <span>Industry-oriented curriculum aligned with modern marketing trends</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-yellow-400 text-xl">🎯</span> 
+          <span>Focus on digital marketing, branding, and consumer behavior</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-yellow-400 text-xl">🧑‍🏫</span> 
+          <span>Experienced faculty including BCS-qualified lecturers</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-yellow-400 text-xl">🌐</span> 
+          <span>Workshops, seminars, and industry talks to enhance real-world exposure</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Right: Image/Graphic -->
+    <div class="flex justify-center" data-aos="fade-left">
+      <img src="https://img.freepik.com/free-photo/modern-equipped-computer-lab_23-2149241214.jpg" alt="Marketing class" class="rounded-lg shadow-lg">
+    </div>
+
+  </div>
+</section>
+
+
+
+
+  
+
+  <!-- Teachers -->
+  <section class="py-16 px-6">
+    <h2 class="text-3xl text-center font-semibold mb-10">👨‍🏫 Our Faculty</h2>
+    <div class="flex flex-wrap justify-center gap-6">
+      <!-- Teacher Cards -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-md w-80" data-aos="fade-up">
+        <img src="https://i.ibb.co.com/RG7TnMrB/image.png" class="rounded w-full h-48 object-cover mb-4">
+        <h3 class="text-xl font-bold">Md. Mizanur Rahman Khan</h3>
+        <p>Associate Professor, Marketing</p>
+        <p>📞 01712207044</p>
+        <p>✉️ mrk012697@gmail.com</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow-md w-80" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://i.ibb.co.com/F1zkT0w/Screenshot-2025-04-23-094252.png" class="rounded w-full h-48 object-cover mb-4">
+        <h3 class="text-xl font-bold">Muhammad Kutub Uddin</h3>
+        <p>Lecturer, 35th BCS</p>
+        <p>📞 01672879176</p>
+        <p>✉️ raihanmkt@yahoo.com</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Support Staff -->
+  <section class="py-16 px-6 bg-gray-800">
+    <h2 class="text-3xl text-center font-semibold mb-10">👥 Support Staff</h2>
+    <div class="flex flex-wrap justify-center gap-6">
+      <!-- Demo Card -->
+      <div class="bg-gray-700 p-6 rounded-lg shadow-lg w-72 text-center" data-aos="fade-right">
+        <div class="text-4xl mb-4">💻</div>
+        <h3 class="text-xl font-bold">Mihat Hosen</h3>
+        <p>Data Entry Operator</p>
+        <p>📞 ০১৭৩৭১৫৯০৫৩</p>
+      </div>
+      <div class="bg-gray-700 p-6 rounded-lg shadow-lg w-72 text-center" data-aos="fade-left">
+        <div class="text-4xl mb-4">🧹</div>
+        <h3 class="text-xl font-bold">Utton Kumar</h3>
+        <p>Office Helper</p>
+        <p>📞 01756418856</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🌍 Find Us Section -->
+<section class="py-16 px-6 bg-gray-900 text-white">
+  <h2 class="text-3xl text-center font-semibold mb-10">🌍 Find Us</h2>
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+
+    <!-- Google Map Card -->
+    <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden" data-aos="fade-right">
+      <div class="p-4 border-b border-gray-700 text-lg font-semibold">📍 Location</div>
+      <iframe 
+        src="https://maps.google.com/maps?q=brojomohan%20college&t=&z=15&ie=UTF8&iwloc=&output=embed"
+        width="100%" 
+        height="300" 
+        class="w-full"
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+      </iframe>
+      <div class="p-4 text-sm text-gray-300">Govt. Brojomohan College, Barishal, Bangladesh</div>
+    </div>
+
+    <!-- Facebook Embed Card -->
+    <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden" data-aos="fade-left">
+      <div class="p-4 border-b border-gray-700 text-lg font-semibold">👍 Follow us on Facebook</div>
+      <iframe 
+        src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/bmcollegebarishal&tabs=timeline&width=500&height=300&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
+        width="100%" 
+        height="300" 
+        style="border:none;overflow:hidden" 
+        scrolling="no" 
+        frameborder="0" 
+        allowfullscreen="true"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+      </iframe>
+      <div class="p-4 text-sm text-gray-300">Stay connected with our latest updates & events.</div>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Graphics Section -->
+  <section class="py-16 px-6 bg-gray-800 text-center">
+    <h2 class="text-3xl font-semibold mb-8">📈 Department Stats</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+      <div>
+        <p class="text-4xl font-bold">250+</p>
+        <p>Active Students</p>
+      </div>
+      <div>
+        <p class="text-4xl font-bold">15+</p>
+        <p>Courses Offered</p>
+      </div>
+      <div>
+        <p class="text-4xl font-bold">10</p>
+        <p>Seminars Held</p>
+      </div>
+      <div>
+        <p class="text-4xl font-bold">98%</p>
+        <p>Pass Rate</p>
+      </div>
+    </div>
+  </section>
+
+  
+  
+  
+  
+  
+  <!-- Testimonials -->
+<section class="py-16 px-6 bg-gray-900">
+  <h2 class="text-3xl text-center font-semibold mb-10">💬 What Our Students Say</h2>
+  <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+    <div class="bg-gray-800 p-6 rounded-lg shadow" data-aos="fade-up">
+      <p class="italic">"The marketing department helped me think like a strategist and a leader. Loved every moment here!"</p>
+      <p class="mt-4 text-right font-semibold text-yellow-400">– Sadia Hossain, Alumni 2021</p>
+    </div>
+    <div class="bg-gray-800 p-6 rounded-lg shadow" data-aos="fade-up" data-aos-delay="100">
+      <p class="italic">"Excellent faculty and a friendly learning environment. I gained practical and digital marketing skills!"</p>
+      <p class="mt-4 text-right font-semibold text-yellow-400">– Tanvir Alam, Final Year</p>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery Section -->
+<section class="py-16 px-6 bg-gray-800">
+  <h2 class="text-3xl text-center font-semibold mb-10">📸 Department Moments</h2>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
+    <img src="https://source.unsplash.com/400x300/?college,event" class="rounded shadow-md" alt="Event 1">
+    <img src="https://source.unsplash.com/400x300/?students,seminar" class="rounded shadow-md" alt="Event 2">
+    <img src="https://source.unsplash.com/400x300/?marketing,classroom" class="rounded shadow-md" alt="Event 3">
+    <img src="https://source.unsplash.com/400x300/?education,teamwork" class="rounded shadow-md" alt="Event 4">
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 py-12 px-6 border-t border-gray-700">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center md:text-left">
+    <div>
+      <h3 class="text-xl font-bold mb-2">📍 Address</h3>
+      <p>Government Brojomohan College</p>
+      <p>Barishal, Bangladesh</p>
+    </div>
+    <div>
+      <h3 class="text-xl font-bold mb-2">🔗 Quick Links</h3>
+      <ul>
+        <li><a href="#notices" class="hover:underline">Notices</a></li>
+        <li><a href="#video-classes" class="hover:underline">Video Classes</a></li>
+        <li><a href="#gallery" class="hover:underline">Gallery</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="text-xl font-bold mb-2">📞 Contact</h3>
+      <p>Email: <a href="mailto:info@bmcollege.gov.bd" class="hover:underline">info@bmcollege.gov.bd</a></p>
+      <p>Phone: 0431-62122</p>
+    </div>
+  </div>
+  <p class="text-center text-gray-400 mt-10 text-sm">© 2025 Department of Marketing, Govt. BM College. All rights reserved.</p>
+</footer>
+
+  
+  
+  
+  
+  <script>
+    AOS.init();
+    fetch('notice.json')
+      .then(res => res.json())
+      .then(data => {
+        const list = document.getElementById("notice-list");
+        data.forEach(item => {
+          const div = document.createElement("div");
+          div.className = "bg-gray-800 p-4 rounded shadow";
+          div.innerHTML = `<h3 class="text-xl font-bold">${item.title}</h3><p class="text-sm text-gray-400">${item.date}</p>`;
+          list.appendChild(div);
+        });
+      });
+  </script>
+
+</body>
+</html>

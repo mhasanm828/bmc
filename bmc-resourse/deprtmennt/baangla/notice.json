@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Semester Final Exam Routine Released",
+    "date": "2025-04-22",
+    "type": "important",
+    "description": "The routine for semester final exams is now available. All students are advised to check the schedule and prepare accordingly.",
+    "link": "#"
+  },
+  {
+    "title": "Marketing Fest 2025 Registration Open",
+    "date": "2025-04-15",
+    "type": "event",
+    "description": "BM College is hosting its annual Marketing Fest! Register now to join exciting competitions, workshops, and more.",
+    "link": "#"
+  },
+  {
+    "title": "Departmental Meeting - Class Rescheduling",
+    "date": "2025-04-18",
+    "type": "notice",
+    "description": "All faculty members are requested to attend a departmental meeting regarding the class schedule for the new session.",
+    "link": "#"
+  },
+  {
+    "title": "Free Workshop on Digital Marketing Tools",
+    "date": "2025-04-10",
+    "type": "event",
+    "description": "A free workshop is being held on how to use modern digital tools for marketing. Seats are limited!",
+    "link": "#"
+  }
+]
