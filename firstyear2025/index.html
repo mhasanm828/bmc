@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PDF Library</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+font-family:Poppins,sans-serif;
+background:#eef2ff;
+}
+</style>
+
+</head>
+<body>
+
+<div class="max-w-7xl mx-auto p-6">
+
+<div class="text-center mb-8">
+
+<h1 class="text-4xl font-bold text-indigo-700">
+📚 PDF Library
+</h1>
+
+<p class="text-gray-600 mt-2">
+Open or Download your PDF Notes
+</p>
+
+<div class="mt-5">
+
+<input
+id="search"
+type="text"
+placeholder="Search subject..."
+class="w-full md:w-96 px-5 py-3 rounded-xl border shadow focus:outline-none focus:ring-2 focus:ring-indigo-500">
+
+</div>
+
+<div class="mt-4">
+
+<span class="bg-indigo-600 text-white px-4 py-2 rounded-full">
+Total PDFs :
+<span id="count"></span>
+</span>
+
+</div>
+
+</div>
+
+<div
+id="list"
+class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+</div>
+
+</div>
+
+<script>
+
+const pdfs=[
+
+"10-BANGLA-part-1-2201_2025_110_10.pdf",
+"11-ENGLISH-2201_2025_110_11.pdf",
+"13-SANSKRIT-2201_2025_110_13.pdf",
+"15-HISTORY-part-1-2201_2025_110_15.pdf",
+"16-ISLAMIC HISTORY & CULTURE-part-1-2201_2025_110_16.pdf",
+"17-PHILOSOPHY-part-1-2201_2025_110_17.pdf",
+"18-ISLAMIC STUDIES-part-1-2201_2025_110_18.pdf",
+"19-POLITICAL SCIENCE-part-1-2201_2025_110_19.pdf",
+"20-SOCIOLOGY-part-1-2201_2025_110_20.pdf",
+"21-SOCIAL WORK-part-1-2201_2025_110_21.pdf",
+"22-ECONOMICS-2201_2025_110_22.pdf",
+"23-MARKETING-Honours-1st-2025_2201_2025_110_23.pdf",
+"24-FINANCE & BANKING-1st-year-2025_2201_2025_110_24.pdf",
+"25-ACCOUNTING-Honours-1st-year-2025_2201_2025_110_25.pdf",
+"26-MANAGEMENT-2201_2025_110_26.pdf",
+"27-PHYSICS-part-1-2201_2025_110_27.pdf",
+"28-CHEMISTRY-2201_2025_110_28.pdf",
+"30-BOTANY-part-1-2201_2025_110_30.pdf",
+"31-ZOOLOGY-2201_2025_110_31.pdf",
+"33-SOIL SCIENCE-2201_2025_110_33.pdf",
+"36-STATISTICS-2201_2025_110_36.pdf",
+"37-MATHEMATICS-2201_2025_110_37.pdf"
+
+];
+
+const container=document.getElementById("list");
+const search=document.getElementById("search");
+const count=document.getElementById("count");
+
+function render(data){
+
+container.innerHTML="";
+
+count.innerHTML=data.length;
+
+data.forEach(file=>{
+
+let title=file
+.replace(".pdf","")
+.replaceAll("-"," ");
+
+container.innerHTML+=`
+
+<div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden">
+
+<div class="bg-gradient-to-r from-indigo-600 to-blue-600 p-5 text-white text-center">
+
+<div class="text-5xl">
+📄
+</div>
+
+</div>
+
+<div class="p-5">
+
+<h2 class="font-semibold text-gray-800 text-sm line-clamp-3 min-h-[60px]">
+
+${title}
+
+</h2>
+
+<div class="flex gap-2 mt-5">
+
+<a
+href="${file}"
+target="_blank"
+class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white text-center py-2 rounded-lg">
+
+Open
+
+</a>
+
+<a
+href="${file}"
+download
+class="flex-1 bg-green-600 hover:bg-green-700 text-white text-center py-2 rounded-lg">
+
+Download
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+}
+
+render(pdfs);
+
+search.onkeyup=function(){
+
+let keyword=this.value.toLowerCase();
+
+let result=pdfs.filter(pdf=>pdf.toLowerCase().includes(keyword));
+
+render(result);
+
+}
+
+</script>
+
+</body>
+</html>
