@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Govt. Brojomohun College, Barisal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+        
+        .header {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        .cover-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+        
+        .logo-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .logo {
+            height: 80px;
+            width: auto;
+            filter: brightness(1.2);
+        }
+        
+        .college-name {
+            margin-left: 15px;
+            color: #4a8cff;
+            font-weight: bold;
+            font-size: 1.5rem;
+            text-shadow: 0 0 10px rgba(74, 140, 255, 0.5);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1, h2, h3 {
+            color: #4a8cff;
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        
+        h1::after, h2::after, h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, #4a8cff, transparent);
+        }
+        
+        .section {
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            border: 1px solid #2d2d2d;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .info-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: inherit;
+    text-decoration: none;
+    padding: 8px 0;
+    transition: all 0.3s ease;
+}
+
+.info-button:hover {
+    color: #4a8cff;
+    transform: translateX(5px);
+}
+
+.course-list li {
+    padding: 0;
+    border-bottom: 1px solid #333;
+}
+
+.course-list li:last-child {
+    border-bottom: none;
+}
+        .info-item {
+            margin-bottom: 12px;
+            padding: 10px;
+            background-color: #252525;
+            border-radius: 5px;
+            border-left: 3px solid #4a8cff;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            color: #4a8cff;
+            display: block;
+            margin-bottom: 3px;
+        }
+        
+        a {
+            color: #4a8cff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: #6da1ff;
+            text-decoration: underline;
+        }
+        
+        .courses {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+              /* Student Information Section Styles */
+            .programs-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+                gap: 25px;
+                margin-top: 20px;
+            }
+            
+            .program-category {
+                background: #252525;
+                border-radius: 10px;
+                padding: 20px;
+                border-left: 4px solid #4a8cff;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                transition: transform 0.3s ease;
+            }
+            
+            .program-category:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 25px rgba(74, 140, 255, 0.1);
+            }
+            
+            .program-category h3 {
+                color: #4a8cff;
+                margin-bottom: 15px;
+                font-size: 1.2rem;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            
+            .program-buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+            
+            .program-button {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background: #1e1e1e;
+                color: #e0e0e0;
+                padding: 12px 15px;
+                border-radius: 8px;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                border: 1px solid #333;
+            }
+            
+            .program-button:hover {
+                background: #2a2a2a;
+                border-color: #4a8cff;
+                transform: translateX(5px);
+            }
+            
+            .program-button span:first-child {
+                font-weight: 500;
+            }
+            
+            .batch {
+                background: #333;
+                padding: 3px 8px;
+                border-radius: 15px;
+                font-size: 0.8rem;
+                color: #aaa;
+            }
+            
+            /* Font Awesome Icons */
+            @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+            
+            @media (max-width: 768px) {
+                .programs-container {
+                    grid-template-columns: 1fr;
+                }
+            }
+        .course-category {
+            background-color: #252525;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            transition: transform 0.3s ease;
+        }
+        
+        .course-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        }
+        
+        .course-list {
+            list-style-type: none;
+            margin-top: 15px;
+        }
+        
+        .course-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .course-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .course-code {
+            color: #888;
+            font-size: 0.8em;
+            background-color: #333;
+            padding: 2px 6px;
+            border-radius: 10px;
+        }
+        
+        footer {
+            background-color: #0a0a0a;
+            color: #aaa;
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+            border-top: 1px solid #333;
+        }
+        
+        footer p {
+            margin-bottom: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .logo-container {
+                flex-direction: column;
+                text-align: center;
+                width: 80%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .college-name {
+                margin-left: 0;
+                margin-top: 10px;
+                font-size: 1.2rem;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .courses {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+
+    <!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <title>BM College Navbar</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .submenu {
+      display: none;
+    }
+    .submenu.active {
+      display: block;
+    }
+  </style>
+</head>
+<body class="font-sans">
+
+<!-- Navbar -->
+<nav class="bg-indigo-700 text-white px-4 py-3 flex items-center justify-between shadow-md sticky top-0 z-50">
+  <!-- Logo & Name -->
+  <div class="flex items-center gap-2">
+    <img src="https://i.postimg.cc/Qdb9Vnk2/image.png" alt="Logo" class="w-8 h-8 rounded" />
+    <span class="font-bold text-lg">BM College</span>
+  </div>
+
+  <!-- Desktop Menu -->
+  <div class="hidden md:flex items-center gap-6">
+    <a href="index.html" class="hover:text-yellow-300">মূল পাতা</a>
+
+    <!-- Departments -->
+    <div class="relative">
+      <button onclick="toggleSubmenu('dept-menu')" class="hover:text-yellow-300 flex items-center gap-1">
+        Departments
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+      <!-- Main Dropdown -->
+      <div id="dept-menu" class="absolute submenu bg-white text-gray-800 mt-2 rounded shadow-lg w-48 z-10">
+        <!-- BA -->
+        <div class="relative">
+          <button onclick="toggleSubmenu('ba-menu')" class="w-full text-left flex justify-between items-center px-4 py-2 hover:bg-gray-100">
+            BA
+            <svg class="w-4 h-4" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
+          <div id="ba-menu" class="absolute submenu bg-white text-gray-800 left-full top-0 ml-1 rounded shadow-lg w-48 z-20">
+            <a href="bangla.html" class="block px-4 py-2 hover:bg-gray-100">Bangla</a>
+            <a href="english.html" class="block px-4 py-2 hover:bg-gray-100">English</a>
+            <a href="sanskrit.html" class="block px-4 py-2 hover:bg-gray-100">Sanskrit</a>
+          </div>
+        </div>
+
+        <!-- BSS -->
+        <div class="relative">
+          <button onclick="toggleSubmenu('bss-menu')" class="w-full text-left flex justify-between items-center px-4 py-2 hover:bg-gray-100">
+            BSS
+            <svg class="w-4 h-4" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
+          <div id="bss-menu" class="absolute submenu bg-white text-gray-800 left-full top-0 ml-1 rounded shadow-lg w-48 z-20">
+            <a href="political_science.html" class="block px-4 py-2 hover:bg-gray-100">Political Science</a>
+            <a href="sociology.html" class="block px-4 py-2 hover:bg-gray-100">Sociology</a>
+            <a href="economics.html" class="block px-4 py-2 hover:bg-gray-100">Economics</a>
+          </div>
+        </div>
+
+        <!-- BSc -->
+        <div class="relative">
+          <button onclick="toggleSubmenu('bsc-menu')" class="w-full text-left flex justify-between items-center px-4 py-2 hover:bg-gray-100">
+            BSc
+            <svg class="w-4 h-4" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
+          <div id="bsc-menu" class="absolute submenu bg-white text-gray-800 left-full top-0 ml-1 rounded shadow-lg w-48 z-20">
+            <a href="physics.html" class="block px-4 py-2 hover:bg-gray-100">Physics</a>
+            <a href="chemistry.html" class="block px-4 py-2 hover:bg-gray-100">Chemistry</a>
+            <a href="mathematics.html" class="block px-4 py-2 hover:bg-gray-100">Mathematics</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="about.html" class="hover:text-yellow-300">About</a>
+  </div>
+
+  <!-- Mobile Toggle -->
+  <button class="md:hidden focus:outline-none" onclick="toggleMobileMenu()">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+    </svg>
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="hidden bg-indigo-700 text-white px-4 py-4 md:hidden">
+  <a href="index.html" class="block py-2 border-b border-indigo-500">মূল পাতা</a>
+  <a href="about.html" class="block py-2 border-b border-indigo-500">About</a>
+
+  <!-- Departments Mobile -->
+  <div class="py-2 border-b border-indigo-500">
+    <button onclick="toggleMobileSubmenu('mobile-dept')" class="w-full flex justify-between items-center">
+      Departments
+      <svg id="mobile-dept-arrow" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+      </svg>
+    </button>
+    <div id="mobile-dept" class="submenu pl-4">
+      <!-- BA Mobile -->
+      <div>
+        <button onclick="toggleMobileSubmenu('mobile-ba')" class="w-full flex justify-between items-center py-2">
+          BA
+          <svg id="mobile-ba-arrow" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div id="mobile-ba" class="submenu pl-4">
+          <a href="bangla.html" class="block py-2">Bangla</a>
+          <a href="english.html" class="block py-2">English</a>
+          <a href="sanskrit.html" class="block py-2">Sanskrit</a>
+        </div>
+      </div>
+
+      <!-- BSS Mobile -->
+      <div>
+        <button onclick="toggleMobileSubmenu('mobile-bss')" class="w-full flex justify-between items-center py-2">
+          BSS
+          <svg id="mobile-bss-arrow" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div id="mobile-bss" class="submenu pl-4">
+          <a href="political_science.html" class="block py-2">Political Science</a>
+          <a href="sociology.html" class="block py-2">Sociology</a>
+          <a href="economics.html" class="block py-2">Economics</a>
+        </div>
+      </div>
+
+      <!-- BSc Mobile -->
+      <div>
+        <button onclick="toggleMobileSubmenu('mobile-bsc')" class="w-full flex justify-between items-center py-2">
+          BSc
+          <svg id="mobile-bsc-arrow" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div id="mobile-bsc" class="submenu pl-4">
+          <a href="physics.html" class="block py-2">Physics</a>
+          <a href="chemistry.html" class="block py-2">Chemistry</a>
+          <a href="mathematics.html" class="block py-2">Mathematics</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Demo Content -->
+<section class="p-8 text-center">
+  <h1 class="text-3xl font-bold text-indigo-700">BM College Departments</h1>
+  <p class="text-gray-600 mt-4">ডেস্কটপ এবং মোবাইলে পুরোপুরি কাজ করবে, সুন্দরভাবে সাবমেনু দেখাবে।</p>
+</section>
+
+<script>
+  // Toggle desktop submenus
+  function toggleSubmenu(id) {
+    const menu = document.getElementById(id);
+    menu.classList.toggle('active');
+  }
+
+  // Toggle mobile menu
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('hidden');
+  }
+
+  // Toggle mobile submenus
+  function toggleMobileSubmenu(id) {
+    const menu = document.getElementById(id);
+    const arrow = document.getElementById(`${id}-arrow`);
+    
+    menu.classList.toggle('active');
+    arrow.classList.toggle('rotate-90');
+  }
+</script>
+
+</body>
+</html>
+    <header class="header">
+        <!-- Cover image -->
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrDuFbdcLv0lK8aGD57zJsiQB0wv-5hqW3UbSmcNrX9G3whoFKHCaSj0DXb01F1K5D_6EPAUAe3VL79P-q2mv5nGPHw-FrDh2jT2dwwlekL8QRehsamwRRRwXvO0lprwQcIFu0=s680-w680-h510-rw" alt="College Cover" class="cover-image">
+        
+        <div class="logo-container">
+            <!-- College logo -->
+            <img src="https://upload.wikimedia.org/wikipedia/bn/3/39/%E0%A6%B8%E0%A6%B0%E0%A6%95%E0%A6%BE%E0%A6%B0%E0%A6%BF_%E0%A6%AC%E0%A6%BF_%E0%A6%8F%E0%A6%AE_%E0%A6%95%E0%A6%B2%E0%A7%87%E0%A6%9C%2C_%E0%A6%AC%E0%A6%B0%E0%A6%BF%E0%A6%B6%E0%A6%BE%E0%A6%B2.png" alt="College Logo" class="logo">
+            <div class="college-name">Govt. Brojomohun College, Barisal</div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="section">
+            <h1>About Our College</h1>
+            <p>Govt. Brojomohun College, established on 14 June 1889, is spreading the light of knowledge till now with reliability, confidence and sincerity. The College is situated in the Divisional City of Barisal some 2 kilometers away from the famous river Kirtonkhola. This is the most ancient and aristocratic College of Greater Barisal and one of the most prestigious colleges of Bangladesh. The college has produced a good number of famous personalities in various fields who keep contributing in their respective field. Govt. BM College is the holy symbol of truth, love and purity. The mass people of Barisal feel pride for this famous college.</p>
+        </section>
+        
+        <section class="section">
+            <h2>College Information</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="info-label">Year of Establishment:</span> 1889
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Total Land:</span> 58.368 ACEARE
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Government/Non-Government:</span> Government
+                </div>
+                <div class="info-item">
+                    <span class="info-label">College EIIN:</span> 100875
+                </div>
+                <div class="info-item">
+                    <span class="info-label">College Address:</span> BARISAL SADAR, BARIAL
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Website:</span> <a href="http://www.bmcollege.gov.bd" target="_blank">www.bmcollege.gov.bd</a>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">College Location:</span> Barisal
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Contact Information</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="info-label">Principal Name:</span> PROFESSOR DR.GOLAM KIBRIA
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Principal Mobile:</span> 01711131927
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Vice-Principal's Name:</span> PROFESSOR DR.GOLAM KIBRIA
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Vice-Principal's Mobile:</span> 01711131927
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Head Clerk Name:</span> MD. Hamidul Islam
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Head Clerk Mobile:</span> 01735410494
+                </div>
+                <div class="info-item">
+                    <span class="info-label">College phone:</span> 043164793
+                </div>
+                <div class="info-item">
+                    <span class="info-label">College Mobile:</span> 01735410494
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Email Address:</span> principalbmcollege@gmail.com
+                </div>
+                <div class="info-item">
+                    <span class="info-label">College Fax:</span> 043164793
+                </div>
+            </div>
+        </section>
+
+        
+                       <!-- Student Information Section -->
+        <section class="section">
+            <h2>Student Information Portal</h2>
+            <div class="programs-container">
+                <!-- Honours Programs -->
+                <div class="program-category">
+                    <h3><i class="fas fa-graduation-cap"></i> Honours Programs</h3>
+                    <div class="program-buttons">
+                        <a href="https://bm-c.vercel.app/h3-2023-info.html" target="_blank" class="program-button">
+                            <span>3rd Year Information</span>
+                            <span class="batch">2023 Batch</span>
+                        </a>
+                        <a href="#" target="_blank" class="program-button">
+                            <span>1st Year Information</span>
+                            <span class="batch">2025 Batch</span>
+                        </a>
+                        <a href="#" target="_blank" class="program-button">
+                            <span>2nd Year Information</span>
+                            <span class="batch">2024 Batch</span>
+                        </a>
+                        <a href="#" target="_blank" class="program-button">
+                            <span>4th Year Information</span>
+                            <span class="batch">2022 Batch</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Masters Programs -->
+                <div class="program-category">
+                    <h3><i class="fas fa-user-graduate"></i> Masters Programs</h3>
+                    <div class="program-buttons">
+                        <a href="#" target="_blank" class="program-button">
+                            <span>Masters Preliminary</span>
+                            <span class="batch">Course Info</span>
+                        </a>
+                        <a href="#" target="_blank" class="program-button">
+                            <span>Masters Final</span>
+                            <span class="batch">Course Info</span>
+                        </a>
+                        <a href="#" target="_blank" class="program-button">
+                            <span>Masters Results</span>
+                            <span class="batch">2020-2023</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Other Degree Programs -->
+                <div class="program-category">
+                    <h3><i class="fas fa-certificate"></i> Other Degrees</h3>
+                    <div class="program-buttons">
+                        <a href="#" target="_blank" class="program-button">
+                            <span>B.A. (Pass Course)</span>
+                            <span class="batch">3 Years</span>
+                        </a>
+                        <a href="#" target="_blank" class="program-button">
+                            <span>B.S.S. (Pass Course)</span>
+                            <span class="batch">3 Years</span>
+                        </a>
+                        <a href="#" target="_blank" class="program-button">
+                            <span>B.Sc. (Pass Course)</span>
+                            <span class="batch">3 Years</span>
+                        </a>
+                        <a href="#" target="_blank" class="program-button">
+                            <span>B.B.S. (Pass Course)</span>
+                            <span class="batch">3 Years</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="section">
+            <h2>Courses Offered</h2>
+            <div class="courses">
+                <div class="course-category">
+                    <h3>Bachelor Degree (Pass)</h3>
+                    <ul class="course-list">
+                        <li><span>B.A. (Pass)</span> <span class="course-code">01</span></li>
+                        <li><span>B.S.S. (Pass)</span> <span class="course-code">02</span></li>
+                        <li><span>B.Sc. (Pass)</span> <span class="course-code">03</span></li>
+                        <li><span>B.B.S. (Pass)</span> <span class="course-code">04</span></li>
+                        <li><span>C.C</span> <span class="course-code">07</span></li>
+                    </ul>
+                </div>
+                
+                <div class="course-category">
+                    <h3>Bachelor Degree Honours</h3>
+                    <ul class="course-list">
+                        <li><span>Bengali</span> <span class="course-code">10</span></li>
+                        <li><span>English</span> <span class="course-code">11</span></li>
+                        <li><span>Sanskrit</span> <span class="course-code">13</span></li>
+                        <li><span>History</span> <span class="course-code">15</span></li>
+                        <li><span>Islamic History and Culture</span> <span class="course-code">16</span></li>
+                        <li><span>Philosophy</span> <span class="course-code">17</span></li>
+                        <li><span>Islamic Studies</span> <span class="course-code">18</span></li>
+                        <li><span>Political Science</span> <span class="course-code">19</span></li>
+                        <li><span>Sociology</span> <span class="course-code">20</span></li>
+                        <li><span>Social Work</span> <span class="course-code">21</span></li>
+                        <li><span>Economics</span> <span class="course-code">22</span></li>
+                        <li><span>Marketing</span> <span class="course-code">23</span></li>
+                        <li><span>Finance & Banking</span> <span class="course-code">24</span></li>
+                        <li><span>Accounting</span> <span class="course-code">25</span></li>
+                        <li><span>Management</span> <span class="course-code">26</span></li>
+                        <li><span>Physics</span> <span class="course-code">27</span></li>
+                        <li><span>Chemistry</span> <span class="course-code">28</span></li>
+                        <li><span>Botany</span> <span class="course-code">30</span></li>
+                        <li><span>Zoology</span> <span class="course-code">31</span></li>
+                        <li><span>Soil Science</span> <span class="course-code">33</span></li>
+                        <li><span>Statistics</span> <span class="course-code">36</span></li>
+                        <li><span>Mathematics</span> <span class="course-code">37</span></li>
+                    </ul>
+                </div>
+                
+                <div class="course-category">
+                    <h3>Masters Final</h3>
+                    <ul class="course-list">
+                        <li><span>Bengali</span> <span class="course-code">10</span></li>
+                        <li><span>English</span> <span class="course-code">11</span></li>
+                        <li><span>Sanskrit</span> <span class="course-code">13</span></li>
+                        <li><span>History</span> <span class="course-code">15</span></li>
+                        <li><span>Islamic History and Culture</span> <span class="course-code">16</span></li>
+                        <li><span>Philosophy</span> <span class="course-code">17</span></li>
+                        <li><span>Islamic Studies</span> <span class="course-code">18</span></li>
+                        <li><span>Political Science</span> <span class="course-code">19</span></li>
+                        <li><span>Sociology</span> <span class="course-code">20</span></li>
+                        <li><span>Social Work</span> <span class="course-code">21</span></li>
+                        <li><span>Economics</span> <span class="course-code">22</span></li>
+                        <li><span>Marketing</span> <span class="course-code">23</span></li>
+                        <li><span>Finance & Banking</span> <span class="course-code">24</span></li>
+                        <li><span>Accounting</span> <span class="course-code">25</span></li>
+                        <li><span>Management</span> <span class="course-code">26</span></li>
+                        <li><span>Physics</span> <span class="course-code">27</span></li>
+                        <li><span>Chemistry</span> <span class="course-code">28</span></li>
+                        <li><span>Botany</span> <span class="course-code">30</span></li>
+                        <li><span>Zoology</span> <span class="course-code">31</span></li>
+                        <li><span>Soil Science</span> <span class="course-code">33</span></li>
+                        <li><span>Mathematics</span> <span class="course-code">37</span></li>
+                    </ul>
+                </div>
+                
+                <div class="course-category">
+                    <h3>Masters Preliminary</h3>
+                    <ul class="course-list">
+                        <li><span>Bengali</span> <span class="course-code">10</span></li>
+                        <li><span>English</span> <span class="course-code">11</span></li>
+                        <li><span>Sanskrit</span> <span class="course-code">13</span></li>
+                        <li><span>History</span> <span class="course-code">15</span></li>
+                        <li><span>Islamic History and Culture</span> <span class="course-code">16</span></li>
+                        <li><span>Philosophy</span> <span class="course-code">17</span></li>
+                        <li><span>Islamic Studies</span> <span class="course-code">18</span></li>
+                        <li><span>Political Science</span> <span class="course-code">19</span></li>
+                        <li><span>Sociology</span> <span class="course-code">20</span></li>
+                        <li><span>Social Work</span> <span class="course-code">21</span></li>
+                        <li><span>Economics</span> <span class="course-code">22</span></li>
+                        <li><span>Accounting</span> <span class="course-code">25</span></li>
+                        <li><span>Management</span> <span class="course-code">26</span></li>
+                        <li><span>Physics</span> <span class="course-code">27</span></li>
+                        <li><span>Chemistry</span> <span class="course-code">28</span></li>
+                        <li><span>Botany</span> <span class="course-code">30</span></li>
+                        <li><span>Zoology</span> <span class="course-code">31</span></li>
+                        <li><span>Soil Science</span> <span class="course-code">33</span></li>
+                        <li><span>Mathematics</span> <span class="course-code">37</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 Govt. Brojomohun College, Barisal. All Rights Reserved.</p>
+        <p>Light of Knowledge Since 1889</p>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add hover effect to sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.addEventListener('mouseenter', function() {
+                    this.style.borderColor = '#4a8cff';
+                });
+                section.addEventListener('mouseleave', function() {
+                    this.style.borderColor = '#2d2d2d';
+                });
+            });
+            
+            // Add click effect to course items
+            const courseItems = document.querySelectorAll('.course-list li');
+            courseItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    this.style.backgroundColor = '#333';
+                    setTimeout(() => {
+                        this.style.backgroundColor = 'transparent';
+                    }, 300);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>প্রাণিবিদ্যা বিভাগ - সরকারি ব্রজমোহন কলেজ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla&display=swap" rel="stylesheet">
+  <style><script>
+// Disable right click (context menu)
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+
+// Disable key combinations like F12, Ctrl+Shift+I, Ctrl+U
+document.addEventListener('keydown', function(e) {
+  if (
+    e.key === 'F12' ||
+    (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) ||
+    (e.ctrlKey && e.key === 'U')
+  ) {
+    e.preventDefault();
+  }
+});
+
+// Prevent video download
+document.querySelectorAll("video").forEach(function(video) {
+  video.setAttribute("controlsList", "nodownload");
+  video.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+  });
+});
+</script>
+
+
+    
+    body {
+      font-family: 'Tiro Bangla', serif;
+    }
+    .bg-primary { background-color: #d0ebf8; }
+    .bg-secondary { background-color: #a6e3a1; }
+    .text-primary { color: #1c1f2b; }
+    .nav-link { transition: all 0.3s ease-in-out; }
+    .nav-link:hover { text-decoration: underline; color: #2563eb; }
+  </style>
+</head>
+<body class="bg-primary text-primary">
+
+<!-- Navbar -->
+<nav class="bg-white shadow sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+    <a href="index.html" class="flex items-center gap-2">
+      <img src="https://i.postimg.cc/Qdb9Vnk2/image.png" class="w-10 h-10" alt="logo">
+      <span class="text-xl font-bold">প্রাণিবিদ্যা বিভাগ</span>
+    </a>
+    <button id="navToggle" class="sm:hidden">&#9776;</button>
+    <ul id="navMenu" class="hidden sm:flex gap-4 text-sm font-semibold">
+      <li><a href="#hero" class="nav-link">হোম</a></li>
+      <li><a href="#about" class="nav-link">পরিচিতি</a></li>
+      <li><a href="#slider" class="nav-link">গ্যালারি</a></li>
+      <li><a href="#teachers" class="nav-link">শিক্ষকবৃন্দ</a></li>
+      <li><a href="#contact" class="nav-link">যোগাযোগ</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section id="hero" class="text-center p-8 bg-secondary">
+  <h1 class="text-3xl md:text-5xl font-bold mb-4 animate-bounce">প্রাণিবিদ্যা বিভাগে আপনাকে স্বাগতম</h1>
+  <p class="text-lg">জীবনের রহস্য উদঘাটনের পথে আমাদের যাত্রা</p>
+</section>
+
+<!-- About -->
+<section id="about" class="max-w-5xl mx-auto px-4 py-6">
+  <h2 class="text-2xl font-semibold mb-4">বিভাগ পরিচিতি</h2>
+  <p class="mb-3 leading-relaxed">
+    প্রাণিবিদ্যা বিভাগ ১৯৬৮ সালে প্রতিষ্ঠিত হয় এবং তখন থেকেই এটি গবেষণা এবং উচ্চ মানের শিক্ষা প্রদানে অগ্রণী ভূমিকা পালন করে আসছে। আমাদের এখানে উন্নত মানের ল্যাবরেটরি এবং গবেষণা কার্যক্রমের সুব্যবস্থা রয়েছে।
+  </p>
+  <div class="grid grid-cols-2 sm:grid-cols-4 text-center mt-6 gap-4">
+    <div><p class="text-xl font-bold">২০+</p><p>শিক্ষক</p></div>
+    <div><p class="text-xl font-bold">৭৫০+</p><p>ছাত্রছাত্রি</p></div>
+    <div><p class="text-xl font-bold">১৯৬৮</p><p>প্রতিষ্ঠা বছর</p></div>
+    <div><p class="text-xl font-bold">৩০+</p><p>গবেষণা</p></div>
+  </div>
+</section>
+
+ 
+
+  <!-- Section: Teachers -->
+  <section id="teachers" class="max-w-6xl mx-auto p-6 mt-8 bg-white rounded-lg shadow-md">
+    <h2 class="text-2xl font-semibold mb-6 text-cyan-800 border-b-2 border-cyan-200 pb-2 animate-fadeIn">আমাদের শিক্ষকবৃন্দ</h2>
+
+    <!-- Filters -->
+    <div class="flex flex-col sm:flex-row items-center justify-between mb-6 gap-4 animate-fadeIn animate-delay-100">
+      <input id="searchBox" type="text" placeholder="শিক্ষকের নাম লিখুন..." 
+             class="p-2 rounded border w-full sm:w-1/3 focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500" />
+      <button onclick="toggleView()" 
+              class="bg-cyan-600 text-white px-4 py-2 rounded shadow hover:bg-cyan-700 transition">
+        <i class="bi bi-grid"></i> ভিউ পরিবর্তন
+      </button>
+    </div>
+
+    <!-- Teachers Container -->
+    <div id="teacherList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 transition">
+      <!-- Cards will be inserted here -->
+    </div>
+  </section>
+  
+  
+  
+
+<!-- Contact -->
+<section id="contact" class="max-w-5xl mx-auto px-4 py-6">
+  <h2 class="text-xl font-semibold mb-3">যোগাযোগ</h2>
+  <p>অবস্থান: প্রাণিবিদ্যা বিভাগ, সরকারি ব্রজমোহন কলেজ, বরিশাল</p>
+  <p>ইমেইল: zoology@bmcollege.gov.bd</p>
+</section>
+
+  
+  
+  
+  
+  
+   <!-- Footer -->
+  <footer class="bg-cyan-900 text-white mt-12">
+    <div class="max-w-6xl mx-auto px-6 py-8">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-lg font-bold mb-4"> প্রাণিবিদ্যা বিভাগ</h3>
+          <p class="text-cyan-200">সরকারি ব্রজমোহন কলেজ, বরিশাল</p>
+          <p class="text-cyan-200 mt-2">বাংলাদেশের দক্ষিণাঞ্চলের শীর্ষস্থানীয় প্রাণিবিদ্যা শিক্ষা কেন্দ্র</p>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">দ্রুত লিংক</h4>
+          <ul class="space-y-2">
+            <li><a href="#about" class="text-cyan-200 hover:text-white transition">পরিচিতি</a></li>
+            <li><a href="#courses" class="text-cyan-200 hover:text-white transition">কোর্সসমূহ</a></li>
+            <li><a href="#teachers" class="text-cyan-200 hover:text-white transition">শিক্ষকবৃন্দ</a></li>
+            <li><a href="#career" class="text-cyan-200 hover:text-white transition">ক্যারিয়ার</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">সম্পর্কিত</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-cyan-200 hover:text-white transition">ভর্তি তথ্য</a></li>
+            <li><a href="#" class="text-cyan-200 hover:text-white transition">সিলেবাস</a></li>
+            <li><a href="#" class="text-cyan-200 hover:text-white transition">পরীক্ষার রুটিন</a></li>
+            <li><a href="#" class="text-cyan-200 hover:text-white transition">ফলাফল</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">সামাজিক যোগাযোগ</h4>
+          <div class="flex space-x-4">
+            <a href="#" class="text-cyan-200 hover:text-white transition text-2xl"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-cyan-200 hover:text-white transition text-2xl"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="text-cyan-200 hover:text-white transition text-2xl"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="text-cyan-200 hover:text-white transition text-2xl"><i class="bi bi-twitter-x"></i></a>
+          </div>
+          <div class="mt-4">
+            <h4 class="font-bold mb-2">নিউজলেটার</h4>
+            <div class="flex">
+              <input type="email" placeholder="আপনার ইমেইল" class="px-3 py-2 text-gray-800 rounded-l-md w-full">
+              <button class="bg-cyan-700 px-4 py-2 rounded-r-md hover:bg-cyan-800 transition">
+                <i class="bi bi-envelope"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-cyan-800 mt-8 pt-6 text-center text-cyan-300">
+        <p>&copy; ২০২৫ সরকারি ব্রজমোহন কলেজ - প্রাণিবিদ্যা বিভাগ। সর্বস্বত্ব সংরক্ষিত।</p>
+      </div>
+    </div>
+  </footer>
+  
+  
+  
+  
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: { delay: 3000, disableOnInteraction: false },
+      pagination: { el: ".swiper-pagination", clickable: true },
+      loop: true
+    });
+ 
+    
+    
+    
+    
+   
+    
+    
+    <!-- Script for Teachers -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    // Initialize Swiper
+    const swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      loop: true,
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
+      speed: 1000,
+    });
+
+    let teachers = [];
+    let grid = true;
+
+    async function loadCSV() {
+      const res = await fetch('https://bm-c.vercel.app/teacher.csv');
+      const text = await res.text();
+      const rows = text.trim().split('\n').slice(1);
+      teachers = rows
+        .map(row => row.split(','))
+        .filter(cols => cols[6] && cols[6].trim() ===  "প্রাণীবিদ্যা");
+
+      // If no teachers found in CSV, use sample data
+      if (teachers.length === 0) {
+       teachers = [
+          ["1", "বরিশাল", "25th", "ড. আহসান হাবীব", "ড. আহসান হাবীব", "অধ্যাপক", "অর্থনীতি", "01712345678", "ahsan.habib@bmcollege.edu.bd", "2010-05-15", "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"],
+          ["2", "ঢাকা", "28th", "ড. ফারহানা ইসলাম", "ড. ফারহানা ইসলাম", "সহযোগী অধ্যাপক", "অর্থনীতি", "01787654321", "farhana.islam@bmcollege.edu.bd", "2012-08-22", "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb- 4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80"],
+          ["3", "খুলনা", "30th", "ড. রিয়াদ হোসেন", "ড. রিয়াদ হোসেন", "সহকারী অধ্যাপক", "অর্থনীতি", "01811223344", "riad.hossain@bmcollege.edu.bd", "2015-03-10", "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"]
+        ];
+      }
+
+      displayTeachers(teachers);
+    }
+
+    function displayTeachers(data) {
+      const list = document.getElementById("teacherList");
+      list.innerHTML = '';
+
+      data.forEach(cols => {
+        const [
+          id, district, batch, nameEn, nameBn, designation, department,
+          mobile, email, joiningDate, imageUrl
+        ] = cols;
+
+        const card = document.createElement("div");
+        card.className = grid
+          ? "teacher-card bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center hover:shadow-lg transition-all duration-300 animate-fadeIn"
+          : "teacher-card bg-white rounded-lg shadow-md p-4 flex items-start gap-4 hover:shadow-lg transition-all duration-300 animate-fadeIn";
+
+        card.innerHTML = `
+          <img src="${imageUrl || 'https://bm-c.vercel.app/paeson.png'}" 
+               onerror="this.src='https://bm-c.vercel.app/paeson.png'" 
+               class="${grid ? 'w-24 h-24' : 'w-20 h-20'} rounded-full object-cover border-4 border-blue-100" />
+          <div class="${grid ? 'mt-3' : ''}">
+            <h3 class="text-lg font-bold text-blue-800">${nameEn || "নাম নেই"}</h3>
+            <p class="text-blue-600">${designation || "পদবী নেই"} | ${batch || "N/A"} BCS</p>
+            <p class="text-sm text-gray-600 mt-1">নিজ জেলাঃ ${district || "N/A"}</p>
+            <p class="text-sm text-gray-600">ফোনঃ 0${mobile || "N/A"}</p>
+            <p class="text-sm text-gray-600">ইমেইলঃ ${email || "N/A"}</p>
+            <p class="text-xs text-gray-500 mt-1">যোগদানের তারিখঃ ${joiningDate?.replace("'", "") || "N/A"}</p>
+          </div>
+        `;
+        list.appendChild(card);
+      });
+    }
+
+    function toggleView() {
+      grid = !grid;
+      displayTeachers(teachers);
+    }
+
+    document.getElementById("searchBox").addEventListener("input", (e) => {
+      const keyword = e.target.value.toLowerCase();
+      const filtered = teachers.filter(t => 
+        t[3]?.toLowerCase().includes(keyword) || 
+        t[4]?.toLowerCase().includes(keyword) ||
+        t[5]?.toLowerCase().includes(keyword) ||
+        t[1]?.toLowerCase().includes(keyword)
+      );
+      displayTeachers(filtered);
+    });
+
+    // Load teachers on page load
+    document.addEventListener('DOMContentLoaded', loadCSV);
+  </script>
+</body>
+</html>

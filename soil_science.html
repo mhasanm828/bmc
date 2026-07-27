@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>মৃত্তিকা বিজ্ঞান বিভাগ - সরকারি ব্রজমোহন কলেজ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+
+    <script>
+// Disable right click (context menu)
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+
+// Disable key combinations like F12, Ctrl+Shift+I, Ctrl+U
+document.addEventListener('keydown', function(e) {
+  if (
+    e.key === 'F12' ||
+    (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) ||
+    (e.ctrlKey && e.key === 'U')
+  ) {
+    e.preventDefault();
+  }
+});
+
+// Prevent video download
+document.querySelectorAll("video").forEach(function(video) {
+  video.setAttribute("controlsList", "nodownload");
+  video.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+  });
+});
+</script>
+
+    
+    body {
+      font-family: 'Tiro Bangla', serif;
+    }
+    .bg-soil { background-color: #8B5A2B; }
+    .text-soil { color: #8B5A2B; }
+    .swiper-slide {
+      height: 400px;
+      background-size: cover;
+      background-position: center;
+    }
+    .swiper-pagination-bullet {
+      background: white;
+      width: 10px;
+      height: 10px;
+    }
+    .swiper-pagination-bullet-active {
+      background: #D2B48C;
+    }
+    .soil-feature {
+      border-left: 4px solid #8B5A2B;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+
+  <!-- Navbar -->
+  <nav class="bg-soil text-white shadow-lg py-3 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 flex flex-wrap items-center justify-between">
+      <a href="#" class="flex items-center gap-2">
+        <img src="https://i.postimg.cc/Qdb9Vnk2/image.png" alt="Logo" class="w-10 h-10 rounded-full">
+        <span class="text-xl font-bold">মৃত্তিকা বিজ্ঞান বিভাগ</span>
+      </a>
+      <button class="sm:hidden block text-2xl" onclick="navMenu.classList.toggle('hidden')">
+        <i class="bi bi-list"></i>
+      </button>
+      <ul id="navMenu" class="sm:flex hidden flex-col sm:flex-row gap-4 font-semibold mt-2 sm:mt-0">
+        <li><a href="#about" class="hover:text-yellow-300 transition"><i class="bi bi-info-circle mr-1"></i> পরিচিতি</a></li>
+        <li><a href="#facilities" class="hover:text-yellow-300 transition"><i class="bi bi-building mr-1"></i> সুবিধাদি</a></li>
+        <li><a href="#research" class="hover:text-yellow-300 transition"><i class="bi bi-search mr-1"></i> গবেষণা</a></li>
+        <li><a href="#courses" class="hover:text-yellow-300 transition"><i class="bi bi-journal-bookmark mr-1"></i> কোর্স</a></li>
+        <li><a href="#contact" class="hover:text-yellow-300 transition"><i class="bi bi-telephone mr-1"></i> যোগাযোগ</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="text-center py-16 bg-soil text-white from-brown-800 to-brown-600 text-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">মৃত্তিকা বিজ্ঞান বিভাগ</h1>
+      <p class="text-xl md:text-2xl mb-2">সরকারি ব্রজমোহন কলেজ, বরিশাল</p>
+      <p class="text-lg">মৃত্তিকা সম্পদ ব্যবস্থাপনা ও কৃষি উন্নয়নের প্রাণকেন্দ্র</p>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <div class="bg-white shadow-lg -mt-8 mx-auto max-w-5xl rounded-lg p-4 grid grid-cols-2 md:grid-cols-4 gap-4 relative z-10">
+    <div class="text-center p-2">
+      <div class="text-3xl font-bold text-soil">35+</div>
+      <div class="text-sm text-gray-600">বছরের ইতিহাস</div>
+    </div>
+    <div class="text-center p-2">
+      <div class="text-3xl font-bold text-soil">10+</div>
+      <div class="text-sm text-gray-600">শিক্ষকবৃন্দ</div>
+    </div>
+    <div class="text-center p-2">
+      <div class="text-3xl font-bold text-soil">400+</div>
+      <div class="text-sm text-gray-600">শিক্ষার্থী</div>
+    </div>
+    <div class="text-center p-2">
+      <div class="text-3xl font-bold text-soil">6+</div>
+      <div class="text-sm text-gray-600">বিশেষ ল্যাব</div>
+    </div>
+  </div>
+
+  <!-- Slider Section -->
+  <div class="swiper mySwiper max-w-6xl mx-auto mt-12">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" 
+             alt="Soil Analysis" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+          <div class="text-white text-center px-4">
+            <h3 class="text-2xl md:text-3xl font-bold mb-2">মৃত্তিকা গবেষণা ল্যাব</h3>
+            <p>আধুনিক যন্ত্রপাতি দ্বারা মৃত্তিকা বিশ্লেষণ</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="https://images.unsplash.com/photo-1586771107445-d3ca888129ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" 
+             alt="Field Research" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+          <div class="text-white text-center px-4">
+            <h3 class="text-2xl md:text-3xl font-bold mb-2">ক্ষেত্র গবেষণা</h3>
+            <p>প্রকৃত কৃষি জমিতে হাতে-কলমে শিক্ষা</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="https://images.unsplash.com/photo-1605007493699-af65834f8a05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" 
+             alt="Soil Conservation" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+          <div class="text-white text-center px-4">
+            <h3 class="text-2xl md:text-3xl font-bold mb-2">মৃত্তিকা সংরক্ষণ</h3>
+            <p>টেকসই কৃষি ব্যবস্থাপনা প্রশিক্ষণ</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+  
+  
+  
+    <!-- Section: Teachers -->
+  <section id="teachers" class="max-w-6xl mx-auto p-6 mt-8 bg-white rounded-lg shadow-md">
+    <h2 class="text-2xl font-semibold mb-6 text-cyan-800 border-b-2 border-cyan-200 pb-2 animate-fadeIn">আমাদের শিক্ষকবৃন্দ</h2>
+
+    <!-- Filters -->
+    <div class="flex flex-col sm:flex-row items-center justify-between mb-6 gap-4 animate-fadeIn animate-delay-100">
+      <input id="searchBox" type="text" placeholder="শিক্ষকের নাম লিখুন..." 
+             class="p-2 rounded border w-full sm:w-1/3 focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500" />
+      <button onclick="toggleView()" 
+              class="bg-cyan-600 text-white px-4 py-2 rounded shadow hover:bg-cyan-700 transition">
+        <i class="bi bi-grid"></i> ভিউ পরিবর্তন
+      </button>
+    </div>
+
+    <!-- Teachers Container -->
+    <div id="teacherList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 transition">
+      <!-- Cards will be inserted here -->
+    </div>
+  </section>
+  
+  
+  
+
+  <!-- About Section -->
+  <section id="about" class="max-w-5xl mx-auto p-6 mt-12 bg-white rounded-lg shadow-md">
+    <h2 class="text-2xl font-semibold mb-4 text-soil border-b-2 border-brown-200 pb-2">বিভাগ পরিচিতি</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          ১৯৮৫ সালে প্রতিষ্ঠিত মৃত্তিকা বিজ্ঞান বিভাগ কৃষি উন্নয়ন ও মৃত্তিকা সম্পদ ব্যবস্থাপনায় বিশেষ ভূমিকা রাখছে। 
+          আমাদের বিভাগে মৃত্তিকা বিজ্ঞানের তাত্ত্বিক ও ব্যবহারিক উভয় দিকেই গভীরভাবে পাঠদান করা হয়। 
+        </p>
+        <p class="text-gray-700 leading-relaxed">
+          আমরা মৃত্তিকা স্বাস্থ্য, উর্বরতা ব্যবস্থাপনা এবং টেকসই কৃষি পদ্ধতি সম্পর্কে গবেষণা ও প্রশিক্ষণ প্রদান করি। 
+          আমাদের লক্ষ্য দক্ষ মৃত্তিকা বিজ্ঞানী গড়ে তোলা যারা কৃষি খাতের উন্নয়নে অবদান রাখবে।
+        </p>
+      </div>
+      <div class="bg-amber-50 p-6 rounded-lg">
+        <h3 class="text-xl font-bold mb-3 text-soil">আমাদের সাফল্য</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <i class="bi bi-check-circle-fill text-soil mt-1 mr-2"></i>
+            <span>বিগত ৫ বছরে ১০০% পাসের হার</span>
+          </li>
+          <li class="flex items-start">
+            <i class="bi bi-check-circle-fill text-soil mt-1 mr-2"></i>
+            <span>জাতীয় পর্যায়ে গবেষণা পুরস্কার ২০২২</span>
+          </li>
+          <li class="flex items-start">
+            <i class="bi bi-check-circle-fill text-soil mt-1 mr-2"></i>
+            <span>কৃষি মন্ত্রণালয়ের সাথে সমন্বিত প্রকল্প</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facilities Section -->
+  <section id="facilities" class="max-w-5xl mx-auto p-6 mt-12 bg-white rounded-lg shadow-md">
+    <h2 class="text-2xl font-semibold mb-6 text-soil border-b-2 border-brown-200 pb-2">আমাদের সুবিধাদি</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="soil-feature bg-amber-50 p-6 rounded-lg">
+        <div class="text-soil text-4xl mb-3">
+          <i class="bi bi-droplet"></i>
+        </div>
+        <h3 class="text-lg font-bold mb-2 text-soil">মৃত্তিকা রসায়ন ল্যাব</h3>
+        <p class="text-gray-700">pH, EC, জৈব পদার্থ ও পুষ্টি উপাদান বিশ্লেষণ</p>
+      </div>
+      <div class="soil-feature bg-amber-50 p-6 rounded-lg">
+        <div class="text-soil text-4xl mb-3">
+          <i class="bi bi-binoculars"></i>
+        </div>
+        <h3 class="text-lg font-bold mb-2 text-soil">মৃত্তিকা পদার্থবিজ্ঞান ল্যাব</h3>
+        <p class="text-gray-700">মৃত্তিকা গঠন, ঘনত্ব ও জল ধারণ ক্ষমতা পরীক্ষা</p>
+      </div>
+      <div class="soil-feature bg-amber-50 p-6 rounded-lg">
+        <div class="text-soil text-4xl mb-3">
+          <i class="bi bi-microwave"></i>
+        </div>
+        <h3 class="text-lg font-bold mb-2 text-soil">স্পেক্ট্রোস্কোপি ল্যাব</h3>
+        <p class="text-gray-700">মৃত্তিকায় ভারী ধাতুর উপস্থিতি নির্ণয়</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Section -->
+  <section id="research" class="max-w-5xl mx-auto p-6 mt-12 bg-white rounded-lg shadow-md">
+    <h2 class="text-2xl font-semibold mb-6 text-soil border-b-2 border-brown-200 pb-2">গবেষণা ক্ষেত্র</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-xl font-bold mb-3 text-soil">চলমান গবেষণা</h3>
+        <ul class="list-disc ml-5 space-y-2 text-gray-700">
+          <li>জৈব কৃষি ও মৃত্তিকা স্বাস্থ্য</li>
+          <li>মৃত্তিকা সংরক্ষণ প্রযুক্তি</li>
+          <li>জলবায়ু পরিবর্তনে মৃত্তিকার অভিযোজন</li>
+          <li>জৈব সারের কার্যকারিতা মূল্যায়ন</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold mb-3 text-soil">শিল্প সহযোগিতা</h3>
+        <div class="bg-amber-50 p-4 rounded-lg">
+          <p class="text-gray-700">আমরা নিম্নোক্ত প্রতিষ্ঠানের সাথে গবেষণা প্রকল্প বাস্তবায়ন করছি:</p>
+          <ul class="list-disc ml-5 mt-2 space-y-1 text-gray-700">
+            <li>বাংলাদেশ কৃষি গবেষণা ইনস্টিটিউট (BARI)</li>
+            <li>মৃত্তিকা সম্পদ উন্নয়ন ইনস্টিটিউট (SRDI)</li>
+            <li>বাংলাদেশ ধান গবেষণা ইনস্টিটিউট (BRRI)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses Section -->
+  <section id="courses" class="max-w-5xl mx-auto p-6 mt-12 bg-white rounded-lg shadow-md">
+    <h2 class="text-2xl font-semibold mb-6 text-soil border-b-2 border-brown-200 pb-2">আমাদের কোর্সসমূহ</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="border border-brown-200 rounded-lg overflow-hidden">
+        <div class="bg-soil text-white p-4">
+          <h3 class="text-xl font-bold">স্নাতক (সম্মান) প্রোগ্রাম</h3>
+        </div>
+        <div class="p-4">
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <i class="bi bi-tree text-soil mt-1 mr-2"></i>
+              <span>মৃত্তিকা উর্বরতা ও সার ব্যবস্থাপনা</span>
+            </li>
+            <li class="flex items-start">
+              <i class="bi bi-droplet-half text-soil mt-1 mr-2"></i>
+              <span>মৃত্তিকা রসায়ন ও জীববিজ্ঞান</span>
+            </li>
+            <li class="flex items-start">
+              <i class="bi bi-geo-alt text-soil mt-1 mr-2"></i>
+              <span>মৃত্তিকা শ্রেণীবিন্যাস ও জরিপ</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border border-brown-200 rounded-lg overflow-hidden">
+        <div class="bg-soil text-white p-4">
+          <h3 class="text-xl font-bold">স্নাতকোত্তর প্রোগ্রাম</h3>
+        </div>
+        <div class="p-4">
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <i class="bi bi-cloud-sun text-soil mt-1 mr-2"></i>
+              <span>জলবায়ু পরিবর্তন ও মৃত্তিকা ব্যবস্থাপনা</span>
+            </li>
+            <li class="flex items-start">
+              <i class="bi bi-recycle text-soil mt-1 mr-2"></i>
+              <span>টেকসই মৃত্তিকা ব্যবহার</span>
+            </li>
+            <li class="flex items-start">
+              <i class="bi bi-flower1 text-soil mt-1 mr-2"></i>
+              <span>জৈব কৃষি পদ্ধতি</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="max-w-5xl mx-auto p-6 mt-12 bg-white rounded-lg shadow-md">
+    <h2 class="text-2xl font-semibold mb-6 text-soil border-b-2 border-brown-200 pb-2">যোগাযোগ</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <div class="flex items-start mb-4">
+          <i class="bi bi-geo-alt text-soil text-xl mt-1 mr-3"></i>
+          <div>
+            <h3 class="font-bold text-gray-800">ঠিকানা</h3>
+            <p class="text-gray-700">মৃত্তিকা বিজ্ঞান বিভাগ<br>সরকারি ব্রজমোহন কলেজ<br>বরিশাল ৮২০০, বাংলাদেশ</p>
+          </div>
+        </div>
+        <div class="flex items-start">
+          <i class="bi bi-envelope text-soil text-xl mt-1 mr-3"></i>
+          <div>
+            <h3 class="font-bold text-gray-800">ইমেইল</h3>
+            <p class="text-gray-700">soil.science@bmcollege.edu.bd</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="flex items-start mb-4">
+          <i class="bi bi-telephone text-soil text-xl mt-1 mr-3"></i>
+          <div>
+            <h3 class="font-bold text-gray-800">ফোন</h3>
+            <p class="text-gray-700">+৮৮০ ১৬৭৮-০০০০০০ (অফিস)<br>+৮৮০ ২-৯৬৬২৭৫০ (বিভাগ)</p>
+          </div>
+        </div>
+        <div class="flex items-start">
+          <i class="bi bi-clock text-soil text-xl mt-1 mr-3"></i>
+          <div>
+            <h3 class="font-bold text-gray-800">সময়সূচী</h3>
+            <p class="text-gray-700">সকাল ৮টা - বিকাল ৫টা<br>(শুক্রবার দুপুর ১টা পর্যন্ত)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-soil text-white mt-12">
+    <div class="max-w-6xl mx-auto px-6 py-8">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-lg font-bold mb-4">মৃত্তিকা বিজ্ঞান বিভাগ</h3>
+          <p class="text-amber-200">সরকারি ব্রজমোহন কলেজ, বরিশাল</p>
+          <p class="text-amber-200 mt-2">টেকসই কৃষি ও মৃত্তিকা ব্যবস্থাপনায় অগ্রণী ভূমিকা</p>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">গুরুত্বপূর্ণ লিংক</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-amber-200 hover:text-white transition">ভর্তি তথ্য</a></li>
+            <li><a href="#" class="text-amber-200 hover:text-white transition">শিক্ষাক্রম</a></li>
+            <li><a href="#" class="text-amber-200 hover:text-white transition">গবেষণা সুযোগ</a></li>
+            <li><a href="#" class="text-amber-200 hover:text-white transition">ইভেন্টস</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">সামাজিক যোগাযোগ</h4>
+          <div class="flex space-x-4">
+            <a href="#" class="text-amber-200 hover:text-white transition text-2xl"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-amber-200 hover:text-white transition text-2xl"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="text-amber-200 hover:text-white transition text-2xl"><i class="bi bi-linkedin"></i></a>
+          </div>
+          <div class="mt-4">
+            <h4 class="font-bold mb-2">নিউজলেটার সাবস্ক্রাইব</h4>
+            <div class="flex">
+              <input type="email" placeholder="আপনার ইমেইল" class="px-3 py-2 text-gray-800 rounded-l-md w-full">
+              <button class="bg-amber-800 px-4 py-2 rounded-r-md hover:bg-amber-900 transition">
+                <i class="bi bi-envelope"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-amber-800 mt-8 pt-6 text-center text-amber-300">
+        <p>&copy; ২০২৫ সরকারি ব্রজমোহন কলেজ - মৃত্তিকা বিজ্ঞান বিভাগ। সর্বস্বত্ব সংরক্ষিত।</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    // Initialize Swiper
+    const swiper = new Swiper(".mySwiper", {
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      loop: true,
+    });
+  
+    
+    
+    
+    
+    <!-- Script for Teachers -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    // Initialize Swiper
+    const swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      loop: true,
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
+      speed: 1000,
+    });
+
+    let teachers = [];
+    let grid = true;
+
+    async function loadCSV() {
+      const res = await fetch('https://bm-c.vercel.app/teacher.csv');
+      const text = await res.text();
+      const rows = text.trim().split('\n').slice(1);
+      teachers = rows
+        .map(row => row.split(','))
+        .filter(cols => cols[6] && cols[6].trim() === "মৃত্তিকা বিজ্ঞান");
+
+      // If no teachers found in CSV, use sample data
+      if (teachers.length === 0) {
+       teachers = [
+          ["1", "বরিশাল", "25th", "ড. আহসান হাবীব", "ড. আহসান হাবীব", "অধ্যাপক", "অর্থনীতি", "01712345678", "ahsan.habib@bmcollege.edu.bd", "2010-05-15", "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"],
+          ["2", "ঢাকা", "28th", "ড. ফারহানা ইসলাম", "ড. ফারহানা ইসলাম", "সহযোগী অধ্যাপক", "অর্থনীতি", "01787654321", "farhana.islam@bmcollege.edu.bd", "2012-08-22", "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb- 4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80"],
+          ["3", "খুলনা", "30th", "ড. রিয়াদ হোসেন", "ড. রিয়াদ হোসেন", "সহকারী অধ্যাপক", "অর্থনীতি", "01811223344", "riad.hossain@bmcollege.edu.bd", "2015-03-10", "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"]
+        ];
+      }
+
+      displayTeachers(teachers);
+    }
+
+    function displayTeachers(data) {
+      const list = document.getElementById("teacherList");
+      list.innerHTML = '';
+
+      data.forEach(cols => {
+        const [
+          id, district, batch, nameEn, nameBn, designation, department,
+          mobile, email, joiningDate, imageUrl
+        ] = cols;
+
+        const card = document.createElement("div");
+        card.className = grid
+          ? "teacher-card bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center hover:shadow-lg transition-all duration-300 animate-fadeIn"
+          : "teacher-card bg-white rounded-lg shadow-md p-4 flex items-start gap-4 hover:shadow-lg transition-all duration-300 animate-fadeIn";
+
+        card.innerHTML = `
+          <img src="${imageUrl || 'https://bm-c.vercel.app/paeson.png'}" 
+               onerror="this.src='https://bm-c.vercel.app/paeson.png'" 
+               class="${grid ? 'w-24 h-24' : 'w-20 h-20'} rounded-full object-cover border-4 border-blue-100" />
+          <div class="${grid ? 'mt-3' : ''}">
+            <h3 class="text-lg font-bold text-blue-800">${nameEn || "নাম নেই"}</h3>
+            <p class="text-blue-600">${designation || "পদবী নেই"} | ${batch || "N/A"} BCS</p>
+            <p class="text-sm text-gray-600 mt-1">নিজ জেলাঃ ${district || "N/A"}</p>
+            <p class="text-sm text-gray-600">ফোনঃ 0${mobile || "N/A"}</p>
+            <p class="text-sm text-gray-600">ইমেইলঃ ${email || "N/A"}</p>
+            <p class="text-xs text-gray-500 mt-1">যোগদানের তারিখঃ ${joiningDate?.replace("'", "") || "N/A"}</p>
+          </div>
+        `;
+        list.appendChild(card);
+      });
+    }
+
+    function toggleView() {
+      grid = !grid;
+      displayTeachers(teachers);
+    }
+
+    document.getElementById("searchBox").addEventListener("input", (e) => {
+      const keyword = e.target.value.toLowerCase();
+      const filtered = teachers.filter(t => 
+        t[3]?.toLowerCase().includes(keyword) || 
+        t[4]?.toLowerCase().includes(keyword) ||
+        t[5]?.toLowerCase().includes(keyword) ||
+        t[1]?.toLowerCase().includes(keyword)
+      );
+      displayTeachers(filtered);
+    });
+
+    // Load teachers on page load
+    document.addEventListener('DOMContentLoaded', loadCSV);
+  </script>
+</body>
+</html>

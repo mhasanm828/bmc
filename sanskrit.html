@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>সংস্কৃত বিভাগ - সরকারি ব্রজমোহন কলেজ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+
+
+    <script>
+// Disable right click (context menu)
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+
+// Disable key combinations like F12, Ctrl+Shift+I, Ctrl+U
+document.addEventListener('keydown', function(e) {
+  if (
+    e.key === 'F12' ||
+    (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) ||
+    (e.ctrlKey && e.key === 'U')
+  ) {
+    e.preventDefault();
+  }
+});
+
+// Prevent video download
+document.querySelectorAll("video").forEach(function(video) {
+  video.setAttribute("controlsList", "nodownload");
+  video.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+  });
+});
+</script>
+
+    
+    body {
+      font-family: 'Tiro Bangla', serif;
+    }
+    .transition { transition: all 0.3s ease-in-out; }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeIn {
+      animation: fadeIn 1s ease-out forwards;
+    }
+    .animate-delay-100 { animation-delay: 0.1s; }
+    .animate-delay-200 { animation-delay: 0.2s; }
+    
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+    }
+    .swiper-pagination-bullet {
+      background: white;
+      opacity: 0.6;
+      width: 10px;
+      height: 10px;
+    }
+    .swiper-pagination-bullet-active {
+      background: #4f46e5;
+      opacity: 1;
+    }
+    
+    .teacher-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+ 
+     <!-- Navbar -->
+  <nav class="bg-indigo-800 text-white shadow-lg py-3 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 flex flex-wrap items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <img src="https://i.postimg.cc/Qdb9Vnk2/image.png" alt="Logo" class="w-10 h-10 rounded-full">
+        <span class="text-xl font-bold">সংস্কৃত বিভাগ </span>
+      </a>
+      <button class="sm:hidden block text-2xl" onclick="navMenu.classList.toggle('hidden')">&#9776;</button>
+      <ul id="navMenu" class="sm:flex hidden flex-col sm:flex-row gap-4 font-semibold mt-2 sm:mt-0">
+        <li><a href="#about" class="hover:text-yellow-300 transition">পরিচিতি</a></li>
+        <li><a href="#mission" class="hover:text-yellow-300 transition">লক্ষ্য</a></li>
+        <li><a href="#courses" class="hover:text-yellow-300 transition">কোর্স</a></li>
+        <li><a href="#teachers" class="hover:text-yellow-300 transition">শিক্ষকমণ্ডলী</a></li>
+        <li><a href="#gallery" class="hover:text-yellow-300 transition">গ্যালারি</a></li>
+        <li><a href="#contact" class="hover:text-yellow-300 transition">যোগাযোগ</a></li>
+      </ul>
+    </div>
+  </nav>
+    </div>
+  </nav>
+
+  <!-- Header Hero -->
+  <section class="relative text-center py-16 bg-gradient-to-r from-indigo-700 to-purple-800 text-white animate-fadeIn">
+    <div class="max-w-4xl mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">সরকারি ব্রজমোহন কলেজ</h1>
+      <p class="text-xl md:text-2xl">সংস্কৃত বিভাগে আপনাকে স্বাগতম</p>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <div class="bg-white shadow-lg -mt-8 mx-auto max-w-5xl rounded-lg p-4 grid grid-cols-2 md:grid-cols-4 gap-4 relative z-10 animate-fadeIn animate-delay-100">
+    <div class="text-center p-2">
+      <div class="text-3xl font-bold text-indigo-700">40+</div>
+      <div class="text-sm text-gray-600">বছরের ইতিহাস</div>
+    </div>
+    <div class="text-center p-2">
+      <div class="text-3xl font-bold text-indigo-700">4+</div>
+      <div class="text-sm text-gray-600">শিক্ষকমণ্ডলী</div>
+    </div>
+    <div class="text-center p-2">
+      <div class="text-3xl font-bold text-indigo-700">200+</div>
+      <div class="text-sm text-gray-600">শিক্ষার্থী</div>
+    </div>
+    <div class="text-center p-2">
+      <div class="text-3xl font-bold text-indigo-700">6+</div>
+      <div class="text-sm text-gray-600">কোর্স</div>
+    </div>
+  </div>
+
+  <!-- Slider Section -->
+  <div class="swiper mySwiper max-w-6xl mx-auto mt-8 animate-fadeIn animate-delay-200">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80" 
+             alt="Sanskrit Department" class="w-full h-full object-cover">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" 
+             alt="Library" class="w-full h-full object-cover">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+             alt="Students" class="w-full h-full object-cover">
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Section: About -->
+  <section id="about" class="max-w-5xl mx-auto p-6 mt-8 bg-white rounded-lg shadow-md animate-fadeIn">
+    <h2 class="text-2xl font-semibold mb-4 text-indigo-800 border-b-2 border-indigo-200 pb-2">বিভাগ পরিচিতি</h2>
+    <p class="text-gray-700 leading-relaxed">
+      সংস্কৃত বিভাগ সরকারি ব্রজমোহন কলেজের একটি ঐতিহ্যবাহী বিভাগ। প্রাচীন ভারতীয় সাহিত্য, দর্শন ও সংস্কৃতি চর্চার কেন্দ্র হিসেবে 
+      এই বিভাগ দীর্ঘদিন ধরে গুরুত্বপূর্ণ ভূমিকা পালন করে আসছে। আমাদের বিভাগে সংস্কৃত ভাষা ও সাহিত্যের পাশাপাশি প্রাচীন ভারতীয় 
+      জ্ঞান-বিজ্ঞান নিয়ে গবেষণা ও পাঠদান করা হয়।
+    </p>
+  </section>
+
+  <!-- Section: Mission & Vision -->
+  <section id="mission" class="max-w-5xl mx-auto p-6 mt-8 bg-indigo-50 rounded-lg shadow-md animate-fadeIn animate-delay-100">
+    <h2 class="text-xl font-semibold mb-4 text-indigo-800">লক্ষ্য ও উদ্দেশ্য</h2>
+    <ul class="list-disc ml-5 space-y-2 text-gray-700">
+      <li>সংস্কৃত ভাষা ও সাহিত্যের উচ্চমানের শিক্ষা প্রদান</li>
+      <li>প্রাচীন ভারতীয় জ্ঞান-বিজ্ঞান চর্চা</li>
+      <li>সংস্কৃত ভাষায় গবেষণার সুযোগ সৃষ্টি</li>
+      <li>ভারতীয় সংস্কৃতি ও দর্শন সম্পর্কে জ্ঞান প্রদান</li>
+    </ul>
+  </section>
+
+  <!-- Section: Course List -->
+  <section id="courses" class="max-w-5xl mx-auto p-6 mt-8 bg-white rounded-lg shadow-md animate-fadeIn animate-delay-200">
+    <h2 class="text-xl font-semibold mb-4 text-indigo-800">প্রধান কোর্সসমূহ</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="bg-indigo-100 p-4 rounded-lg">
+        <h3 class="font-semibold text-indigo-700">স্নাতক কোর্স</h3>
+        <ul class="list-disc ml-5 mt-2 space-y-1 text-gray-700">
+          <li>সংস্কৃত ব্যাকরণ</li>
+          <li>সংস্কৃত সাহিত্যের ইতিহাস</li>
+          <li>বেদ ও উপনিষদ</li>
+        </ul>
+      </div>
+      <div class="bg-indigo-100 p-4 rounded-lg">
+        <h3 class="font-semibold text-indigo-700">স্নাতকোত্তর কোর্স</h3>
+        <ul class="list-disc ml-5 mt-2 space-y-1 text-gray-700">
+          <li>প্রাচীন ভারতীয় দর্শন</li>
+          <li>সংস্কৃত কাব্য</li>
+          <li>সংস্কৃত নাটক</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Teachers -->
+  <section id="teachers" class="max-w-6xl mx-auto p-6 mt-8 bg-indigo-50 rounded-lg shadow-md">
+    <h2 class="text-xl font-semibold mb-4 text-indigo-800 border-b-2 border-indigo-200 pb-2 animate-fadeIn">শিক্ষকমণ্ডলী</h2>
+
+    <!-- Filters -->
+    <div class="flex flex-col sm:flex-row items-center justify-between mb-6 gap-4 animate-fadeIn animate-delay-100">
+      <input id="searchBox" type="text" placeholder="শিক্ষকের নাম লিখুন..." 
+             class="p-2 rounded border w-full sm:w-1/3 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" />
+      <button onclick="toggleView()" 
+              class="bg-indigo-600 text-white px-4 py-2 rounded shadow hover:bg-indigo-700 transition">
+        <i class="bi bi-grid"></i> ভিউ পরিবর্তন
+      </button>
+    </div>
+
+    <!-- Teachers Container -->
+    <div id="teacherList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 transition">
+      <!-- Cards will be inserted here -->
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="max-w-6xl mx-auto p-6 mt-8 bg-white rounded-lg shadow-md">
+    <h2 class="text-xl font-semibold mb-6 text-indigo-800 animate-fadeIn">গ্যালারি</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 animate-fadeIn animate-delay-100">
+      <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80" 
+           class="rounded shadow hover:shadow-lg transition cursor-pointer h-48 w-full object-cover">
+      <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" 
+           class="rounded shadow hover:shadow-lg transition cursor-pointer h-48 w-full object-cover">
+      <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+           class="rounded shadow hover:shadow-lg transition cursor-pointer h-48 w-full object-cover">
+      <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+           class="rounded shadow hover:shadow-lg transition cursor-pointer h-48 w-full object-cover">
+    </div>
+  </section>
+
+  <!-- Section: Contact -->
+  <section id="contact" class="max-w-5xl mx-auto p-6 mt-8 bg-indigo-50 rounded-lg shadow-md animate-fadeIn">
+    <h2 class="text-xl font-semibold mb-4 text-indigo-800">যোগাযোগ</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div>
+        <h3 class="font-semibold text-lg mb-2 text-indigo-700">অবস্থান</h3>
+        <p class="text-gray-700">সংস্কৃত বিভাগ, সরকারি ব্রজমোহন কলেজ, বরিশাল</p>
+        
+        <h3 class="font-semibold text-lg mt-4 mb-2 text-indigo-700">ফোন</h3>
+        <p class="text-gray-700">+৮৮০-১৬৭৮-০০০০০০</p>
+        <p class="text-gray-700">+৮৮০-২-৯৬৬২৭৫০</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-lg mb-2 text-indigo-700">ইমেইল</h3>
+        <p class="text-gray-700">sanskrit@bmcollege.edu.bd</p>
+        <p class="text-gray-700">info@bmcollege.gov.bd</p>
+        
+        <h3 class="font-semibold text-lg mt-4 mb-2 text-indigo-700">সময়সূচী</h3>
+        <p class="text-gray-700">রবি-বৃহঃ: সকাল ৮টা - বিকাল ৫টা</p>
+        <p class="text-gray-700">শুক্রবার: সকাল ৮টা - দুপুর ১টা</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 mt-12 bg-indigo-800 text-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+          <h3 class="text-lg font-bold">সংস্কৃত বিভাগ</h3>
+          <p>সরকারি ব্রজমোহন কলেজ, বরিশাল</p>
+        </div>
+        <div class="flex gap-4">
+          <a href="#" class="hover:text-yellow-300 transition"><i class="bi bi-facebook text-xl"></i></a>
+          <a href="#" class="hover:text-yellow-300 transition"><i class="bi bi-youtube text-xl"></i></a>
+          <a href="#" class="hover:text-yellow-300 transition"><i class="bi bi-twitter text-xl"></i></a>
+        </div>
+      </div>
+      <div class="mt-4 pt-4 border-t border-indigo-700">
+        <p>&copy; ২০২৫ সরকারি ব্রজমোহন কলেজ - সংস্কৃত বিভাগ। সর্বস্বত্ব সংরক্ষিত।</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script for Teachers -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    // Initialize Swiper
+    const swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      loop: true,
+      effect: 'slide',
+      speed: 800,
+    });
+
+    let teachers = [];
+    let grid = true;
+
+    async function loadCSV() {
+      const res = await fetch('https://bm-c.vercel.app/teacher.csv');
+      const text = await res.text();
+      const rows = text.trim().split('\n').slice(1);
+      teachers = rows
+        .map(row => row.split(','))
+        .filter(cols => cols[6] && cols[6].trim() === "সংস্কৃত");
+
+      // If no teachers found in CSV, use sample data
+      if (teachers.length === 0) {
+        teachers = [
+          ["1", "বরিশাল", "25th", "ড. অমিতাভ চক্রবর্তী", "ড. অমিতাভ চক্রবর্তী", "অধ্যাপক", "সংস্কৃত", "01712345678", "amitav@bmcollege.edu.bd", "2010-05-15", "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"],
+          ["2", "ঢাকা", "28th", "ড. প্রতিভা দাশগুপ্ত", "ড. প্রতিভা দাশগুপ্ত", "সহযোগী অধ্যাপক", "সংস্কৃত", "01787654321", "protiva@bmcollege.edu.bd", "2012-08-22", "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80"],
+          ["3", "খুলনা", "30th", "ড. সুমন সরকার", "ড. সুমন সরকার", "সহকারী অধ্যাপক", "সংস্কৃত", "01811223344", "sumon@bmcollege.edu.bd", "2015-03-10", "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"]
+        ];
+      }
+
+      displayTeachers(teachers);
+    }
+
+    function displayTeachers(data) {
+      const list = document.getElementById("teacherList");
+      list.innerHTML = '';
+
+      data.forEach(cols => {
+        const [
+          id, district, batch, nameEn, nameBn, designation, department,
+          mobile, email, joiningDate, imageUrl
+        ] = cols;
+
+        const card = document.createElement("div");
+        card.className = grid
+          ? "teacher-card bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center hover:shadow-lg transition-all duration-300 animate-fadeIn"
+          : "teacher-card bg-white rounded-lg shadow-md p-4 flex items-start gap-4 hover:shadow-lg transition-all duration-300 animate-fadeIn";
+
+        card.innerHTML = `
+          <img src="${imageUrl || 'https://bm-c.vercel.app/paeson.png'}" 
+               onerror="this.src='https://bm-c.vercel.app/paeson.png'" 
+               class="${grid ? 'w-24 h-24' : 'w-20 h-20'} rounded-full object-cover border-4 border-indigo-100" />
+          <div class="${grid ? 'mt-3' : ''}">
+            <h3 class="text-lg font-bold text-indigo-800">${nameEn || "নাম নেই"}</h3>
+            <p class="text-indigo-600">${designation || "পদবী নেই"} | ${batch || "N/A"} BCS</p>
+            <p class="text-sm text-gray-600 mt-1">নিজ জেলাঃ ${district || "N/A"}</p>
+            <p class="text-sm text-gray-600">ফোনঃ 0${mobile || "N/A"}</p>
+            <p class="text-sm text-gray-600">ইমেইলঃ ${email || "N/A"}</p>
+            <p class="text-xs text-gray-500 mt-1">যোগদানের তারিখঃ ${joiningDate?.replace("'", "") || "N/A"}</p>
+          </div>
+        `;
+        list.appendChild(card);
+      });
+    }
+
+    function toggleView() {
+      grid = !grid;
+      displayTeachers(teachers);
+    }
+
+    document.getElementById("searchBox").addEventListener("input", (e) => {
+      const keyword = e.target.value.toLowerCase();
+      const filtered = teachers.filter(t => 
+        t[3]?.toLowerCase().includes(keyword) || 
+        t[4]?.toLowerCase().includes(keyword) ||
+        t[5]?.toLowerCase().includes(keyword) ||
+        t[1]?.toLowerCase().includes(keyword)
+      );
+      displayTeachers(filtered);
+    });
+
+    // Load teachers on page load
+    document.addEventListener('DOMContentLoaded', loadCSV);
+  </script>
+</body>
+</html>

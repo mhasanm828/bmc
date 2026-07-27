@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Political Science Department - BM College</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <style>
+    body { font-family: 'Tiro Bangla', serif; }
+  </style>
+</head>
+
+  <script>
+// Disable right click (context menu)
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+
+// Disable key combinations like F12, Ctrl+Shift+I, Ctrl+U
+document.addEventListener('keydown', function(e) {
+  if (
+    e.key === 'F12' ||
+    (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) ||
+    (e.ctrlKey && e.key === 'U')
+  ) {
+    e.preventDefault();
+  }
+});
+
+// Prevent video download
+document.querySelectorAll("video").forEach(function(video) {
+  video.setAttribute("controlsList", "nodownload");
+  video.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+  });
+});
+</script>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-blue-900 text-white p-4 shadow-md">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <a href="index.html" class="flex items-center space-x-2">
+        <img src="https://i.postimg.cc/Qdb9Vnk2/image.png" alt="Logo" class="w-8 h-8 rounded-full bg-white p-1"/>
+        <span class="text-xl font-bold">পলিটিকাল সাইন্স বিভাগ</span>
+      </a>
+      <div class="space-x-4 hidden md:block">
+        <a href="#about" class="hover:underline">পরিচিতি</a>
+        <a href="#slider" class="hover:underline">ছবি</a>
+        <a href="#gallery" class="hover:underline">গ্যালারি</a>
+        <a href="#activities" class="hover:underline">কার্যক্রম</a>
+        <a href="#alumni" class="hover:underline">অ্যালামনাই</a>
+        <a href="#teachers" class="hover:underline">শিক্ষক</a>
+        <a href="#contact" class="hover:underline">যোগাযোগ</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-r from-blue-700 to-blue-900 text-white text-center py-16">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">পলিটিকাল সাইন্স বিভাগ</h1>
+    <p class="text-xl md:text-2xl">সরকারি ব্রজমোহন কলেজ, বরিশাল</p>
+  </section>
+
+  <!-- Slider -->
+  <section id="slider" class="max-w-6xl mx-auto p-6 mt-10">
+    <h2 class="text-2xl font-semibold mb-4 text-blue-800 text-center">বিভাগের কিছু মুহূর্ত</h2>
+    <div class="swiper mySwiper rounded-lg shadow-lg">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1581092160609-b6a5c38e97d9" class="w-full h-72 object-cover rounded" alt=""></div>
+        <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1579154203451-0efef35a1d06" class="w-full h-72 object-cover rounded" alt=""></div>
+        <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1614696608707-b0325e6a59b9" class="w-full h-72 object-cover rounded" alt=""></div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="max-w-5xl mx-auto p-6 mt-10 bg-white rounded-lg shadow-md">
+    <h2 class="text-2xl font-semibold mb-4 text-blue-800">বিভাগ পরিচিতি</h2>
+    <p class="text-gray-700 leading-relaxed">
+      পলিটিকাল সাইন্স বিভাগ রাষ্ট্রবিজ্ঞান, প্রশাসন, আন্তর্জাতিক সম্পর্ক এবং সমাজতত্ত্ব নিয়ে গভীর গবেষণা এবং শিক্ষাদান করে। এ বিভাগটি ছাত্রছাত্রীদের রাজনৈতিক ধারণা, নেতৃত্বের দক্ষতা এবং সামাজিক সচেতনতা বৃদ্ধির জন্য কাজ করে।
+    </p>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="max-w-6xl mx-auto p-6 mt-10 bg-blue-50 rounded-lg shadow-md">
+    <h2 class="text-2xl font-semibold mb-4 text-blue-800 text-center">ছবি গ্যালারি</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <img src="https://images.unsplash.com/photo-1528460033278-a6ba57020420" alt="" class="w-full h-48 object-cover rounded shadow-md hover:scale-105 transition"/>
+      <img src="https://images.unsplash.com/photo-1603575448362-07d0f0b9c156" alt="" class="w-full h-48 object-cover rounded shadow-md hover:scale-105 transition"/>
+      <img src="https://images.unsplash.com/photo-1617084230997-40a5f2f051ec" alt="" class="w-full h-48 object-cover rounded shadow-md hover:scale-105 transition"/>
+      <img src="https://images.unsplash.com/photo-1593810215447-1193b2c5c3b2" alt="" class="w-full h-48 object-cover rounded shadow-md hover:scale-105 transition"/>
+      <img src="https://images.unsplash.com/photo-1606760727685-6db02906d5e9" alt="" class="w-full h-48 object-cover rounded shadow-md hover:scale-105 transition"/>
+      <img src="https://images.unsplash.com/photo-1520072959219-c595dc870360" alt="" class="w-full h-48 object-cover rounded shadow-md hover:scale-105 transition"/>
+    </div>
+  </section>
+
+  <!-- Activities -->
+  <section id="activities" class="max-w-6xl mx-auto p-6 mt-10 bg-white rounded-lg shadow-md">
+    <h2 class="text-2xl font-semibold mb-4 text-blue-800">বিভাগীয় কার্যক্রম</h2>
+    <p class="text-gray-700 leading-relaxed mb-4">
+      বিভাগে নিয়মিত সেমিনার, ডিবেট কম্পিটিশন, রাজনৈতিক বিশ্লেষণ কর্মশালা এবং সমাজসেবামূলক প্রোগ্রাম অনুষ্ঠিত হয়।
+    </p>
+    <ul class="list-disc list-inside text-gray-700">
+      <li>বার্ষিক পলিটিকাল সায়েন্স ফেস্ট</li>
+      <li>জাতীয় ও আন্তর্জাতিক সেমিনার</li>
+      <li>ছাত্রছাত্রীদের নেতৃত্ব উন্নয়ন কর্মশালা</li>
+      <li>সমাজসেবা প্রজেক্ট এবং প্রচারাভিযান</li>
+    </ul>
+  </section>
+
+  <!-- Alumni -->
+  <section id="alumni" class="max-w-6xl mx-auto p-6 mt-10 bg-blue-50 rounded-lg shadow-md">
+    <h2 class="text-2xl font-semibold mb-4 text-blue-800 text-center">অ্যালামনাই হাইলাইট</h2>
+    <p class="text-gray-700 leading-relaxed text-center mb-4">
+      আমাদের গর্বিত প্রাক্তন শিক্ষার্থীরা দেশের বিভিন্ন গুরুত্বপূর্ণ প্রশাসনিক, কূটনৈতিক এবং শিক্ষাক্ষেত্রে সাফল্যের সাথে কাজ করে যাচ্ছেন।
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+      <div class="p-4 bg-white rounded shadow hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" alt="" class="w-24 h-24 rounded-full mx-auto object-cover mb-3">
+        <h3 class="font-bold text-blue-700">মোহাম্মদ রিয়াজ</h3>
+        <p class="text-gray-600">ডেপুটি কমিশনার</p>
+      </div>
+      <div class="p-4 bg-white rounded shadow hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2" alt="" class="w-24 h-24 rounded-full mx-auto object-cover mb-3">
+        <h3 class="font-bold text-blue-700">সাদিয়া জাহান</h3>
+        <p class="text-gray-600">রাষ্ট্রদূত</p>
+      </div>
+      <div class="p-4 bg-white rounded shadow hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="" class="w-24 h-24 rounded-full mx-auto object-cover mb-3">
+        <h3 class="font-bold text-blue-700">মাহমুদুল হাসান</h3>
+        <p class="text-gray-600">বিশ্ববিদ্যালয় শিক্ষক</p>
+      </div>
+    </div>
+  </section>
+
+ <!-- Section: Teachers -->
+  <section id="teachers" class="max-w-6xl mx-auto p-6 mt-16 bg-gray-100 rounded-lg shadow-md">
+    <h2 class="text-3xl font-bold mb-6 text-red-800 heading-font border-b-2 border-red-200 pb-2 animate-fadeIn">Our Faculty</h2>
+
+    <!-- Filters -->
+    <div class="flex flex-col sm:flex-row items-center justify-between mb-6 gap-4 animate-fadeIn animate-delay-100">
+      <input id="searchBox" type="text" placeholder="Search faculty by name..." 
+             class="p-2 rounded border w-full sm:w-1/3 focus:ring-2 focus:ring-red-500 focus:border-red-500" />
+      <button onclick="toggleView()" 
+              class="bg-red-700 text-white px-4 py-2 rounded shadow hover:bg-red-800 transition flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+        </svg>
+        Toggle View
+      </button>
+    </div>
+
+    <!-- Teachers Container -->
+    <div id="teacherList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 transition">
+      <!-- Cards will be inserted here -->
+    </div>
+  </section>
+  
+  
+  <!-- Contact -->
+  <section id="contact" class="max-w-5xl mx-auto p-6 mt-10 bg-white rounded-lg shadow-md">
+    <h2 class="text-xl font-semibold mb-4 text-blue-800">যোগাযোগ</h2>
+    <p class="text-gray-700 mb-2">ঠিকানা: সরকারি ব্রজমোহন কলেজ, বরিশাল</p>
+    <p class="text-gray-700 mb-2">ফোন: +880 1234-567890</p>
+    <p class="text-gray-700 mb-2">ইমেইল: politicalscience@bmcollege.edu.bd</p>
+    <div class="mt-4">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3689.561292481226!2d90.36843371496018!3d22.7010025851226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30aaf4b414af2099%3A0xb9a6d4507b048205!2sBM%20College!5e0!3m2!1sen!2sbd!4v1700000000000" width="100%" height="300" style="border:0;" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white mt-10 p-6 text-center">
+    <p>© 2025 পলিটিকাল সাইন্স বিভাগ, সরকারি ব্রজমোহন কলেজ</p>
+    <div class="mt-2">
+      <a href="index.html" class="hover:underline mr-3">মূল পৃষ্ঠা</a>
+      <a href="#about" class="hover:underline mr-3">পরিচিতি</a>
+      <a href="#slider" class="hover:underline mr-3">ছবি</a>
+      <a href="#gallery" class="hover:underline mr-3">গ্যালারি</a>
+      <a href="#activities" class="hover:underline mr-3">কার্যক্রম</a>
+      <a href="#alumni" class="hover:underline mr-3">অ্যালামনাই</a>
+      <a href="#teachers" class="hover:underline mr-3">শিক্ষক</a>
+      <a href="#contact" class="hover:underline">যোগাযোগ</a>
+    </div>
+  </footer>
+
+  <!-- Swiper script -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: { delay: 3000, disableOnInteraction: false },
+      pagination: { el: ".swiper-pagination", clickable: true },
+      navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+      loop: true,
+      effect: 'slide',
+      speed: 800,
+    });
+  
+    
+    
+    
+    
+    
+    
+    
+    
+      <!-- Script for Teachers -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    // Initialize Swiper
+    const swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      loop: true,
+      effect: 'slide',
+      speed: 800,
+    });
+
+    let teachers = [];
+    let grid = true;
+
+    async function loadCSV() {
+      const res = await fetch('https://bm-c.vercel.app/teacher.csv');
+      const text = await res.text();
+      const rows = text.trim().split('\n').slice(1);
+      teachers = rows
+        .map(row => row.split(','))
+        .filter(cols => cols[6] && cols[6].trim() === "রাষ্ট্রবিজ্ঞান");
+
+      displayTeachers(teachers);
+    }
+
+    function displayTeachers(data) {
+      const list = document.getElementById("teacherList");
+      list.innerHTML = '';
+
+      data.forEach(cols => {
+        const [
+          id, district, batch, nameEn, nameBn, designation, department,
+          mobile, email, joiningDate, imageUrl
+        ] = cols;
+
+        const card = document.createElement("div");
+        card.className = grid
+          ? "teacher-card bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center hover:shadow-lg transition-all duration-300 animate-fadeIn"
+          : "teacher-card bg-white rounded-lg shadow-md p-4 flex items-start gap-4 hover:shadow-lg transition-all duration-300 animate-fadeIn";
+
+        card.innerHTML = `
+          <img src="${imageUrl || 'https://bm-c.vercel.app/paeson.png'}" 
+               onerror="this.src='https://bm-c.vercel.app/paeson.png'" 
+               class="${grid ? 'w-24 h-24' : 'w-20 h-20'} rounded-full object-cover border-4 border-indigo-100" />
+          <div class="${grid ? 'mt-3' : ''}">
+            <h3 class="text-lg font-bold text-indigo-800">${nameEn || "নাম নেই"}</h3>
+            <p class="text-indigo-600">${designation || "পদবী নেই"} | ${batch || "N/A"} BCS</p>
+            <p class="text-sm text-gray-600 mt-1">নিজ জেলাঃ ${district || "N/A"}</p>
+            <p class="text-sm text-gray-600">ফোনঃ 0${mobile || "N/A"}</p>
+            <p class="text-sm text-gray-600">ইমেইলঃ ${email || "N/A"}</p>
+            <p class="text-xs text-gray-500 mt-1">যোগদানের তারিখঃ ${joiningDate?.replace("'", "") || "N/A"}</p>
+          </div>
+        `;
+        list.appendChild(card);
+      });
+    }
+
+    function toggleView() {
+      grid = !grid;
+      displayTeachers(teachers);
+    }
+
+    document.getElementById("searchBox").addEventListener("input", (e) => {
+      const keyword = e.target.value.toLowerCase();
+      const filtered = teachers.filter(t => 
+        t[3]?.toLowerCase().includes(keyword) || 
+        t[4]?.toLowerCase().includes(keyword) ||
+        t[5]?.toLowerCase().includes(keyword) ||
+        t[1]?.toLowerCase().includes(keyword)
+      );
+      displayTeachers(filtered);
+    });
+
+    // Load teachers on page load
+    document.addEventListener('DOMContentLoaded', loadCSV);
+  </script>
+</body>
+</html>                                       
+             

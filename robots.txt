@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /admin/
+Disallow: /private/
+
+Sitemap: https://bmcollege.site/sitemap.xml

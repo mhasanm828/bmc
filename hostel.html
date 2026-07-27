@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>হোস্টেল তথ্য - সরকারি বি.এম. কলেজ</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts - Bangla -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .bangla-font {
+            font-family: 'Hind Siliguri', sans-serif;
+        }
+        .header-bg {
+            background: linear-gradient(135deg, #1a5f7a 0%, #159895 100%);
+            color: white;
+        }
+        .hostel-card, .employee-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 25px;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        }
+        .hostel-card:hover, .employee-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 24px rgba(0,0,0,0.13);
+        }
+        .hostel-img {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+        .contact-badge {
+            background-color: #e3f2fd;
+            color: #0d6efd;
+        }
+        .section-title {
+            position: relative;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+        .section-title:after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, #1a5f7a, #159895);
+        }
+        .update-marquee {
+            background: #fff3cd;
+            color: #856404;
+            font-weight: 500;
+        }
+        .map-container {
+            height: 200px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .supervisor-info {
+            border-left: 3px solid #1a5f7a;
+            padding-left: 10px;
+            margin: 10px 0;
+        }
+        .employee-card img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+        .employee-card .card-body {
+            padding-top: 10px;
+        }
+        .badge-role {
+            font-size: 0.95em;
+            padding: 0.4em 0.8em;
+            margin-bottom: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header-bg py-4 mb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mx-auto text-center">
+                    <h1 class="bangla-font mb-3">সরকারি বি.এম. কলেজ হোস্টেল তথ্য</h1>
+                    <p class="lead bangla-font">ছাত্র-ছাত্রীদের আবাসন সুবিধা সম্পর্কিত তথ্য</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Update Marquee -->
+    <div class="update-marquee py-2 mb-4">
+        <div class="container">
+            <marquee behavior="scroll" direction="left" class="bangla-font">
+                <i class="fas fa-info-circle me-2"></i> সাইটের তথ্য শীঘ্রই আপডেট করা হবে। অনুগ্রহ করে অপেক্ষা করুন...
+                (Site data will be updated soon. Please wait...)
+            </marquee>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <!-- Introduction -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h3 class="card-title text-center bangla-font section-title">হোস্টেল সুবিধা</h3>
+                        <p class="card-text bangla-font text-center">
+                            কলেজে ছাত্র-ছাত্রীদের জন্য আবাসনের সুব্যবস্থা রয়েছে। বর্তমানে <strong>৪টি ছাত্রাবাস</strong> ও <strong>৩টি ছাত্রীনিবাস</strong> পরিচালিত হচ্ছে।
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Boys Hostel Section -->
+        <h2 class="text-center bangla-font section-title mt-5">ছাত্রাবাস সমূহ</h2>
+        <div class="row g-4">
+            <!-- মহাত্বা অশ্বিনী কুমার দত্ত ডিগ্রী হোস্টেল -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card hostel-card h-100 shadow">
+                    <img src="https://i.postimg.cc/kGgRm1CG/IMG-20250727-211612.jpg" class="hostel-img card-img-top" alt="মহাত্বা অশ্বিনী কুমার দত্ত ডিগ্রী হোস্টেল">
+                    <div class="card-body">
+                        <h5 class="card-title bangla-font">মহাত্বা অশ্বিনী কুমার দত্ত ডিগ্রী হোস্টেল</h5>
+                        <!-- Supervisor 1 -->
+                        <div class="supervisor-info bangla-font d-flex align-items-start mb-3">
+                            <img src="https://emis.gov.bd/EMIS/upload/HRM/EmployeeImage/00502/00502480_rylh3gh24d34w.jpg" alt="এস.এম. আসাদুজ্জামান" class="rounded-circle me-3" width="60" height="60">
+                            <div>
+                                <strong>তত্ত্বাবধায়ক:</strong><br>
+                                <span class="fw-bold">এস.এম. আসাদুজ্জামান</span><br>
+                                <span>সহযোগী অধ্যাপক | 24th BCS | বাংলা</span><br>
+                                <span>নিজ জেলাঃ পিরোজপুর</span><br>
+                                <span><i class="fas fa-phone-alt"></i> 01740990055</span><br>
+                                <span><i class="fas fa-envelope"></i> asaduzzaman24th@gmail.com</span><br>
+                                <span>যোগদানের তারিখঃ 27-Apr-2023</span>
+                            </div>
+                        </div>
+                        <!-- Supervisor 2 -->
+                        <div class="supervisor-info bangla-font d-flex align-items-start mb-3">
+                            <img src="https://emis.gov.bd/EMIS/upload/HRM/EmployeeImage/00502/00502601_vb3ro2o4fis5m.jpg" alt="এস, এম, মোস্তাফিজুর রহমান" class="rounded-circle me-3" width="60" height="60">
+                            <div>
+                                <strong>সহ-তত্ত্বাবধায়ক:</strong><br>
+                                <span class="fw-bold">এস, এম, মোস্তাফিজুর রহমান</span><br>
+                                <span>অধ্যাপক | 20th BCS | বাংলা</span><br>
+                                <span>নিজ জেলাঃ পটুয়াখালী</span><br>
+                                <span><i class="fas fa-phone-alt"></i> 01712241555</span><br>
+                                <span><i class="fas fa-envelope"></i> mostafizurrahmansm1969@gmail.com</span><br>
+                                <span>যোগদানের তারিখঃ 24-Sep-2024</span>
+                            </div>
+                        </div>
+                        <!-- Supervisor 3 -->
+                        <div class="supervisor-info bangla-font d-flex align-items-start mb-3">
+                            <img src="https://emis.gov.bd/EMIS/upload/HRM/EmployeeImage/00502/00502579_ek33ctrct6asa.jpg" alt="মোঃ আবু ইসলাম" class="rounded-circle me-3" width="60" height="60">
+                            <div>
+                                <strong>সহ-তত্ত্বাবধায়ক:</strong><br>
+                                <span class="fw-bold">মোঃ আবু ইসলাম</span><br>
+                                <span>সহকারী অধ্যাপক | 33rd BCS | ইতিহাস</span><br>
+                                <span>নিজ জেলাঃ বরিশাল</span><br>
+                                <span><i class="fas fa-phone-alt"></i> 01918958182</span><br>
+                                <span><i class="fas fa-envelope"></i> abuislam89du@gmail.com</span><br>
+                                <span>যোগদানের তারিখঃ 05-Mar-2024</span>
+                            </div>
+                        </div>
+                        <!-- Supervisor 4 -->
+                        <div class="supervisor-info bangla-font d-flex align-items-start">
+                            <img src="https://emis.gov.bd/EMIS/upload/HRM/EmployeeImage/00487/00487813_plxgljp6ilu7y.jpg" alt="মুন্সী এইচ এম রাহাত" class="rounded-circle me-3" width="60" height="60">
+                            <div>
+                                <strong>সহ-তত্ত্বাবধায়ক:</strong><br>
+                                <span class="fw-bold">মুন্সী এইচ এম রাহাত</span><br>
+                                <span>প্রভাষক | 35th BCS | পদার্থবিদ্যা</span><br>
+                                <span>নিজ জেলাঃ ঝালকাঠি</span><br>
+                                <span><i class="fas fa-phone-alt"></i> 01710450654</span><br>
+                                <span><i class="fas fa-envelope"></i> rahatmithun@gmail.com</span><br>
+                                <span>যোগদানের তারিখঃ 07-Jun-2023</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-container p-2">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1840.2476875052826!2d90.35177377240487!3d22.709821899999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755342190fbab43%3A0xc587af0ad24adb6e!2sB.M.College%20Degree%20Hostel!5e0!3m2!1sen!2sbd!4v1753159512801!5m2!1sen!2sbd" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+           
+          
+          
+          
+            <!-- Hostel 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card hostel-card h-100 shadow">
+                    <img src="https://i.postimg.cc/8cZWf84L/20250727-202843-lmc-8-4.jpg" class="hostel-img card-img-top" alt="ফ্লাইট সার্জেন্ট ফজলুল হক হল">
+                    <div class="card-body">
+                        <h5 class="card-title bangla-font">ফ্লাইট সার্জেন্ট ফজলুল হক হল</h5>
+                        <div class="supervisor-info bangla-font d-flex align-items-start mb-3">
+                            <img src="https://emis.gov.bd/EMIS/upload/HRM/EmployeeImage/00502/00502463_jde434guorgs6.jpg" alt="Dr. Md. Jahangir Kabir" class="rounded-circle me-3" width="60" height="60">
+                            <div>
+                                <strong>তত্ত্বাবধায়ক:</strong><br>
+                                <span class="fw-bold">ড. মোঃ জাহাঙ্গীর কবির</span><br>
+                                <span>সহযোগী অধ্যাপক | 22nd BCS | সমাজকর্ম</span><br>
+                                <span>নিজ জেলাঃ ঝিনাইদহ</span><br>
+                                <span><i class="fas fa-phone-alt"></i> 01716088097</span>
+                            </div>
+                        </div>
+                        <div class="supervisor-info bangla-font d-flex align-items-start">
+                            <img src="https://emis.gov.bd/EMIS/upload/HRM/EmployeeImage/00502/00502564_zgqytnaijcqey.jpg" alt="Zakir Hossain" class="rounded-circle me-3" width="60" height="60">
+                            <div>
+                                <strong>সহকারী তত্ত্বাবধায়ক:</strong><br>
+                                <span class="fw-bold">মোঃ জাকির হোসেন</span><br>
+                                <span>সহকারী অধ্যাপক | 34th BCS | মৃত্তিকা বিজ্ঞান</span><br>
+                                <span>নিজ জেলাঃ গোপালগঞ্জ</span><br>
+                                <span><i class="fas fa-phone-alt"></i> 01717577309</span>
+                            </div>
+                        </div>
+                        <div class="supervisor-info bangla-font">
+                            <span class="badge bg-info text-dark badge-role">কর্মচারী</span>
+                            <div>ইমরান হোসেন<br>
+                            <i class="fas fa-phone-alt"></i> 01745463443</div>
+                        </div>
+                    </div>
+                    <div class="map-container p-2">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1282.586668268825!2d90.35523323410004!3d22.710801998378745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755341f41b7f177%3A0xbc4b429f81463a37!2sFlight%20Sergeant%20Fazlul%20Huq%20Hall!5e0!3m2!1sen!2sbd!4v1753159620265!5m2!1sen!2sbd" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+            <!-- Hostel 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card hostel-card h-100 shadow">
+                    <img src="https://i.postimg.cc/3WMhBNth/Screenshot-2025-07-28-00-14-10-817-com-google-android-apps-maps-edit.jpg" class="hostel-img card-img-top" alt="জীবনানন্দ দাস ছাত্রাবাস">
+                    <div class="card-body">
+                        <h5 class="card-title bangla-font">জীবনানন্দ দাস ছাত্রাবাস</h5>
+                        <div class="supervisor-info bangla-font d-flex align-items-start mb-3">
+                            <img src="https://emis.gov.bd/EMIS/upload/HRM/EmployeeImage/00502/00502547_ni7sminei5q2g.jpg" alt="Ujjwal Kumar Paul" class="rounded-circle me-3" width="60" height="60">
+                            <div>
+                                <strong>তত্ত্বাবধায়ক:</strong><br>
+                                <span class="fw-bold">উজ্জ্বল কুমার পাল</span><br>
+                                <span>সহকারী অধ্যাপক | 28th BCS | পরিসংখ্যান</span><br>
+                                <span>নিজ জেলাঃ ফরিদপুর</span><br>
+                                <span><i class="fas fa-phone-alt"></i> 01818422227</span>
+                            </div>
+                        </div>
+                        <div class="supervisor-info bangla-font d-flex align-items-start">
+                            <img src="https://emis.gov.bd/EMIS/upload/HRM/EmployeeImage/00488/00488960_hkppscjxbewhs.jpg" alt="Suman Mandal" class="rounded-circle me-3" width="60" height="60">
+                            <div>
+                                <strong>সহকারী তত্ত্বাবধায়ক:</strong><br>
+                                <span class="fw-bold">সুমন মন্ডল</span><br>
+                                <span>প্রভাষক | 36th BCS</span><br>
+                                <span>নিজ জেলাঃ পিরোজপুর</span><br>
+                                <span><i class="fas fa-phone-alt"></i> 01738077144</span>
+                            </div>
+                        </div>
+                        <div class="supervisor-info bangla-font">
+                            <span class="badge bg-info text-dark badge-role">কর্মচারী</span>
+                            <div>শিপ্রা রানী<br>
+                            <i class="fas fa-phone-alt"></i> 01798459525</div>
+                        </div>
+                    </div>
+                    <div class="map-container p-2">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1070.7641589452467!2d90.35510462942295!3d22.710698116993115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755358fb9fa246d%3A0xc891eeff75f0b56e!2z4KaV4Kas4Ka_IOCmnOCngOCmrOCmqOCmvuCmqOCmqOCnjeCmpiDgpqbgpr7gprYg4Ka54Kay!5e0!3m2!1sen!2sbd!4v1753159668632!5m2!1sen!2sbd" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+            <!-- Hostel 4 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card hostel-card h-100 shadow">
+                    <img src="https://i.postimg.cc/T3NKVqrv/image.png" class="hostel-img card-img-top" alt="সুরেন্দ্র ভবন ছাত্রাবাস">
+                    <div class="card-body">
+                        <h5 class="card-title bangla-font">সুরেন্দ্র ভবন ছাত্রাবাস</h5>
+                        <div class="supervisor-info bangla-font d-flex align-items-start mb-3">
+                            <img src="https://emis.gov.bd/EMIS/upload/HRM/EmployeeImage/00502/00502506_hom2ipx55opls.jpg" alt="Mizanur Rahman" class="rounded-circle me-3" width="60" height="60">
+                            <div>
+                                <strong>তত্ত্বাবধায়ক:</strong><br>
+                                <span class="fw-bold">মোঃ মিজানুর রহমান</span><br>
+                                <span>সহযোগী অধ্যাপক | 24th BCS | হিসাব বিজ্ঞান</span><br>
+                                <span>নিজ জেলাঃ পটুয়াখালী</span><br>
+                                <span><i class="fas fa-phone-alt"></i> 01721538684</span>
+                            </div>
+                        </div>
+                        <div class="supervisor-info bangla-font">
+                            <span class="badge bg-info text-dark badge-role">কর্মচারী</span>
+                            <div>মোঃ সজিব তালুকদার<br>
+                            <i class="fas fa-phone-alt"></i> 01318591000</div>
+                        </div>
+                    </div>
+                    <div class="map-container p-2">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d505.3319644503802!2d90.36381467303943!3d22.71109246463304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375535283159b0c5%3A0x5ae8301753b0a6c6!2z4Ka44KeB4Kaw4KeH4Kao4KeN4Kam4KeN4KawIOCmreCmrOCmqCDgprjgp43gpp_gp4HgpqHgp4fgpqjgp43gpp8g4Ka54Ka44KeN4Kaf4KeH4Kay!5e0!3m2!1sbn!2sbd!4v1753641875982!5m2!1sbn!2sbd" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Girls Hostel Section -->
+        <h2 class="text-center bangla-font section-title mt-5">ছাত্রীনিবাস সমূহ</h2>
+        <div class="row g-4">
+            <!-- ডাঃ বনমালী গাঙ্গুলী ছাত্রীনিবাস -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card hostel-card h-100 shadow">
+                    <img src="https://i.postimg.cc/Vkd9MN3v/image.png" class="hostel-img card-img-top" alt="ডাঃ বনমালী গাঙ্গুলী ছাত্রীনিবাস">
+                    <div class="card-body">
+                        <h5 class="card-title bangla-font">ডাঃ বনমালী গাঙ্গুলী ছাত্রীনিবাস</h5>
+                        <div class="supervisor-info bangla-font d-flex align-items-start mb-3">
+                            <img src="https://emis.gov.bd/EMIS/upload/HRM/EmployeeImage/00502/00502286_x3i3l5qaxvdgg.jpg" alt="Dr. Tahera Tanjin Nahar" class="rounded-circle me-3" width="60" height="60">
+                            <div>
+                                <strong>তত্ত্বাবধায়ক:</strong><br>
+                                <span class="fw-bold">ডাঃ তাহেরা তানজিন নাহার</span><br>
+                                <span>সহযোগী অধ্যাপক | 24th BCS | প্রাণিবিদ্যা</span><br>
+                                <span>নিজ জেলাঃ বরিশাল</span><br>
+                                <span><i class="fas fa-phone-alt"></i> 01718680290</span>
+                            </div>
+                        </div>
+                        <div class="supervisor-info bangla-font d-flex align-items-start mb-3">
+                            <img src="https://emis.gov.bd/EMIS/upload/HRM/EmployeeImage/00502/00502511_f2c4qpmjcbr64.jpg" alt="Manoj Haldar" class="rounded-circle me-3" width="60" height="60">
+                            <div>
+                                <strong>সহকারী তত্ত্বাবধায়ক:</strong><br>
+                                <span class="fw-bold">মনোজ হালদার</span><br>
+                                <span>সহযোগী অধ্যাপক | 24th BCS | হিসাববিজ্ঞান</span><br>
+                                <span>নিজ জেলাঃ পিরোজপুর</span><br>
+                                <span><i class="fas fa-phone-alt"></i> 01712154984</span>
+                            </div>
+                        </div>
+                        <div class="supervisor-info bangla-font d-flex align-items-start mb-3">
+                            <img src="https://emis.gov.bd/EMIS/upload/HRM/EmployeeImage/00502/00502519_7egxbmeily2ns.jpg" alt="Md. Shahidul Islam" class="rounded-circle me-3" width="60" height="60">
+                            <div>
+                                <strong>সহকারী তত্ত্বাবধায়ক:</strong><br>
+                                <span class="fw-bold">মোঃ শহীদুল ইসলাম</span><br>
+                                <span>সহকারী অধ্যাপক | 31st BCS | দর্শন</span><br>
+                                <span>নিজ জেলাঃ পিরোজপুর</span><br>
+                                <span><i class="fas fa-phone-alt"></i> 01914918182</span>
+                            </div>
+                        </div>
+                        <div class="supervisor-info bangla-font d-flex align-items-start mb-3">
+                            <img src="https://emis.gov.bd/EMIS/upload/HRM/EmployeeImage/00499/00499839_2w5btobtxgbqg.jpg" alt="Mst. Monira Akter" class="rounded-circle me-3" width="60" height="60">
+                            <div>
+                                <strong>সহকারী তত্ত্বাবধায়ক:</strong><br>
+                                <span class="fw-bold">মোছাঃ মনিরা আক্তার</span><br>
+                                <span>প্রভাষক | 34th BCS | অর্থনীতি</span><br>
+                                <span>নিজ জেলাঃ পটুয়াখালী</span><br>
+                                <span><i class="fas fa-phone-alt"></i> 01772777989</span>
+                            </div>
+                        </div>
+                        <div class="supervisor-info bangla-font d-flex align-items-start">
+                            <img src="https://emis.gov.bd/EMIS/upload/HRM/EmployeeImage/00500/00500689_jrzux4hflrefq.jpg" alt="Zahirul Islam" class="rounded-circle me-3" width="60" height="60">
+                            <div>
+                                <strong>সহকারী তত্ত্বাবধায়ক:</strong><br>
+                                <span class="fw-bold">জহিরুল ইসলাম</span><br>
+                                <span>প্রভাষক | 34th BCS | ইতিহাস</span><br>
+                                <span>নিজ জেলাঃ বরিশাল</span><br>
+                                <span><i class="fas fa-phone-alt"></i> 01728366655</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-container p-2">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1070.7641589452467!2d90.35510462942295!3d22.710698116993115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755358fb9fa246d%3A0xc891eeff75f0b56e!2z4KaV4Kas4Ka_IOCmnOCngOCmrOCmqOCmvuCmqOCmqOCnjeCmpiDgpqbgpr7gprYg4Ka54Kay!5e0!3m2!1sen!2sbd!4v1753159668632!5m2!1sen!2sbd" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+            <!-- দেবেন্দ্র ভবন ছাত্রীনিবাস -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card hostel-card h-100 shadow">
+                    <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="hostel-img card-img-top" alt="দেবেন্দ্র ভবন ছাত্রীনিবাস">
+                    <div class="card-body">
+                        <h5 class="card-title bangla-font">দেবেন্দ্র ভবন ছাত্রীনিবাস</h5>
+                        <div class="supervisor-info bangla-font">
+                            <strong>তত্ত্বাবধায়ক:</strong><br>
+                            তথ্য আপডেট চলছে...
+                        </div>
+                        <div class="d-flex align-items-center mt-3">
+                            <span class="badge bg-secondary text-white">
+                                <i class="fas fa-info-circle me-1"></i> কলেজ অফিসে যোগাযোগ করুন
+                            </span>
+                        </div>
+                    </div>
+                    <div class="map-container p-2">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1ddummy!2d0!3d0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMMKwMDAnMDAuMCJOIDDCsDAwJzAwLjAiRQ!5e0!3m2!1sen!2sbd!4v1234567890123!5m2!1sen!2sbd" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+            <!-- নৃপেন্দ্র ভবন ছাত্রীনিবাস -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card hostel-card h-100 shadow">
+                    <img src="https://images.unsplash.com/photo-1560448204-603b3fc33ddc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="hostel-img card-img-top" alt="নৃপেন্দ্র ভবন ছাত্রীনিবাস">
+                    <div class="card-body">
+                        <h5 class="card-title bangla-font">নৃপেন্দ্র ভবন ছাত্রীনিবাস</h5>
+                        <div class="supervisor-info bangla-font">
+                            <strong>তত্ত্বাবধায়ক:</strong><br>
+                            তথ্য আপডেট চলছে...
+                        </div>
+                        <div class="d-flex align-items-center mt-3">
+                            <span class="badge bg-secondary text-white">
+                                <i class="fas fa-info-circle me-1"></i> কলেজ অফিসে যোগাযোগ করুন
+                            </span>
+                        </div>
+                    </div>
+                    <div class="map-container p-2">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d460.045845039571!2d90.35513264392203!3d22.714605526610548!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1753160077937!5m2!1sen!2sbd" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+      
+      
+      
+<!-- ডেভেলপার -->
+  <section>
+    <div class="card p-4 mb-4 bg-white text-center">
+      <h5 class="text-success">👨‍💻 ডেভেলপার</h5>
+      <h6 class="fw-bold mb-1">MD Hasan Mahmud</h6>
+      <p class="text-muted mb-2">BBA Student, Marketing Dept.<br>Government BM College, Barisal</p>
+      <div>
+        <a href="https://facebook.com/mhasanm828" target="_blank" class="btn btn-sm btn-primary me-2">Facebook</a>
+        <a href="Https://wa.me/+8801723477809" class="btn btn-sm btn-success me-2">WhatsApp</a>
+        <a href="mailto:mhasanm828@gmail.com" class="btn btn-sm btn-dark">Email</a>
+      </div>
+    </div>
+
+
+
+      
+
+        <!-- Employee Section --
+        <h2 class="text-center bangla-font section-title mt-5">কর্মচারীবৃন্দ</h2>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-6 col-lg-3">
+                <div class="card employee-card text-center">
+                    <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="ইমরান হোসেন">
+                    <div class="card-body">
+                        <h5 class="bangla-font mb-1">ইমরান হোসেন</h5>
+                        <span class="badge bg-info text-dark badge-role">কর্মচারী</span>
+                        <p class="mb-1"><i class="fas fa-phone-alt"></i> 01745463443</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card employee-card text-center">
+                    <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="মোঃ সজিব তালুকদার">
+                    <div class="card-body">
+                        <h5 class="bangla-font mb-1">মোঃ সজিব তালুকদার</h5>
+                        <span class="badge bg-info text-dark badge-role">কর্মচারী</span>
+                        <p class="mb-1"><i class="fas fa-phone-alt"></i> 01318591000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card employee-card text-center">
+                    <img src="https://randomuser.me/api/portraits/men/43.jpg" alt="মোহাম্মদ মোবারক হোসেন">
+                    <div class="card-body">
+                        <h5 class="bangla-font mb-1">মোহাম্মদ মোবারক হোসেন</h5>
+                        <span class="badge bg-warning text-dark badge-role">নৈশ্য প্রহরী</span>
+                        <p class="mb-1"><i class="fas fa-phone-alt"></i> 01721189651</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card employee-card text-center">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="শিপ্রা রানী">
+                    <div class="card-body">
+                        <h5 class="bangla-font mb-1">শিপ্রা রানী</h5>
+                        <span class="badge bg-info text-dark badge-role">কর্মচারী</span>
+                        <p class="mb-1"><i class="fas fa-phone-alt"></i> 01798459525</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    .footer-bg {
+      background: #14532d;
+      color: #fff;
+    }
+    .footer-link:hover {
+      color: #6ee7b7 !important;
+      text-decoration: underline;
+    }
+    .footer-hr {
+      border-color: #166534;
+      opacity: 1;
+    }
+    .footer-social a {
+      color: #fff;
+      font-size: 1.5rem;
+      margin-right: 1rem;
+      transition: color 0.2s;
+    }
+    .footer-social a:hover {
+      color: #6ee7b7;
+    }
+    .footer-map {
+      width: 100%;
+      height: 180px;
+      border: none;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .footer-section-title {
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+    .footer-list-title {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-top: 1rem;
+      margin-bottom: 0.3rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Footer -->
+<footer id="contact" class="footer-bg pt-5 pb-3">
+  <div class="container">
+    <div class="row g-4">
+      <!-- কলেজ ও ডিপার্টমেন্ট পরিচিতি -->
+      <div class="col-md-4">
+        <div class="footer-section-title mb-2">সরকারি ব্রজমোহন কলেজ, বরিশাল</div>
+        <p class="mb-1">জাতীয় বিশ্ববিদ্যালয়ের অধীনে অনার্স ও মাস্টার্স কোর্স।</p>
+        <p class="mb-1">Government Brojomohun College, Barisal.</p>
+        <ul class="list-unstyled small mb-0">
+          <li><strong>অফিস ফোন:</strong></li>
+          <li>০৪৩১-৬৪৭৯৩ (অফিস)</li>
+          <li>০৪৩১-৬৪৫৩২ (প্রিন্সিপাল)</li>
+          <li>০৪৩১-২১৭৩৫৮৩ (ভাইস প্রিন্সিপাল)</li>
+        </ul>
+      </div>
+      <!-- গুরুত্বপূর্ণ লিংক (দাপ্তরিক ও অদাপ্তরিক) -->
+      <div class="col-md-4">
+        <div class="footer-section-title mb-2">গুরুত্বপূর্ণ লিংক</div>
+        <div class="footer-list-title">দাপ্তরিক</div>
+        <ul class="list-unstyled mb-2">
+          <li><a href="https://bmcollege.gov.bd/" target="_blank" class="footer-link d-block mb-1">বিএম কলেজ অফিসিয়াল ওয়েবসাইট</a></li>
+          <li><a href="http://admission.nu.edu.bd/" target="_blank" class="footer-link d-block mb-1">ভর্তি (জাতীয় বিশ্ববিদ্যালয়)</a></li>
+          <li><a href="https://www.nu.ac.bd/results" target="_blank" class="footer-link d-block mb-1">ফলাফল (জাতীয় বিশ্ববিদ্যালয়)</a></li>
+          <li><a href="https://www.nu.ac.bd/notice" target="_blank" class="footer-link d-block">নোটিশ (জাতীয় বিশ্ববিদ্যালয়)</a></li>
+        </ul>
+        <div class="footer-list-title">অদাপ্তরিক</div>
+        <ul class="list-unstyled">
+          <li><a href="https://bm-c.vercel.app/" target="_blank" class="footer-link d-block mb-1">বিএম কলেজ (অফ-সাইট)</a></li>
+          <li><a href="https://admission-nu25.vercel.app/" target="_blank" class="footer-link d-block mb-1">ভর্তি (অফ-সাইট)</a></li>
+          <li><a href="http://bm-c.vercel.app/department.html" target="_blank" class="footer-link d-block mb-1">ডিপার্টমেন্ট</a></li>
+          <li><a href="https://bm-c.vercel.app/hostel.html" target="_blank" class="footer-link d-block">হোস্টেল</a></li>
+        </ul>
+      </div>
+      <!-- সোশ্যাল মিডিয়া ও ম্যাপ -->
+      <div class="col-md-4">
+        <div class="footer-section-title mb-2">আমাদের সাথে যুক্ত থাকুন</div>
+        <div class="footer-social mb-3">
+          <a href="https://www.facebook.com/groups/996281274531009/" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="https://bmcollege.gov.bd/" target="_blank" aria-label="Website"><i class="bi bi-globe2"></i></a>
+        </div>
+        <div>
+          <div class="fw-semibold mb-1">অবস্থান:</div>
+          <iframe class="footer-map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2141.5120611704424!2d90.3547739397704!3d22.711737312652176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37553421cd62ea31%3A0xa143dc843a7c2a66!2sGovernment%20Brojomohun%20College%2C%20Barishal!5e0!3m2!1sen!2sus!4v1753841301760!5m2!1sen!2sus"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+    <hr class="footer-hr my-4">
+    <div class="text-center small text-light">
+      © <span id="footer-year"></span>  সরকারি ব্রজমোহন কলেজ, বরিশাল | ডেভেলপ করেছেন
+      <a href="https://mhasanm828.vercel.app" class="footer-link" target="_blank">এমডি হাসান মাহমুদ</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS (optional, for dropdowns etc.) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Dynamic Year JS -->
+<script>
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
+</script>
+</body>
+ 
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        // Animation for hostel cards when they come into view
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.hostel-card, .employee-card').forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>

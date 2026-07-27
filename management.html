@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Management Department - BM College</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    body { font-family: 'Tiro Bangla', serif; }
+  </style>
+</head>
+
+
+  <script>
+// Disable right click (context menu)
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+
+// Disable key combinations like F12, Ctrl+Shift+I, Ctrl+U
+document.addEventListener('keydown', function(e) {
+  if (
+    e.key === 'F12' ||
+    (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) ||
+    (e.ctrlKey && e.key === 'U')
+  ) {
+    e.preventDefault();
+  }
+});
+
+// Prevent video download
+document.querySelectorAll("video").forEach(function(video) {
+  video.setAttribute("controlsList", "nodownload");
+  video.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+  });
+});
+</script>
+
+
+
+  
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-indigo-800 text-white p-4 shadow-md fixed w-full z-20 top-0 left-0">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <a href="index.html" class="flex items-center space-x-2">
+        <img src="https://i.postimg.cc/Qdb9Vnk2/image.png" alt="Logo" class="w-8 h-8 rounded-full bg-white p-1"/>
+        <span class="text-xl font-bold">Management</span>
+      </a>
+      <div class="hidden md:flex space-x-6 text-lg">
+        <a href="#about" class="hover:underline hover:text-indigo-300">About</a>
+        <a href="#courses" class="hover:underline hover:text-indigo-300">Courses</a>
+        <a href="#teachers" class="hover:underline hover:text-indigo-300">Teachers</a>
+        <a href="#gallery" class="hover:underline hover:text-indigo-300">Gallery</a>
+        <a href="#contact" class="hover:underline hover:text-indigo-300">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="h-20"></div>
+
+  <!-- Header Hero -->
+  <header class="bg-gradient-to-r from-indigo-700 to-indigo-900 text-white text-center py-20 px-4">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Management Department</h1>
+    <p class="text-xl md:text-2xl max-w-3xl mx-auto">Shaping future leaders through strategic thinking, leadership, and innovation.</p>
+  </header>
+
+  <!-- Stats Bar -->
+  <section class="bg-indigo-600 text-white py-6">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-around items-center gap-4 text-center">
+      <div>
+        <h2 class="text-3xl font-bold">200+</h2>
+        <p>Graduates Annually</p>
+      </div>
+      <div>
+        <h2 class="text-3xl font-bold">30+</h2>
+        <p>Expert Faculty</p>
+      </div>
+      <div>
+        <h2 class="text-3xl font-bold">12+</h2>
+        <p>Specialized Courses</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slider Section -->
+  <div class="swiper mySwiper max-w-6xl mx-auto mt-8">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
+             alt="Teamwork" class="w-full h-full object-cover">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80" 
+             alt="Leadership" class="w-full h-full object-cover">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://images.unsplash.com/photo-1560264418-c4445382edbc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
+             alt="Meeting" class="w-full h-full object-cover">
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Section: About -->
+  <section id="about" class="max-w-5xl mx-auto p-6 mt-14 bg-white rounded-lg shadow-md">
+    <h2 class="text-2xl font-semibold mb-4 text-indigo-800">About the Department</h2>
+    <p class="text-gray-700 leading-relaxed">
+      The Management Department aims to create visionary leaders who can effectively manage organizations in a fast-changing global environment. Students learn strategic planning, organizational behavior, human resource management, and more to prepare for executive roles worldwide.
+    </p>
+  </section>
+
+  <!-- Section: Course List -->
+  <section id="courses" class="max-w-5xl mx-auto p-6 mt-14 bg-indigo-50 rounded-lg shadow-md">
+    <h2 class="text-2xl font-semibold mb-4 text-indigo-800">Courses Offered</h2>
+    <ul class="list-disc list-inside text-gray-700 space-y-2">
+      <li>Strategic Management</li>
+      <li>Organizational Behavior</li>
+      <li>Human Resource Management</li>
+      <li>Business Ethics & Corporate Governance</li>
+      <li>Entrepreneurship & Innovation</li>
+    </ul>
+  </section>
+
+  <!-- Section: Teachers -->
+  <section id="teachers" class="max-w-6xl mx-auto p-6 mt-8 bg-indigo-50 rounded-lg shadow-md">
+    <h2 class="text-xl font-semibold mb-4 text-indigo-800 border-b-2 border-indigo-200 pb-2">শিক্ষকমণ্ডলী</h2>
+
+    <!-- Filters -->
+    <div class="flex flex-col sm:flex-row items-center justify-between mb-6 gap-4">
+      <input id="searchBox" type="text" placeholder="শিক্ষকের নাম লিখুন..." 
+             class="p-2 rounded border w-full sm:w-1/3 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" />
+      <button onclick="toggleView()" 
+              class="bg-indigo-600 text-white px-4 py-2 rounded shadow hover:bg-indigo-700 transition">
+        <i class="bi bi-grid"></i> ভিউ পরিবর্তন
+      </button>
+    </div>
+
+    <!-- Teachers Container -->
+    <div id="teacherList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 transition">
+      <!-- Cards will be inserted here -->
+    </div>
+  </section>
+
+  <!-- Section: Gallery -->
+  <section id="gallery" class="max-w-6xl mx-auto p-6 mt-14 bg-white rounded-lg shadow-md">
+    <h2 class="text-2xl font-semibold mb-4 text-indigo-800 text-center">Gallery</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-5">
+      <img src="https://images.unsplash.com/photo-1573164574572-cb89e39749b4?auto=format&fit=crop&w=600&q=80" alt="Conference" class="w-full h-48 object-cover rounded shadow-md hover:scale-105 transition" />
+      <img src="https://images.unsplash.com/photo-1581090700227-4c4a9fa80f9c?auto=format&fit=crop&w=600&q=80" alt="Seminar" class="w-full h-48 object-cover rounded shadow-md hover:scale-105 transition" />
+      <img src="https://images.unsplash.com/photo-1531497865144-0464d51b3f9e?auto=format&fit=crop&w=600&q=80" alt="Training" class="w-full h-48 object-cover rounded shadow-md hover:scale-105 transition" />
+      <img src="https://images.unsplash.com/photo-1604471527498-5103d6b85c1d?auto=format&fit=crop&w=600&q=80" alt="Workshop" class="w-full h-48 object-cover rounded shadow-md hover:scale-105 transition" />
+      <img src="https://images.unsplash.com/photo-1581091012184-3d1c7e066b3f?auto=format&fit=crop&w=600&q=80" alt="Group Project" class="w-full h-48 object-cover rounded shadow-md hover:scale-105 transition" />
+      <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=600&q=80" alt="Discussion" class="w-full h-48 object-cover rounded shadow-md hover:scale-105 transition" />
+    </div>
+  </section>
+
+  <!-- Section: Contact -->
+  <section id="contact" class="max-w-5xl mx-auto p-6 mt-14 bg-indigo-50 rounded-lg shadow-md">
+    <h2 class="text-xl font-semibold mb-4 text-indigo-800">Contact</h2>
+    <p class="text-gray-700 mb-2">Address: Govt. Brojomohun College, Barishal</p>
+    <p class="text-gray-700 mb-2">Phone: +880 1234-567890</p>
+    <p class="text-gray-700 mb-2">Email: management@bmcollege.edu.bd</p>
+    <div class="mt-4">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3689.561292481226!2d90.36843371496018!3d22.7010025851226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30aaf4b414af2099%3A0xb9a6d4507b048205!2sBM%20College!5e0!3m2!1sen!2sbd!4v1700000000000" 
+        width="100%" height="300" style="border:0;" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-indigo-900 text-white mt-16 p-6 text-center">
+    <p>© 2025 Management Department, Govt. BM College</p>
+    <div class="mt-2">
+      <a href="index.html" class="hover:underline mr-3">Home</a>
+      <a href="#about" class="hover:underline mr-3">About</a>
+      <a href="#courses" class="hover:underline mr-3">Courses</a>
+      <a href="#teachers" class="hover:underline mr-3">Teachers</a>
+      <a href="#gallery" class="hover:underline mr-3">Gallery</a>
+      <a href="#contact" class="hover:underline">Contact</a>
+    </div>
+  </footer>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: { delay: 3000, disableOnInteraction: false },
+      pagination: { el: ".swiper-pagination", clickable: true },
+      loop: true,
+      effect: 'slide',
+      speed: 800,
+    });
+  
+    
+    
+    
+  <!-- Script for Teachers -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    // Initialize Swiper
+    const swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      loop: true,
+      effect: 'slide',
+      speed: 800,
+    });
+
+    let teachers = [];
+    let grid = true;
+
+    async function loadCSV() {
+      const res = await fetch('https://bm-c.vercel.app/teacher.csv');
+      const text = await res.text();
+      const rows = text.trim().split('\n').slice(1);
+      teachers = rows
+        .map(row => row.split(','))
+        .filter(cols => cols[6] && cols[6].trim() === "ব্যবস্থাপনা");
+
+      // If no teachers found in CSV, use sample data
+      if (teachers.length === 0) {
+        teachers = [
+          ["1", "বরিশাল", "25th", "ড. আহসান হাবীব", "ড. আহসান হাবীব", "অধ্যাপক", "অর্থনীতি", "01712345678", "ahsan.habib@bmcollege.edu.bd", "2010-05-15", "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"],
+          ["2", "ঢাকা", "28th", "ড. ফারহানা ইসলাম", "ড. ফারহানা ইসলাম", "সহযোগী অধ্যাপক", "অর্থনীতি", "01787654321", "farhana.islam@bmcollege.edu.bd", "2012-08-22", "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80"],
+          ["3", "খুলনা", "30th", "ড. রিয়াদ হোসেন", "ড. রিয়াদ হোসেন", "সহকারী অধ্যাপক", "অর্থনীতি", "01811223344", "riad.hossain@bmcollege.edu.bd", "2015-03-10", "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"]
+        ];
+      }
+
+      displayTeachers(teachers);
+    }
+
+    function displayTeachers(data) {
+      const list = document.getElementById("teacherList");
+      list.innerHTML = '';
+
+      data.forEach(cols => {
+        const [
+          id, district, batch, nameEn, nameBn, designation, department,
+          mobile, email, joiningDate, imageUrl
+        ] = cols;
+
+        const card = document.createElement("div");
+        card.className = grid
+          ? "teacher-card bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center hover:shadow-lg transition-all duration-300 animate-fadeIn"
+          : "teacher-card bg-white rounded-lg shadow-md p-4 flex items-start gap-4 hover:shadow-lg transition-all duration-300 animate-fadeIn";
+
+        card.innerHTML = `
+          <img src="${imageUrl || 'https://bm-c.vercel.app/paeson.png'}" 
+               onerror="this.src='https://bm-c.vercel.app/paeson.png'" 
+               class="${grid ? 'w-24 h-24' : 'w-20 h-20'} rounded-full object-cover border-4 border-blue-100" />
+          <div class="${grid ? 'mt-3' : ''}">
+            <h3 class="text-lg font-bold text-blue-800">${nameEn || "নাম নেই"}</h3>
+            <p class="text-blue-600">${designation || "পদবী নেই"} | ${batch || "N/A"} BCS</p>
+            <p class="text-sm text-gray-600 mt-1">নিজ জেলাঃ ${district || "N/A"}</p>
+            <p class="text-sm text-gray-600">ফোনঃ 0${mobile || "N/A"}</p>
+            <p class="text-sm text-gray-600">ইমেইলঃ ${email || "N/A"}</p>
+            <p class="text-xs text-gray-500 mt-1">যোগদানের তারিখঃ ${joiningDate?.replace("'", "") || "N/A"}</p>
+          </div>
+        `;
+        list.appendChild(card);
+      });
+    }
+
+    function toggleView() {
+      grid = !grid;
+      displayTeachers(teachers);
+    }
+
+    document.getElementById("searchBox").addEventListener("input", (e) => {
+      const keyword = e.target.value.toLowerCase();
+      const filtered = teachers.filter(t => 
+        t[3]?.toLowerCase().includes(keyword) || 
+        t[4]?.toLowerCase().includes(keyword) ||
+        t[5]?.toLowerCase().includes(keyword) ||
+        t[1]?.toLowerCase().includes(keyword)
+      );
+      displayTeachers(filtered);
+    });
+
+    // Load teachers on page load
+    document.addEventListener('DOMContentLoaded', loadCSV);
+  </script>
+</body>
+</html>

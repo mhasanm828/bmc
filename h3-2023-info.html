@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honours 3rd Year Student Info</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #111827 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        .glow {
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+        }
+        .search-container {
+            backdrop-filter: blur(10px);
+            background-color: rgba(17, 24, 39, 0.8);
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen text-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 animate__animated animate__fadeInDown">
+                Honours 3rd Year Student Information
+            </h1>
+            <p class="text-xl text-blue-200 animate__animated animate__fadeIn animate__delay-1s">
+                Access subject-wise information with ease
+            </p>
+            <div class="mt-6 w-20 h-1 bg-blue-500 mx-auto animate__animated animate__fadeIn animate__delay-2s"></div>
+        </header>
+
+        <!-- Search Section -->
+        <div class="search-container p-6 rounded-xl border border-gray-700 mb-12 animate__animated animate__fadeInUp">
+            <h2 class="text-2xl font-semibold mb-4 text-blue-300">Generate Custom Link</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div>
+                    <label class="block text-sm font-medium mb-1">Center Code (3 digits)</label>
+                    <input type="text" id="cenCode" placeholder="e.g. 166" 
+                        class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-1">College Code (4 digits)</label>
+                    <input type="text" id="collCode" placeholder="e.g. 1101" 
+                        class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-1">Subject Code (2 digits)</label>
+                    <input type="text" id="subCode" placeholder="e.g. 31" 
+                        class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="flex items-end">
+                    <button id="generateBtn" class="w-full px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded font-medium transition-all duration-300 transform hover:scale-105">
+                        Generate Link
+                    </button>
+                </div>
+            </div>
+            <div id="resultLink" class="mt-4 hidden">
+                <label class="block text-sm font-medium mb-1">Generated Link:</label>
+                <div class="flex">
+                    <input type="text" id="generatedUrl" readonly 
+                        class="flex-grow px-4 py-2 rounded-l bg-gray-800 border border-gray-700 focus:outline-none">
+                    <button id="copyBtn" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-r font-medium">
+                        Copy
+                    </button>
+                </div>
+                <a id="openLink" href="#" target="_blank" 
+                    class="mt-2 inline-block px-4 py-2 bg-green-600 hover:bg-green-700 rounded font-medium text-sm transition-all duration-300">
+                    Open in New Tab
+                </a>
+            </div>
+        </div>
+
+        <!-- Subjects Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Bengali -->
+            <div class="card-hover bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-blue-500">
+                <h3 class="text-xl font-semibold mb-2 text-blue-300">BENGALI</h3>
+                <p class="text-sm text-gray-400 mb-4">Subject Code: 10</p>
+                <a href="http://103.113.200.46:8006/storage/pdf/center_descriptive/2203_2023_167_1101_10_2235-ds.pdf" target="_blank" 
+                    class="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded font-medium transition-all duration-300 transform hover:scale-105">
+                    View Details
+                </a>
+            </div>
+            
+            <!-- English -->
+            <div class="card-hover bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-blue-500">
+                <h3 class="text-xl font-semibold mb-2 text-blue-300">ENGLISH</h3>
+                <p class="text-sm text-gray-400 mb-4">Subject Code: 11</p>
+                <a href="http://103.113.200.46:8006/storage/pdf/center_descriptive/2203_2023_167_1101_11_2235-ds.pdf" target="_blank" 
+                    class="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded font-medium transition-all duration-300 transform hover:scale-105">
+                    View Details
+                </a>
+            </div>
+            
+            <!-- Sanskrit -->
+            <div class="card-hover bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-blue-500">
+                <h3 class="text-xl font-semibold mb-2 text-blue-300">SANSKRIT</h3>
+                <p class="text-sm text-gray-400 mb-4">Subject Code: 13</p>
+                <a href="http://103.113.200.46:8006/storage/pdf/center_descriptive/2203_2023_167_1101_13_2235-ds.pdf" target="_blank" 
+                    class="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded font-medium transition-all duration-300 transform hover:scale-105">
+                    View Details
+                </a>
+            </div>
+            
+            <!-- History -->
+            <div class="card-hover bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-blue-500">
+                <h3 class="text-xl font-semibold mb-2 text-blue-300">HISTORY</h3>
+                <p class="text-sm text-gray-400 mb-4">Subject Code: 15</p>
+                <a href="http://103.113.200.46:8006/storage/pdf/center_descriptive/2203_2023_167_1101_15_2235-ds.pdf" target="_blank" 
+                    class="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded font-medium transition-all duration-300 transform hover:scale-105">
+                    View Details
+                </a>
+            </div>
+            
+            <!-- Islamic History and Culture -->
+            <div class="card-hover bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-blue-500">
+                <h3 class="text-xl font-semibold mb-2 text-blue-300">ISLAMIC HISTORY AND CULTURE</h3>
+                <p class="text-sm text-gray-400 mb-4">Subject Code: 16</p>
+                <a href="http://103.113.200.46:8006/storage/pdf/center_descriptive/2203_2023_167_1101_16_2235-ds.pdf" target="_blank" 
+                    class="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded font-medium transition-all duration-300 transform hover:scale-105">
+                    View Details
+                </a>
+            </div>
+            
+            <!-- Philosophy -->
+            <div class="card-hover bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-blue-500">
+                <h3 class="text-xl font-semibold mb-2 text-blue-300">PHILOSOPHY</h3>
+                <p class="text-sm text-gray-400 mb-4">Subject Code: 17</p>
+                <a href="http://103.113.200.46:8006/storage/pdf/center_descriptive/2203_2023_167_1101_17_2235-ds.pdf" target="_blank" 
+                    class="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded font-medium transition-all duration-300 transform hover:scale-105">
+                    View Details
+                </a>
+            </div>
+            
+            <!-- Islamic Studies -->
+            <div class="card-hover bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-blue-500">
+                <h3 class="text-xl font-semibold mb-2 text-blue-300">ISLAMIC STUDIES</h3>
+                <p class="text-sm text-gray-400 mb-4">Subject Code: 18</p>
+                <a href="http://103.113.200.46:8006/storage/pdf/center_descriptive/2203_2023_167_1101_18_2235-ds.pdf" target="_blank" 
+                    class="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded font-medium transition-all duration-300 transform hover:scale-105">
+                    View Details
+                </a>
+            </div>
+            
+            <!-- Political Science -->
+            <div class="card-hover bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-blue-500">
+                <h3 class="text-xl font-semibold mb-2 text-blue-300">POLITICAL SCIENCE</h3>
+                <p class="text-sm text-gray-400 mb-4">Subject Code: 19</p>
+                <a href="http://103.113.200.46:8006/storage/pdf/center_descriptive/2203_2023_167_1101_19_2235-ds.pdf" target="_blank" 
+                    class="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded font-medium transition-all duration-300 transform hover:scale-105">
+                    View Details
+                </a>
+            </div>
+            
+            <!-- Sociology -->
+            <div class="card-hover bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-blue-500">
+                <h3 class="text-xl font-semibold mb-2 text-blue-300">SOCIOLOGY</h3>
+                <p class="text-sm text-gray-400 mb-4">Subject Code: 20</p>
+                <a href="http://103.113.200.46:8006/storage/pdf/center_descriptive/2203_2023_167_1101_20_2235-ds.pdf" target="_blank" 
+                    class="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded font-medium transition-all duration-300 transform hover:scale-105">
+                    View Details
+                </a>
+            </div>
+            
+            <!-- Social Work -->
+            <div class="card-hover bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-blue-500">
+                <h3 class="text-xl font-semibold mb-2 text-blue-300">SOCIAL WORK</h3>
+                <p class="text-sm text-gray-400 mb-4">Subject Code: 21</p>
+                <a href="http://103.113.200.46:8006/storage/pdf/center_descriptive/2203_2023_167_1101_21_2235-ds.pdf" target="_blank" 
+                    class="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded font-medium transition-all duration-300 transform hover:scale-105">
+                    View Details
+                </a>
+            </div>
+            
+            <!-- Economics -->
+            <div class="card-hover bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-blue-500">
+                <h3 class="text-xl font-semibold mb-2 text-blue-300">ECONOMICS</h3>
+                <p class="text-sm text-gray-400 mb-4">Subject Code: 22</p>
+                <a href="http://103.113.200.46:8006/storage/pdf/center_descriptive/2203_2023_167_1101_22_2235-ds.pdf" target="_blank" 
+                    class="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded font-medium transition-all duration-300 transform hover:scale-105">
+                    View Details
+                </a>
+            </div>
+            
+            <!-- Marketing -->
+            <div class="card-hover bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-blue-500">
+                <h3 class="text-xl font-semibold mb-2 text-blue-300">MARKETING</h3>
+                <p class="text-sm text-gray-400 mb-4">Subject Code: 23</p>
+                <a href="http://103.113.200.46:8006/storage/pdf/center_descriptive/2203_2023_168_1101_23_2235-ds.pdf" target="_blank" 
+                    class="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded font-medium transition-all duration-300 transform hover:scale-105">
+                    View Details
+                </a>
+            </div>
+            
+            <!-- Finance & Banking -->
+            <div class="card-hover bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-blue-500">
+                <h3 class="text-xl font-semibold mb-2 text-blue-300">FINANCE & BANKING</h3>
+                <p class="text-sm text-gray-400 mb-4">Subject Code: 24</p>
+                <a href="http://103.113.200.46:8006/storage/pdf/center_descriptive/2203_2023_168_1101_24_2235-ds.pdf" target="_blank" 
+                    class="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded font-medium transition-all duration-300 transform hover:scale-105">
+                    View Details
+                </a>
+            </div>
+            
+            <!-- Accounting -->
+            <div class="card-hover bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-blue-500">
+                <h3 class="text-xl font-semibold mb-2 text-blue-300">ACCOUNTING</h3>
+                <p class="text-sm text-gray-400 mb-4">Subject Code: 25</p>
+                <a href="http://103.113.200.46:8006/storage/pdf/center_descriptive/2203_2023_168_1101_25_2235-ds.pdf" target="_blank" 
+                    class="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded font-medium transition-all duration-300 transform hover:scale-105">
+                    View Details
+                </a>
+            </div>
+            
+            <!-- Management -->
+            <div class="card-hover bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-blue-500">
+                <h3 class="text-xl font-semibold mb-2 text-blue-300">MANAGEMENT</h3>
+                <p class="text-sm text-gray-400 mb-4">Subject Code: 26</p>
+                <a href="http://103.113.200.46:8006/storage/pdf/center_descriptive/2203_2023_168_1101_26_2235-ds.pdf" target="_blank" 
+                    class="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded font-medium transition-all duration-300 transform hover:scale-105">
+                    View Details
+                </a>
+            </div>
+            
+            <!-- Physics -->
+            <div class="card-hover bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-blue-500">
+                <h3 class="text-xl font-semibold mb-2 text-blue-300">PHYSICS</h3>
+                <p class="text-sm text-gray-400 mb-4">Subject Code: 27</p>
+                <a href="http://103.113.200.46:8006/storage/pdf/center_descriptive/2203_2023_166_1101_27_2235-ds.pdf" target="_blank" 
+                    class="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded font-medium transition-all duration-300 transform hover:scale-105">
+                    View Details
+                </a>
+            </div>
+            
+            <!-- Chemistry -->
+            <div class="card-hover bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-blue-500">
+                <h3 class="text-xl font-semibold mb-2 text-blue-300">CHEMISTRY</h3>
+                <p class="text-sm text-gray-400 mb-4">Subject Code: 28</p>
+                <a href="http://103.113.200.46:8006/storage/pdf/center_descriptive/2203_2023_166_1101_28_2235-ds.pdf" target="_blank" 
+                    class="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded font-medium transition-all duration-300 transform hover:scale-105">
+                    View Details
+                </a>
+            </div>
+            
+            <!-- Botany -->
+            <div class="card-hover bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-blue-500">
+                <h3 class="text-xl font-semibold mb-2 text-blue-300">BOTANY</h3>
+                <p class="text-sm text-gray-400 mb-4">Subject Code: 30</p>
+                <a href="http://103.113.200.46:8006/storage/pdf/center_descriptive/2203_2023_166_1101_30_2235-ds.pdf" target="_blank" 
+                    class="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded font-medium transition-all duration-300 transform hover:scale-105">
+                    View Details
+                </a>
+            </div>
+            
+            <!-- Zoology -->
+            <div class="card-hover bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-blue-500">
+                <h3 class="text-xl font-semibold mb-2 text-blue-300">ZOOLOGY</h3>
+                <p class="text-sm text-gray-400 mb-4">Subject Code: 31</p>
+                <a href="http://103.113.200.46:8006/storage/pdf/center_descriptive/2203_2023_166_1101_31_2235-ds.pdf" target="_blank" 
+                    class="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded font-medium transition-all duration-300 transform hover:scale-105">
+                    View Details
+                </a>
+            </div>
+            
+            <!-- Soil Science -->
+            <div class="card-hover bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-blue-500">
+                <h3 class="text-xl font-semibold mb-2 text-blue-300">SOIL SCIENCE</h3>
+                <p class="text-sm text-gray-400 mb-4">Subject Code: 33</p>
+                <a href="http://103.113.200.46:8006/storage/pdf/center_descriptive/2203_2023_166_1101_33_2235-ds.pdf" target="_blank" 
+                    class="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded font-medium transition-all duration-300 transform hover:scale-105">
+                    View Details
+                </a>
+            </div>
+            
+            <!-- Statistics -->
+            <div class="card-hover bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-blue-500">
+                <h3 class="text-xl font-semibold mb-2 text-blue-300">STATISTICS</h3>
+                <p class="text-sm text-gray-400 mb-4">Subject Code: 36</p>
+                <a href="http://103.113.200.46:8006/storage/pdf/center_descriptive/2203_2023_166_1101_36_2235-ds.pdf" target="_blank" 
+                    class="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded font-medium transition-all duration-300 transform hover:scale-105">
+                    View Details
+                </a>
+            </div>
+            
+            <!-- Mathematics -->
+            <div class="card-hover bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-blue-500">
+                <h3 class="text-xl font-semibold mb-2 text-blue-300">MATHEMATICS</h3>
+                <p class="text-sm text-gray-400 mb-4">Subject Code: 37</p>
+                <a href="http://103.113.200.46:8006/storage/pdf/center_descriptive/2203_2023_166_1101_37_2235-ds.pdf" target="_blank" 
+                    class="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded font-medium transition-all duration-300 transform hover:scale-105">
+                    View Details
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-16 text-center text-gray-400 text-sm">
+            <p>© 2023 Honours 3rd Year Student Information Portal</p>
+            <p class="mt-2">All links open in new tabs for your convenience</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Generate custom link
+            document.getElementById('generateBtn').addEventListener('click', function() {
+                const cenCode = document.getElementById('cenCode').value.trim();
+                const collCode = document.getElementById('collCode').value.trim();
+                const subCode = document.getElementById('subCode').value.trim();
+                
+                // Validate inputs
+                if (cenCode.length !== 3 || !/^\d+$/.test(cenCode)) {
+                    alert('Please enter a valid 3-digit Center Code');
+                    return;
+                }
+                
+                if (collCode.length !== 4 || !/^\d+$/.test(collCode)) {
+                    alert('Please enter a valid 4-digit College Code');
+                    return;
+                }
+                
+                if (subCode.length !== 2 || !/^\d+$/.test(subCode)) {
+                    alert('Please enter a valid 2-digit Subject Code');
+                    return;
+                }
+                
+                // Generate URL
+                const baseUrl = 'http://103.113.200.46:8006/storage/pdf/center_descriptive/';
+                const generatedUrl = `${baseUrl}2203_2023_${cenCode}_${collCode}_${subCode}_2235-ds.pdf`;
+                
+                // Display result
+                document.getElementById('generatedUrl').value = generatedUrl;
+                document.getElementById('openLink').href = generatedUrl;
+                document.getElementById('resultLink').classList.remove('hidden');
+                
+                // Add animation
+                document.getElementById('resultLink').classList.add('animate__animated', 'animate__fadeInUp');
+            });
+            
+            // Copy to clipboard
+            document.getElementById('copyBtn').addEventListener('click', function() {
+                const urlInput = document.getElementById('generatedUrl');
+                urlInput.select();
+                document.execCommand('copy');
+                
+                // Change button text temporarily
+                const copyBtn = document.getElementById('copyBtn');
+                copyBtn.textContent = 'Copied!';
+                copyBtn.classList.add('bg-green-600', 'hover:bg-green-700');
+                copyBtn.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+                
+                setTimeout(function() {
+                    copyBtn.textContent = 'Copy';
+                    copyBtn.classList.add('bg-blue-600', 'hover:bg-blue-700');
+                    copyBtn.classList.remove('bg-green-600', 'hover:bg-green-700');
+                }, 2000);
+            });
+            
+            // Add hover effects to all cards
+            const cards = document.querySelectorAll('.card-hover');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.classList.add('glow');
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.classList.remove('glow');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

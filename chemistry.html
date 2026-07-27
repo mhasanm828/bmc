@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>রসায়ন বিভাগ - সরকারি ব্রজমোহন কলেজ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Tiro Bangla', serif;
+    }
+    .bg-chemistry { background-color: #6b21a8; }
+    .text-chemistry { color: #6b21a8; }
+    .swiper-slide {
+      height: 400px;
+      background-size: cover;
+      background-position: center;
+    }
+    .swiper-pagination-bullet {
+      background: white;
+      width: 10px;
+      height: 10px;
+    }
+    .swiper-pagination-bullet-active {
+      background: #a855f7;
+    }
+  </style>
+</head>
+
+  <script>
+// Disable right click (context menu)
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+
+// Disable key combinations like F12, Ctrl+Shift+I, Ctrl+U
+document.addEventListener('keydown', function(e) {
+  if (
+    e.key === 'F12' ||
+    (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) ||
+    (e.ctrlKey && e.key === 'U')
+  ) {
+    e.preventDefault();
+  }
+});
+
+// Prevent video download
+document.querySelectorAll("video").forEach(function(video) {
+  video.setAttribute("controlsList", "nodownload");
+  video.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+  });
+});
+</script>
+
+<body class="bg-gray-50">
+
+  <!-- Navbar -->
+  <nav class="bg-chemistry text-white shadow-lg py-3 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 flex flex-wrap items-center justify-between">
+      <a href="#" class="flex items-center gap-2">
+        <img src="https://i.postimg.cc/Qdb9Vnk2/image.png" alt="Logo" class="w-10 h-10 rounded-full">
+        <span class="text-xl font-bold">রসায়ন বিভাগ</span>
+      </a>
+      <button class="sm:hidden block text-2xl" onclick="navMenu.classList.toggle('hidden')">
+        <i class="bi bi-list"></i>
+      </button>
+      <ul id="navMenu" class="sm:flex hidden flex-col sm:flex-row gap-4 font-semibold mt-2 sm:mt-0">
+        <li><a href="#about" class="hover:text-yellow-300 transition"><i class="bi bi-info-circle mr-1"></i> পরিচিতি</a></li>
+        <li><a href="#facilities" class="hover:text-yellow-300 transition"><i class="bi bi-building mr-1"></i> সুবিধাদি</a></li>
+        <li><a href="#courses" class="hover:text-yellow-300 transition"><i class="bi bi-journal-bookmark mr-1"></i> কোর্স</a></li>
+        <li><a href="#research" class="hover:text-yellow-300 transition"><i class="bi bi-search mr-1"></i> গবেষণা</a></li>
+        <li><a href="#contact" class="hover:text-yellow-300 transition"><i class="bi bi-telephone mr-1"></i> যোগাযোগ</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="text-center py-16 bg-gradient-to-r from-purple-900 to-purple-700 text-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">রসায়ন বিভাগ</h1>
+      <p class="text-xl md:text-2xl mb-2">সরকারি ব্রজমোহন কলেজ, বরিশাল</p>
+      <p class="text-lg">বিজ্ঞানের মৌলিক শাখার উৎকর্ষ সাধনের প্রাণকেন্দ্র</p>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <div class="bg-white shadow-lg -mt-8 mx-auto max-w-5xl rounded-lg p-4 grid grid-cols-2 md:grid-cols-4 gap-4 relative z-10">
+    <div class="text-center p-2">
+      <div class="text-3xl font-bold text-chemistry">40+</div>
+      <div class="text-sm text-gray-600">বছরের ইতিহাস</div>
+    </div>
+    <div class="text-center p-2">
+      <div class="text-3xl font-bold text-chemistry">12+</div>
+      <div class="text-sm text-gray-600">শিক্ষকবৃন্দ</div>
+    </div>
+    <div class="text-center p-2">
+      <div class="text-3xl font-bold text-chemistry">500+</div>
+      <div class="text-sm text-gray-600">শিক্ষার্থী</div>
+    </div>
+    <div class="text-center p-2">
+      <div class="text-3xl font-bold text-chemistry">8+</div>
+      <div class="text-sm text-gray-600">ল্যাবরেটরি</div>
+    </div>
+  </div>
+
+  <!-- Slider Section -->
+  <div class="swiper mySwiper max-w-6xl mx-auto mt-12">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+             alt="Chemistry Lab" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+          <div class="text-white text-center px-4">
+            <h3 class="text-2xl md:text-3xl font-bold mb-2">আধুনিক রসায়ন ল্যাবরেটরি</h3>
+            <p>হাতে-কলমে গবেষণার জন্য সর্বাধুনিক সুবিধা</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="https://images.unsplash.com/photo-1614699906157-7cb31a4ad920?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+             alt="Chemistry Research" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+          <div class="text-white text-center px-4">
+            <h3 class="text-2xl md:text-3xl font-bold mb-2">গবেষণার সুযোগ</h3>
+            <p>জাতীয় ও আন্তর্জাতিক পর্যায়ের গবেষণা প্রকল্প</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="https://images.unsplash.com/photo-1606333259737-6da197890fa2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
+             alt="Chemistry Class" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+          <div class="text-white text-center px-4">
+            <h3 class="text-2xl md:text-3xl font-bold mb-2">মেধাবী শিক্ষকমণ্ডলী</h3>
+            <p>অভিজ্ঞ ও গবেষণাধর্মী শিক্ষক দ্বারা পরিচালিত</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+    <!-- Section: Teachers -->
+  <section id="teachers" class="max-w-6xl mx-auto p-6 mt-8 bg-white rounded-lg shadow-md">
+    <h2 class="text-2xl font-semibold mb-6 text-cyan-800 border-b-2 border-cyan-200 pb-2 animate-fadeIn">আমাদের শিক্ষকবৃন্দ</h2>
+
+    <!-- Filters -->
+    <div class="flex flex-col sm:flex-row items-center justify-between mb-6 gap-4 animate-fadeIn animate-delay-100">
+      <input id="searchBox" type="text" placeholder="শিক্ষকের নাম লিখুন..." 
+             class="p-2 rounded border w-full sm:w-1/3 focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500" />
+      <button onclick="toggleView()" 
+              class="bg-cyan-600 text-white px-4 py-2 rounded shadow hover:bg-cyan-700 transition">
+        <i class="bi bi-grid"></i> ভিউ পরিবর্তন
+      </button>
+    </div>
+
+    <!-- Teachers Container -->
+    <div id="teacherList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 transition">
+      <!-- Cards will be inserted here -->
+    </div>
+  </section>
+  
+  
+  
+  
+
+  <!-- Contact Section -->
+  <section id="contact" class="max-w-5xl mx-auto p-6 mt-12 bg-white rounded-lg shadow-md">
+    <h2 class="text-2xl font-semibold mb-6 text-chemistry border-b-2 border-purple-200 pb-2">যোগাযোগ</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <div class="flex items-start mb-4">
+          <i class="bi bi-geo-alt text-chemistry text-xl mt-1 mr-3"></i>
+          <div>
+            <h3 class="font-bold text-gray-800">ঠিকানা</h3>
+            <p class="text-gray-700">রসায়ন বিভাগ<br>সরকারি ব্রজমোহন কলেজ<br>বরিশাল ৮২০০, বাংলাদেশ</p>
+          </div>
+        </div>
+        <div class="flex items-start mb-4">
+          <i class="bi bi-envelope text-chemistry text-xl mt-1 mr-3"></i>
+          <div>
+            <h3 class="font-bold text-gray-800">ইমেইল</h3>
+            <p class="text-gray-700">chemistry@bmcollege.edu.bd</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="flex items-start mb-4">
+          <i class="bi bi-telephone text-chemistry text-xl mt-1 mr-3"></i>
+          <div>
+            <h3 class="font-bold text-gray-800">ফোন</h3>
+            <p class="text-gray-700">+৮৮০ ১৬৭৮-০০০০০০ (অফিস)<br>+৮৮০ ২-৯৬৬২৭৫০ (বিভাগ)</p>
+          </div>
+        </div>
+        <div class="flex items-start">
+          <i class="bi bi-clock text-chemistry text-xl mt-1 mr-3"></i>
+          <div>
+            <h3 class="font-bold text-gray-800">সময়সূচী</h3>
+            <p class="text-gray-700">সকাল ৮টা - বিকাল ৫টা<br>(শুক্রবার দুপুর ১টা পর্যন্ত)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-chemistry text-white mt-12">
+    <div class="max-w-6xl mx-auto px-6 py-8">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-lg font-bold mb-4">রসায়ন বিভাগ</h3>
+          <p class="text-purple-200">সরকারি ব্রজমোহন কলেজ, বরিশাল</p>
+          <p class="text-purple-200 mt-2">বাংলাদেশের দক্ষিণাঞ্চলের শীর্ষস্থানীয় রসায়ন শিক্ষা কেন্দ্র</p>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">দ্রুত লিংক</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-purple-200 hover:text-white transition">ভর্তি তথ্য</a></li>
+            <li><a href="#" class="text-purple-200 hover:text-white transition">সিলেবাস</a></li>
+            <li><a href="#" class="text-purple-200 hover:text-white transition">পরীক্ষার রুটিন</a></li>
+            <li><a href="#" class="text-purple-200 hover:text-white transition">ফলাফল</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">সামাজিক যোগাযোগ</h4>
+          <div class="flex space-x-4">
+            <a href="#" class="text-purple-200 hover:text-white transition text-2xl"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-purple-200 hover:text-white transition text-2xl"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="text-purple-200 hover:text-white transition text-2xl"><i class="bi bi-linkedin"></i></a>
+          </div>
+          <div class="mt-4">
+            <h4 class="font-bold mb-2">নিউজলেটার</h4>
+            <div class="flex">
+              <input type="email" placeholder="আপনার ইমেইল" class="px-3 py-2 text-gray-800 rounded-l-md w-full">
+              <button class="bg-purple-700 px-4 py-2 rounded-r-md hover:bg-purple-800 transition">
+                <i class="bi bi-envelope"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-purple-800 mt-8 pt-6 text-center text-purple-300">
+        <p>&copy; ২০২৫ সরকারি ব্রজমোহন কলেজ - রসায়ন বিভাগ। সর্বস্বত্ব সংরক্ষিত।</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    // Initialize Swiper
+    const swiper = new Swiper(".mySwiper", {
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      loop: true,
+    });
+
+    
+    !-- Script for Teachers -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    // Initialize Swiper
+    const swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      loop: true,
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
+      speed: 1000,
+    });
+
+    let teachers = [];
+    let grid = true;
+
+    async function loadCSV() {
+      const res = await fetch('https://bm-c.vercel.app/teacher.csv');
+      const text = await res.text();
+      const rows = text.trim().split('\n').slice(1);
+      teachers = rows
+        .map(row => row.split(','))
+        .filter(cols => cols[6] && cols[6].trim() === "রসায়ন");
+
+      // If no teachers found in CSV, use sample data
+      if (teachers.length === 0) {
+       teachers = [
+          ["1", "বরিশাল", "25th", "ড. আহসান হাবীব", "ড. আহসান হাবীব", "অধ্যাপক", "অর্থনীতি", "01712345678", "ahsan.habib@bmcollege.edu.bd", "2010-05-15", "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"],
+          ["2", "ঢাকা", "28th", "ড. ফারহানা ইসলাম", "ড. ফারহানা ইসলাম", "সহযোগী অধ্যাপক", "অর্থনীতি", "01787654321", "farhana.islam@bmcollege.edu.bd", "2012-08-22", "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb- 4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80"],
+          ["3", "খুলনা", "30th", "ড. রিয়াদ হোসেন", "ড. রিয়াদ হোসেন", "সহকারী অধ্যাপক", "অর্থনীতি", "01811223344", "riad.hossain@bmcollege.edu.bd", "2015-03-10", "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"]
+        ];
+      }
+
+      displayTeachers(teachers);
+    }
+
+    function displayTeachers(data) {
+      const list = document.getElementById("teacherList");
+      list.innerHTML = '';
+
+      data.forEach(cols => {
+        const [
+          id, district, batch, nameEn, nameBn, designation, department,
+          mobile, email, joiningDate, imageUrl
+        ] = cols;
+
+        const card = document.createElement("div");
+        card.className = grid
+          ? "teacher-card bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center hover:shadow-lg transition-all duration-300 animate-fadeIn"
+          : "teacher-card bg-white rounded-lg shadow-md p-4 flex items-start gap-4 hover:shadow-lg transition-all duration-300 animate-fadeIn";
+
+        card.innerHTML = `
+          <img src="${imageUrl || 'https://bm-c.vercel.app/paeson.png'}" 
+               onerror="this.src='https://bm-c.vercel.app/paeson.png'" 
+               class="${grid ? 'w-24 h-24' : 'w-20 h-20'} rounded-full object-cover border-4 border-blue-100" />
+          <div class="${grid ? 'mt-3' : ''}">
+            <h3 class="text-lg font-bold text-blue-800">${nameEn || "নাম নেই"}</h3>
+            <p class="text-blue-600">${designation || "পদবী নেই"} | ${batch || "N/A"} BCS</p>
+            <p class="text-sm text-gray-600 mt-1">নিজ জেলাঃ ${district || "N/A"}</p>
+            <p class="text-sm text-gray-600">ফোনঃ 0${mobile || "N/A"}</p>
+            <p class="text-sm text-gray-600">ইমেইলঃ ${email || "N/A"}</p>
+            <p class="text-xs text-gray-500 mt-1">যোগদানের তারিখঃ ${joiningDate?.replace("'", "") || "N/A"}</p>
+          </div>
+        `;
+        list.appendChild(card);
+      });
+    }
+
+    function toggleView() {
+      grid = !grid;
+      displayTeachers(teachers);
+    }
+
+    document.getElementById("searchBox").addEventListener("input", (e) => {
+      const keyword = e.target.value.toLowerCase();
+      const filtered = teachers.filter(t => 
+        t[3]?.toLowerCase().includes(keyword) || 
+        t[4]?.toLowerCase().includes(keyword) ||
+        t[5]?.toLowerCase().includes(keyword) ||
+        t[1]?.toLowerCase().includes(keyword)
+      );
+      displayTeachers(filtered);
+    });
+
+    // Load teachers on page load
+    document.addEventListener('DOMContentLoaded', loadCSV);
+  </script>
+
+
+
+  
+
+    <script src="ri.js"></script>
+
+  
+</body>
+</html>

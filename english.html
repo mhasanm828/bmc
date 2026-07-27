@@ -1,0 +1,662 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>English Department - Government BM College</title>
+    <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/Qdb9Vnk2/image.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    .heading-font {
+      font-family: 'Playfair Display', serif;
+    }
+    
+    /* Animation classes */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeIn {
+      animation: fadeIn 1s ease-out forwards;
+    }
+    .animate-delay-100 { animation-delay: 0.1s; }
+    .animate-delay-200 { animation-delay: 0.2s; }
+    .animate-delay-300 { animation-delay: 0.3s; }
+    
+    /* Swiper custom styles */
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+    }
+    .swiper-pagination-bullet {
+      background: white;
+      opacity: 0.6;
+      width: 10px;
+      height: 10px;
+    }
+    .swiper-pagination-bullet-active {
+      background: #b91c1c;
+      opacity: 1;
+    }
+    
+    /* Teacher card hover effect */
+    .teacher-card {
+      transition: all 0.3s ease;
+    }
+    .teacher-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #b91c1c;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<script>
+// Disable right click (context menu)
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+
+// Disable key combinations like F12, Ctrl+Shift+I, Ctrl+U
+document.addEventListener('keydown', function(e) {
+  if (
+    e.key === 'F12' ||
+    (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) ||
+    (e.ctrlKey && e.key === 'U')
+  ) {
+    e.preventDefault();
+  }
+});
+
+// Prevent video download
+document.querySelectorAll("video").forEach(function(video) {
+  video.setAttribute("controlsList", "nodownload");
+  video.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+  });
+});
+</script>
+
+  
+  
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-red-800 text-white shadow-lg py-3 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 flex flex-wrap items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="https://i.postimg.cc/Qdb9Vnk2/image.png" alt="Logo" class="w-10 h-10 rounded-full border-2 border-white">
+        <div>
+          <span class="text-xl font-bold heading-font block">English Department</span>
+          <span class="text-xs block">Government BM College, Barishal</span>
+        </div>
+      </a>
+      <button class="sm:hidden block text-2xl" onclick="navMenu.classList.toggle('hidden')">&#9776;</button>
+      <ul id="navMenu" class="sm:flex hidden flex-col sm:flex-row gap-5 font-medium mt-2 sm:mt-0">
+        <li><a href="#about" class="hover:text-yellow-200 transition">About</a></li>
+        <li><a href="#mission" class="hover:text-yellow-200 transition">Mission</a></li>
+        <li><a href="#courses" class="hover:text-yellow-200 transition">Courses</a></li>
+        <li><a href="#teachers" class="hover:text-yellow-200 transition">Faculty</a></li>
+        <li><a href="#gallery" class="hover:text-yellow-200 transition">Gallery</a></li>
+        <li><a href="#contact" class="hover:text-yellow-200 transition">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header Hero -->
+  <section class="relative text-center py-20 bg-gradient-to-r from-red-900 to-red-700 text-white animate-fadeIn">
+    <div class="max-w-4xl mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 heading-font">Department of English</h1>
+      <p class="text-xl md:text-2xl mb-6">Government BM College, Barishal</p>
+      <a href="#about" class="inline-block bg-white text-red-800 px-6 py-2 rounded-full font-medium hover:bg-yellow-200 transition">Explore More</a>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-50 to-transparent"></div>
+  </section>
+
+  <!-- Stats Bar -->
+  <div class="bg-white shadow-lg -mt-8 mx-auto max-w-5xl rounded-lg p-4 grid grid-cols-2 md:grid-cols-4 gap-4 relative z-10 animate-fadeIn animate-delay-100">
+    <div class="text-center p-2">
+      <div class="text-3xl font-bold text-red-700 heading-font">50+</div>
+      <div class="text-sm text-gray-600">Years History</div>
+    </div>
+    <div class="text-center p-2">
+      <div class="text-3xl font-bold text-red-700 heading-font">15+</div>
+      <div class="text-sm text-gray-600">Faculty Members</div>
+    </div>
+    <div class="text-center p-2">
+      <div class="text-3xl font-bold text-red-700 heading-font">500+</div>
+      <div class="text-sm text-gray-600">Students</div>
+    </div>
+    <div class="text-center p-2">
+      <div class="text-3xl font-bold text-red-700 heading-font">10+</div>
+      <div class="text-sm text-gray-600">Courses Offered</div>
+    </div>
+  </div>
+
+  <!-- Slider Section -->
+  <div class="swiper mySwiper max-w-6xl mx-auto mt-16 animate-fadeIn animate-delay-200">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+             alt="English Department" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+          <div class="text-white text-center px-4">
+            <h3 class="text-2xl md:text-3xl font-bold heading-font mb-2">Our Department</h3>
+            <p class="max-w-2xl">A center of excellence for English literature and language studies</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" 
+             alt="Students" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+          <div class="text-white text-center px-4">
+            <h3 class="text-2xl md:text-3xl font-bold heading-font mb-2">Our Students</h3>
+            <p class="max-w-2xl">Engaged learners shaping their future through literature</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+             alt="Library" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+          <div class="text-white text-center px-4">
+            <h3 class="text-2xl md:text-3xl font-bold heading-font mb-2">Our Resources</h3>
+            <p class="max-w-2xl">Extensive collection of literary works and research materials</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Section: About -->
+  <section id="about" class="max-w-5xl mx-auto p-6 mt-16 bg-white rounded-lg shadow-md animate-fadeIn animate-delay-300">
+    <h2 class="text-3xl font-bold mb-6 text-red-800 heading-font border-b-2 border-red-200 pb-2">About the Department</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          The English Department at Government BM College has been a cornerstone of literary education since its establishment in 1965. 
+          We pride ourselves on offering comprehensive programs that explore the richness of English literature while developing 
+          critical thinking and communication skills.
+        </p>
+        <p class="text-gray-700 leading-relaxed">
+          Our faculty consists of renowned scholars and dedicated educators who bring diverse perspectives to the study of literature, 
+          linguistics, and composition. The department serves as a vibrant intellectual community where students engage with texts 
+          from Shakespeare to postcolonial literature.
+        </p>
+      </div>
+      <div class="bg-red-50 p-6 rounded-lg">
+        <h3 class="text-xl font-bold mb-3 text-red-800 heading-font">Key Features</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-red-700 mt-1 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span>Bachelor's and Master's degree programs</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-red-700 mt-1 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span>Annual literary festival and symposium</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-red-700 mt-1 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span>Research opportunities for students</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-red-700 mt-1 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span>Modern language lab facilities</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Mission & Vision -->
+  <section id="mission" class="max-w-5xl mx-auto p-6 mt-16 bg-red-800 text-white rounded-lg shadow-md">
+    <h2 class="text-3xl font-bold mb-6 heading-font border-b-2 border-red-600 pb-2 animate-fadeIn">Our Mission & Vision</h2>
+    <div class="grid md:grid-cols-2 gap-8 animate-fadeIn animate-delay-100">
+      <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm">
+        <h3 class="text-xl font-bold mb-3 heading-font">Mission</h3>
+        <p class="leading-relaxed">
+          To foster a deep appreciation for English literature and language, while developing critical thinkers, 
+          effective communicators, and engaged global citizens through rigorous academic programs, innovative 
+          teaching methods, and meaningful scholarship.
+        </p>
+      </div>
+      <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm">
+        <h3 class="text-xl font-bold mb-3 heading-font">Vision</h3>
+        <p class="leading-relaxed">
+          To be recognized as a premier center for English studies in Bangladesh, known for academic excellence, 
+          transformative learning experiences, and significant contributions to literary scholarship and cultural 
+          understanding.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Course List -->
+  <section id="courses" class="max-w-5xl mx-auto p-6 mt-16 bg-white rounded-lg shadow-md">
+    <h2 class="text-3xl font-bold mb-6 text-red-800 heading-font border-b-2 border-red-200 pb-2 animate-fadeIn">Our Courses</h2>
+    
+    <div class="grid md:grid-cols-2 gap-6 animate-fadeIn animate-delay-100">
+      <!-- Undergraduate Courses -->
+      <div class="border border-red-200 rounded-lg overflow-hidden">
+        <div class="bg-red-800 text-white p-4">
+          <h3 class="text-xl font-bold heading-font">Undergraduate Programs</h3>
+        </div>
+        <div class="p-4">
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-red-700 mt-1 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+              <span>Introduction to Literature</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-red-700 mt-1 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+              <span>History of English Literature</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-red-700 mt-1 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+              <span>Shakespeare Studies</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-red-700 mt-1 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+              <span>Literary Criticism</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-red-700 mt-1 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+              <span>Postcolonial Literature</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Graduate Courses -->
+      <div class="border border-red-200 rounded-lg overflow-hidden">
+        <div class="bg-red-800 text-white p-4">
+          <h3 class="text-xl font-bold heading-font">Graduate Programs</h3>
+        </div>
+        <div class="p-4">
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-red-700 mt-1 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+              <span>Advanced Literary Theory</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-red-700 mt-1 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+              <span>World Literature in English</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-red-700 mt-1 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+              <span>Research Methodology</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-red-700 mt-1 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+              <span>Contemporary Critical Approaches</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-red-700 mt-1 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+              <span>Thesis/Dissertation</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Teachers -->
+  <section id="teachers" class="max-w-6xl mx-auto p-6 mt-16 bg-gray-100 rounded-lg shadow-md">
+    <h2 class="text-3xl font-bold mb-6 text-red-800 heading-font border-b-2 border-red-200 pb-2 animate-fadeIn">Our Faculty</h2>
+
+    <!-- Filters -->
+    <div class="flex flex-col sm:flex-row items-center justify-between mb-6 gap-4 animate-fadeIn animate-delay-100">
+      <input id="searchBox" type="text" placeholder="Search faculty by name..." 
+             class="p-2 rounded border w-full sm:w-1/3 focus:ring-2 focus:ring-red-500 focus:border-red-500" />
+      <button onclick="toggleView()" 
+              class="bg-red-700 text-white px-4 py-2 rounded shadow hover:bg-red-800 transition flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+        </svg>
+        Toggle View
+      </button>
+    </div>
+
+    <!-- Teachers Container -->
+    <div id="teacherList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 transition">
+      <!-- Cards will be inserted here -->
+    </div>
+  </section>
+
+   <!-- Gallery -->
+  <section id="gallery" class="max-w-6xl mx-auto p-6 mt-16 bg-white rounded-lg shadow-md">
+    <h2 class="text-3xl font-bold mb-6 text-red-800 heading-font animate-fadeIn">Gallery</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 animate-fadeIn animate-delay-100">
+      <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+           class="rounded shadow hover:shadow-lg transition cursor-pointer h-48 w-full object-cover hover:scale-105 duration-300">
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" 
+           class="rounded shadow hover:shadow-lg transition cursor-pointer h-48 w-full object-cover hover:scale-105 duration-300">
+      <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+           class="rounded shadow hover:shadow-lg transition cursor-pointer h-48 w-full object-cover hover:scale-105 duration-300">
+      <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+           class="rounded shadow hover:shadow-lg transition cursor-pointer h-48 w-full object-cover hover:scale-105 duration-300">
+      <img src="https://images.unsplash.com/photo-1524179091875-bf99a9a9a57a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+           class="rounded shadow hover:shadow-lg transition cursor-pointer h-48 w-full object-cover hover:scale-105 duration-300">
+      <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+           class="rounded shadow hover:shadow-lg transition cursor-pointer h-48 w-full object-cover hover:scale-105 duration-300">
+      <img src="https://images.unsplash.com/photo-1523057530100-383d7fbc77a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+           class="rounded shadow hover:shadow-lg transition cursor-pointer h-48 w-full object-cover hover:scale-105 duration-300">
+      <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+           class="rounded shadow hover:shadow-lg transition cursor-pointer h-48 w-full object-cover hover:scale-105 duration-300">
+    </div>
+  </section>
+
+  <!-- Section: Events -->
+  <section class="max-w-5xl mx-auto p-6 mt-16 bg-red-800 text-white rounded-lg shadow-md">
+    <h2 class="text-3xl font-bold mb-6 heading-font border-b-2 border-red-600 pb-2 animate-fadeIn">Upcoming Events</h2>
+    <div class="grid md:grid-cols-3 gap-6 animate-fadeIn animate-delay-100">
+      <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm">
+        <div class="text-yellow-300 font-bold mb-2">June 15, 2025</div>
+        <h3 class="text-xl font-bold mb-2 heading-font">Annual Literary Festival</h3>
+        <p class="text-sm">A celebration of literature with guest authors, readings, and workshops.</p>
+      </div>
+      <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm">
+        <div class="text-yellow-300 font-bold mb-2">July 8, 2025</div>
+        <h3 class="text-xl font-bold mb-2 heading-font">Shakespeare Symposium</h3>
+        <p class="text-sm">Exploring the Bard's works with performances and academic discussions.</p>
+      </div>
+      <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm">
+        <div class="text-yellow-300 font-bold mb-2">August 22, 2025</div>
+        <h3 class="text-xl font-bold mb-2 heading-font">Creative Writing Workshop</h3>
+        <p class="text-sm">Developing writing skills with published authors and poets.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Contact -->
+  <section id="contact" class="max-w-5xl mx-auto p-6 mt-16 bg-white rounded-lg shadow-md">
+    <h2 class="text-3xl font-bold mb-6 text-red-800 heading-font animate-fadeIn">Contact Us</h2>
+    <div class="grid md:grid-cols-2 gap-8 animate-fadeIn animate-delay-100">
+      <div>
+        <h3 class="text-xl font-bold mb-4 heading-font">Department Information</h3>
+        <div class="space-y-4">
+          <div class="flex items-start">
+            <svg class="w-6 h-6 text-red-700 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+            <div>
+              <h4 class="font-bold text-gray-800">Address</h4>
+              <p class="text-gray-700">English Department<br>Government BM College<br>Barishal 8200, Bangladesh</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <svg class="w-6 h-6 text-red-700 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+            <div>
+              <h4 class="font-bold text-gray-800">Phone</h4>
+              <p class="text-gray-700">+880 1678-000000 (Office)<br>+880 2-9662750 (Department)</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <svg class="w-6 h-6 text-red-700 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+            <div>
+              <h4 class="font-bold text-gray-800">Email</h4>
+              <p class="text-gray-700">english@bmcollege.edu.bd<br>info@bmcollege.gov.bd</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold mb-4 heading-font">Send Us a Message</h3>
+        <form class="space-y-4">
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700">Your Name</label>
+            <input type="text" id="name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500">
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+            <input type="email" id="email" class="mt-1 block w-full rounded-md border
+                       border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500">
+          </div>
+          <div>
+            <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
+            <input type="text" id="subject" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500">
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+            <textarea id="message" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500"></textarea>
+          </div>
+          <button type="submit" class="bg-red-700 text-white px-4 py-2 rounded-md hover:bg-red-800 transition">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <div class="max-w-6xl mx-auto mt-16 animate-fadeIn">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.328041928563!2d90.36126931539204!3d22.69782298510581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755341c42000001%3A0x548a927c146f3f3d!2sGovt.%20B.M.%20College!5e0!3m2!1sen!2sbd!4v1620000000000!5m2!1sen!2sbd" 
+            width="100%" 
+            height="400" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy"
+            class="rounded-lg shadow-lg">
+    </iframe>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white mt-16">
+    <div class="max-w-6xl mx-auto px-6 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4 heading-font">English Department</h3>
+          <p class="text-gray-400">Government BM College, Barishal</p>
+          <p class="text-gray-400 mt-2">A center of excellence for literary studies since 1965.</p>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#about" class="text-gray-400 hover:text-yellow-300 transition">About Us</a></li>
+            <li><a href="#courses" class="text-gray-400 hover:text-yellow-300 transition">Courses</a></li>
+            <li><a href="#teachers" class="text-gray-400 hover:text-yellow-300 transition">Faculty</a></li>
+            <li><a href="#gallery" class="text-gray-400 hover:text-yellow-300 transition">Gallery</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">Resources</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-yellow-300 transition">Library</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-yellow-300 transition">Research</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-yellow-300 transition">Publications</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-yellow-300 transition">Student Portal</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">Connect With Us</h4>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-yellow-300 transition">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-yellow-300 transition">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 3.804.058h.468c2.456 0 2.784-.011 3.807-.058.975-.045 1.504-.207 1.857-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-3.804v-.468c0-2.456-.011-2.784-.058-3.807-.045-.975-.207-1.504-.344-1.857a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"></path>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-yellow-300 transition">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-yellow-300 transition">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+              </svg>
+            </a>
+          </div>
+          <div class="mt-4">
+            <h4 class="font-bold mb-2">Subscribe to Newsletter</h4>
+            <div class="flex">
+              <input type="email" placeholder="Your email" class="px-3 py-2 text-gray-800 rounded-l-md w-full">
+              <button class="bg-red-700 px-4 py-2 rounded-r-md hover:bg-red-800 transition">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2025 Government BM College - English Department. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+    <!-- Script for Teachers -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    // Initialize Swiper
+    const swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      loop: true,
+      effect: 'slide',
+      speed: 800,
+    });
+
+    let teachers = [];
+    let grid = true;
+
+    async function loadCSV() {
+      const res = await fetch('https://bm-c.vercel.app/teacher.csv');
+      const text = await res.text();
+      const rows = text.trim().split('\n').slice(1);
+      teachers = rows
+        .map(row => row.split(','))
+        .filter(cols => cols[6] && cols[6].trim() === "ইংরেজি");
+
+      displayTeachers(teachers);
+    }
+
+    function displayTeachers(data) {
+      const list = document.getElementById("teacherList");
+      list.innerHTML = '';
+
+      data.forEach(cols => {
+        const [
+          id, district, batch, nameEn, nameBn, designation, department,
+          mobile, email, joiningDate, imageUrl
+        ] = cols;
+
+        const card = document.createElement("div");
+        card.className = grid
+          ? "teacher-card bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center hover:shadow-lg transition-all duration-300 animate-fadeIn"
+          : "teacher-card bg-white rounded-lg shadow-md p-4 flex items-start gap-4 hover:shadow-lg transition-all duration-300 animate-fadeIn";
+
+        card.innerHTML = `
+          <img src="${imageUrl || 'https://bm-c.vercel.app/paeson.png'}" 
+               onerror="this.src='https://bm-c.vercel.app/paeson.png'" 
+               class="${grid ? 'w-24 h-24' : 'w-20 h-20'} rounded-full object-cover border-4 border-indigo-100" />
+          <div class="${grid ? 'mt-3' : ''}">
+            <h3 class="text-lg font-bold text-indigo-800">${nameEn || "নাম নেই"}</h3>
+            <p class="text-indigo-600">${designation || "পদবী নেই"} | ${batch || "N/A"} BCS</p>
+            <p class="text-sm text-gray-600 mt-1">নিজ জেলাঃ ${district || "N/A"}</p>
+            <p class="text-sm text-gray-600">ফোনঃ 0${mobile || "N/A"}</p>
+            <p class="text-sm text-gray-600">ইমেইলঃ ${email || "N/A"}</p>
+            <p class="text-xs text-gray-500 mt-1">যোগদানের তারিখঃ ${joiningDate?.replace("'", "") || "N/A"}</p>
+          </div>
+        `;
+        list.appendChild(card);
+      });
+    }
+
+    function toggleView() {
+      grid = !grid;
+      displayTeachers(teachers);
+    }
+
+    document.getElementById("searchBox").addEventListener("input", (e) => {
+      const keyword = e.target.value.toLowerCase();
+      const filtered = teachers.filter(t => 
+        t[3]?.toLowerCase().includes(keyword) || 
+        t[4]?.toLowerCase().includes(keyword) ||
+        t[5]?.toLowerCase().includes(keyword) ||
+        t[1]?.toLowerCase().includes(keyword)
+      );
+      displayTeachers(filtered);
+    });
+
+    // Load teachers on page load
+    document.addEventListener('DOMContentLoaded', loadCSV);
+  </script>
+</body>
+</html>                                       
+                                                  
+                                                  
+                                                  
+                                                  

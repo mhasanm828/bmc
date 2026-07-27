@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Social Work Department - BM College</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body { font-family: 'Tiro Bangla', serif; }
+    /* Hamburger animation */
+    .hamburger span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px;
+      background-color: white;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+    .hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-green-800 text-white p-4 shadow-md fixed w-full z-20 top-0 left-0">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <a href="#home" class="flex items-center space-x-2">
+        <img src="https://i.postimg.cc/7Zy7ZQSv/IMG-20250728-WA0033.jpg" alt="Logo" class="w-12 h-12 rounded-full bg-white p-1"/>
+        <!---img src="https://i.postimg.cc/Qdb9Vnk2/image.png" alt="Logo" class="w-8 h-8 rounded-full bg-white p-1"/--->
+        <span class="text-xl font-bold">সমাজকর্ম বিভাগ</span>
+      </a>
+
+      <div class="hidden md:flex space-x-6 text-lg">
+        <a href="#about" class="hover:underline hover:text-green-300">পরিচিতি</a>
+        <a href="#history" class="hover:underline hover:text-green-300">ইতিহাস</a>
+        <a href="#highlights" class="hover:underline hover:text-green-300">হাইলাইটস</a>
+        <a href="#slider" class="hover:underline hover:text-green-300">ছবি</a>
+        <a href="#gallery" class="hover:underline hover:text-green-300">গ্যালারি</a>
+        <a href="#routine" class="hover:underline hover:text-green-300">রুটিন</a>
+        <a href="#admission" class="hover:underline hover:text-green-300">ভর্তি</a>
+        <a href="#office" class="hover:underline hover:text-green-300">অফিস সহকারী</a>
+        <a href="#teachers" class="hover:underline hover:text-green-300">শিক্ষক</a>
+        <a href="#contact" class="hover:underline hover:text-green-300">যোগাযোগ</a>
+      </div>
+
+      <!-- Hamburger -->
+      <button id="hamburgerBtn" class="md:hidden hamburger focus:outline-none" aria-label="Menu Toggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden flex-col space-y-4 mt-4 text-center text-lg">
+      <a href="#about" class="block hover:underline hover:text-green-300">পরিচিতি</a>
+      <a href="#slider" class="block hover:underline hover:text-green-300">ছবি</a>
+      <a href="#gallery" class="block hover:underline hover:text-green-300">গ্যালারি</a>
+      <a href="#routine" class="block hover:underline hover:text-green-300">রুটিন</a>
+      <a href="#teachers" class="block hover:underline hover:text-green-300">শিক্ষক</a>
+      <a href="#contact" class="block hover:underline hover:text-green-300">যোগাযোগ</a>
+    </div>
+  </nav>
+
+  <!-- Spacer for fixed nav -->
+  <div id="home" class="h-20"></div>
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-r from-green-700 to-green-900 text-white text-center py-5 px-4">
+
+  <center> <img src="https://i.postimg.cc/7Zy7ZQSv/IMG-20250728-WA0033.jpg" alt="Logo" class="w-40 h-50 rounded-full bg-white p-1"/></center> <br>
+
+  <h1 class="text-4xl md:text-5xl font-bold mb-4">সমাজকর্ম বিভাগ</h1>
+    <p class="text-sm">সরকারি ব্রজমোহন কলেজ, বরিশাল (জাতীয় বিশ্ববিদ্যালয়ের অধিভুক্ত)</p>
+  </section>
+
+  <!-- Slider -->
+  <section id="slider" class="max-w-6xl mx-auto p-6 mt-10">
+    <h2 class="text-2xl font-semibold mb-6 text-green-800 text-center">বিভাগের কিছু মুহূর্ত</h2>
+    <div class="swiper mySwiper rounded-lg shadow-lg">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://i.postimg.cc/GtQXqhPN/IMG-20250728-WA0011.jpg" alt="Social work meeting" class="w-full h-72 object-cover rounded" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://i.postimg.cc/N03C0nfN/IMG-20250728-WA0012.jpg" alt="Community helping" class="w-full h-72 object-cover rounded" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://i.postimg.cc/pTFHmyJd/FB-IMG-1753669912159.jpg" alt="Community helping" class="w-full h-72 object-cover rounded" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://i.postimg.cc/fRbrqXrv/IMG-20250728-WA0008.jpg" alt="Social workers discussion" class="w-full h-72 object-cover rounded" />
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </section>
+
+<!-- পরিসংখ্যান সেকশন (আইকনসহ আরও ডাইনামিক) -->
+<section class="p-6 bg-white shadow-md my-6 text-center rounded-2xl">
+  <h2 class="text-2xl font-bold mb-6 text-blue-700">📊 পরিসংখ্যান</h2>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-blue-800 font-semibold">
+    
+    <div class="flex flex-col items-center p-4 bg-blue-50 rounded-xl shadow hover:scale-105 transition">
+      <i class="fas fa-user-graduate text-3xl mb-2 text-blue-600"></i>
+      <p>অনার্স শিক্ষার্থী</p>
+      <span class="text-black text-lg font-bold">১০২০+</span>
+    </div>
+
+    <div class="flex flex-col items-center p-4 bg-blue-50 rounded-xl shadow hover:scale-105 transition">
+      <i class="fas fa-university text-3xl mb-2 text-blue-600"></i>
+      <p>মাস্টার্স শিক্ষার্থী</p>
+      <span class="text-black text-lg font-bold">৩৯০+</span>
+    </div>
+
+    <div class="flex flex-col items-center p-4 bg-blue-50 rounded-xl shadow hover:scale-105 transition">
+      <i class="fas fa-chalkboard-teacher text-3xl mb-2 text-blue-600"></i>
+      <p>শিক্ষক</p>
+      <span class="text-black text-lg font-bold">৫ জন</span>
+    </div>
+
+    <div class="flex flex-col items-center p-4 bg-blue-50 rounded-xl shadow hover:scale-105 transition">
+      <i class="fas fa-calendar-alt text-3xl mb-2 text-blue-600"></i>
+      <p>প্রতিষ্ঠাকাল</p>
+      <span class="text-black text-lg font-bold">১৯৯৩</span>
+    </div>
+
+  </div>
+</section>
+ 
+
+
+
+
+
+
+
+<!-- Font Awesome CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<!-- About Section with Icons -->
+<section id="about" class="max-w-5xl mx-auto p-6 mt-14 bg-white rounded-lg shadow-md">
+  <h2 class="text-2xl font-bold mb-6 text-green-800 text-center flex items-center justify-center gap-2">
+    <svg class="w-6 h-6 text-green-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16h6M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+    বিভাগ পরিচিতি
+  </h2>
+  <p class="text-gray-700 leading-relaxed text-justify">
+    সমাজকর্ম বিভাগ এমন একটি শাখা যা সমাজের দুর্বল, অবহেলিত ও প্রান্তিক জনগোষ্ঠীর কল্যাণে কাজ করে। এই বিভাগ সমাজসেবকদের মানসিক, নৈতিক এবং পেশাগত দক্ষতা বৃদ্ধির জন্য সর্বদা সচেষ্ট। সমাজের টেকসই উন্নয়নের জন্য মানবিক মূল্যবোধ, সামাজিক ন্যায় ও দায়িত্বশীলতার ভিত্তিতে শিক্ষা প্রদান করা হয়।
+  </p>
+</section>
+
+<!-- History Section with Timeline Icons -->
+<section id="history" class="max-w-5xl mx-auto p-6 mt-14 bg-green-50 rounded-lg shadow-md">
+  <h2 class="text-2xl font-bold mb-6 text-green-800 text-center flex items-center justify-center gap-2">
+    <svg class="w-6 h-6 text-green-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3M16 7V3M4 11h16M4 19h16M4 15h16" />
+    </svg>
+    ইতিহাস (সংক্ষেপে)
+  </h2>
+  <ul class="space-y-4 text-gray-700">
+    <li class="flex items-start gap-3">
+      <svg class="w-5 h-5 text-green-700 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3M12 2a10 10 0 100 20 10 10 0 000-20z" />
+      </svg>
+      <span><strong>১৯৯৩</strong> সালে সমাজকর্মে <strong>মাস্টার্স কোর্স</strong> চালু হয়।</span>
+    </li>
+    <li class="flex items-start gap-3">
+      <svg class="w-5 h-5 text-green-700 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2M4 4v16h16V4H4z" />
+      </svg>
+      <span><strong>১৯৯৫</strong> সালে <strong>অনার্স কোর্স</strong> চালু হয় সমাজকর্মে বিভাগে।</span>
+    </li>
+    <li class="flex items-start gap-3">
+      <svg class="w-5 h-5 text-green-700 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+      </svg>
+      <span>এই বিভাগ <strong>জাতীয় বিশ্ববিদ্যালয়ের</strong> অধীনে পরিচালিত।</span>
+    </li>
+  </ul>
+</section>
+
+
+
+
+
+<!-- Chairman Section -->
+<section class="p-6 bg-white shadow-md my-8 max-w-6xl mx-auto rounded-lg">
+  <h2 class="text-3xl font-bold mb-6 text-green-800 text-center">বিভাগীয় প্রধান</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <!-- Left: Image -->
+    <div class="flex justify-center md:justify-start">
+      <img src="https://i.postimg.cc/vTXCVXWz/IMG-20250728-WA0017.jpg" alt="Chairman Dr. Md. Jahangir Kabir" 
+           class="rounded-lg shadow-lg w-64 md:w-80 object-cover hover:scale-105 transition-transform duration-300" />
+    </div>
+
+    <!-- Right: Content -->
+    <div>
+      <h3 class="text-2xl font-semibold text-green-900 mb-2">ড. মোঃ জাহাঙ্গীর কবীর</h3>
+      <p class="text-green-700 font-medium mb-1">সহযোগী অধ্যাপক | ২২তম বিসিএস</p>
+      
+      <ul class="text-gray-700 space-y-1 mb-4">
+        <li><strong>নিজ জেলা:</strong> ঝিনাইদহ</li>
+        <li><strong>ফোন:</strong> <a href="tel:+8801716088097" class="text-blue-600 hover:underline">01716088097</a></li>
+        <li><strong>ইমেইল:</strong> <a href="mailto:kabirdrjahangir@gmail.com" class="text-blue-600 hover:underline">kabirdrjahangir@gmail.com</a></li>
+      </ul>
+
+      <blockquote class="italic border-l-4 border-green-500 pl-4 text-gray-600 text-lg">
+        "আমরা সামাজিক উন্নয়নে নেতৃত্ব দিতে শিক্ষার্থীদের মানবিকতা, চিন্তা শক্তি ও গবেষণামূলক মনোভাব তৈরি করতে চাই।"
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+
+<section class="container py-5">
+  <h2 class="text-center mb-4">📂 Batch 19-20 Files</h2>
+  <div class="list-group shadow">
+    <a href="#" class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#fileModal" data-file="images/batch1.jpg">
+      🖼️ Group Photo - Orientation Day
+    </a>
+    <a href="#" class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#fileModal" data-file="images/batch2.jpg">
+      🖼️ Campus Tour - 1st Week
+    </a>
+    <a href="#" class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#fileModal" data-file="images/batch3.jpg">
+      📄 Routine PDF - Term 1
+    </a>
+  </div>
+</section>
+
+<!-- Modal Popup -->
+<div class="modal fade" id="fileModal" tabindex="-1" aria-labelledby="fileModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">📁 File Preview</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center" id="filePreview">
+        <!-- File content goes here -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const fileModal = document.getElementById('fileModal');
+    const filePreview = document.getElementById('filePreview');
+
+    fileModal.addEventListener('show.bs.modal', function (event) {
+      const triggerLink = event.relatedTarget;
+      const filePath = triggerLink.getAttribute('data-file');
+      const fileExt = filePath.split('.').pop().toLowerCase();
+
+      if (['jpg', 'jpeg', 'png', 'webp', 'gif'].includes(fileExt)) {
+        filePreview.innerHTML = `<img src="${filePath}" class="img-fluid rounded" alt="Preview">`;
+      } else if (fileExt === 'pdf') {
+        filePreview.innerHTML = `<iframe src="${filePath}" style="width:100%; height:600px;" frameborder="0"></iframe>`;
+      } else {
+        filePreview.innerHTML = `<p class="text-danger">⚠️ File format not supported for preview.</p>`;
+      }
+    });
+  });
+</script>
+
+<!-- Highlights (Upgraded & Dynamic) -->
+<section id="highlights" class="py-16 bg-green-900 text-white">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-4xl font-bold mb-10 text-center tracking-wide border-b-4 border-green-700 pb-3">
+      ডিপার্টমেন্ট হাইলাইটস
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      
+      <div class="bg-green-800 rounded-lg p-7 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl cursor-default">
+        <div class="flex items-center mb-4">
+          <span class="text-3xl mr-3">👨‍🏫</span>
+          <h3 class="text-2xl font-semibold">অভিজ্ঞ শিক্ষক মণ্ডলী</h3>
+        </div>
+        <p class="text-green-200 leading-relaxed">
+          ১০+ বছর অভিজ্ঞতা সম্পন্ন শিক্ষকগণ শিক্ষার্থীদের মানবিক ও একাডেমিক বিকাশে নিবেদিত।
+        </p>
+      </div>
+      
+      <div class="bg-green-800 rounded-lg p-7 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl cursor-default">
+        <div class="flex items-center mb-4">
+          <span class="text-3xl mr-3">📚</span>
+          <h3 class="text-2xl font-semibold">গবেষণা ও আধুনিক পাঠ্যক্রম</h3>
+        </div>
+        <p class="text-green-200 leading-relaxed">
+          গবেষণাভিত্তিক ও এনজিও-অরিয়েন্টেড পাঠ্যক্রম যা শিক্ষার্থীদের সমাজসেবায় দক্ষ করে তোলে।
+        </p>
+      </div>
+      
+      <div class="bg-green-800 rounded-lg p-7 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl cursor-default">
+        <div class="flex items-center mb-4">
+          <span class="text-3xl mr-3">🏅</span>
+          <h3 class="text-2xl font-semibold">অর্জিত সাফল্য</h3>
+        </div>
+        <p class="text-green-200 leading-relaxed">
+          নিয়মিত ভালো ফলাফল, উচ্চ CGPA এবং বিভিন্ন প্রতিষ্ঠানে শিক্ষার্থীদের সফল প্লেসমেন্ট।
+        </p>
+      </div>
+      
+      <div class="bg-green-800 rounded-lg p-7 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl cursor-default">
+        <div class="flex items-center mb-4">
+          <span class="text-3xl mr-3">🤝</span>
+          <h3 class="text-2xl font-semibold">কমিউনিটি এনগেজমেন্ট</h3>
+        </div>
+        <p class="text-green-200 leading-relaxed">
+          স্থানীয় সমাজের উন্নয়নে নিয়মিত কর্মশালা, ক্যাম্পেইন ও আউটরিচ প্রোগ্রাম।
+        </p>
+      </div>
+      
+      <div class="bg-green-800 rounded-lg p-7 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl cursor-default">
+        <div class="flex items-center mb-4">
+          <span class="text-3xl mr-3">🌍</span>
+          <h3 class="text-2xl font-semibold">জাতীয় ও আন্তর্জাতিক সংযোগ</h3>
+        </div>
+        <p class="text-green-200 leading-relaxed">
+          বিভিন্ন এনজিও ও উন্নয়ন সংস্থার সাথে পার্টনারশিপ, শিক্ষার্থীদের আন্তর্জাতিক অভিজ্ঞতা অর্জনের সুযোগ।
+        </p>
+      </div>
+      
+      <div class="bg-green-800 rounded-lg p-7 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl cursor-default">
+        <div class="flex items-center mb-4">
+          <span class="text-3xl mr-3">🎓</span>
+          <h3 class="text-2xl font-semibold">আন্তরিক ছাত্রসমাজ</h3>
+        </div>
+        <p class="text-green-200 leading-relaxed">
+          মানবিক দৃষ্টিভঙ্গি সম্পন্ন, সুসংগঠিত ও সক্রিয় ছাত্রসংঘ যা শিক্ষার্থীদের নেতৃত্ব ও সহায়তা করে।
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+  <!-- Teachers -->
+  <section id="teachers" class="max-w-6xl mx-auto p-6 mt-16 bg-gray-100 rounded-lg shadow-md">
+      <h2 class="text-3xl font-semibold mb-8 text-green-800 text-center"> সম্মানিত শিক্ষকবৃন্দ</h2>
+
+    <!-- Filters -->
+    <div class="flex flex-col sm:flex-row items-center justify-between mb-6 gap-4">
+      <input id="searchBox" type="text" placeholder="Search faculty by name..."
+        class="p-2 rounded border w-full sm:w-1/3 focus:ring-2 focus:ring-red-500 focus:border-red-500" />
+      <button onclick="toggleView()"
+        class="bg-red-700 text-white px-4 py-2 rounded shadow hover:bg-red-800 transition flex items-center gap-2">
+        <!-- icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+        </svg>
+        Toggle View
+      </button>
+    </div>
+
+    <!-- Teachers Container -->
+    <div id="teacherList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 transition">
+      <!-- Cards will be inserted here -->
+    </div>
+  </section>
+
+
+  <!-- Section: Course List -->
+  <section id="courses" class="max-w-3xl mx-auto my-10 p-6 bg-white rounded shadow">
+    <h2 class="text-2xl font-bold text-center mb-6 text-indigo-700">সমাজকর্ম বিভাগের কোর্স তালিকা</h2>
+       <h5 class=" text-center mb-6 text-danger-700"> এই তথ্যগুলো সমাজকর্ম বিভাগের  নয় । তথ্য সংগ্রহ করে আপডেট করা হবে</h5>
+ <div class="flex gap-2 justify-center mb-4">
+      <button onclick="showYear('1st')" id="btn-1st" class="px-4 py-2 bg-blue-600 text-white rounded">১ম বর্ষ</button>
+      <button onclick="showYear('2nd')" id="btn-2nd" class="px-4 py-2 bg-gray-700 text-white rounded">২য় বর্ষ</button>
+      <button onclick="showYear('3rd')" id="btn-3rd" class="px-4 py-2 bg-gray-700 text-white rounded">৩য় বর্ষ</button>
+      <button onclick="showYear('4th')" id="btn-4th" class="px-4 py-2 bg-gray-700 text-white rounded">৪র্থ বর্ষ</button>
+      <button onclick="showYear('Masters')" id="btn-4th" class="px-4 py-2 bg-gray-700 text-white rounded"> মাস্টার্স </button>
+    </div>
+    <div id="course-table-container"></div>
+  </section>
+
+  <script>
+    const banglaCourses = [
+
+  // ১ম বর্ষ
+  { code: "SW101", title: "Introduction to Social Work", credit: 4, year: "1st" },
+  { code: "SW102", title: "Social Work History and Philosophy", credit: 4, year: "1st" },
+  { code: "SW103", title: "Political Organization and Political Thought", credit: 4, year: "1st" },
+  { code: "SW104", title: "Principles of Economics", credit: 4, year: "1st" },
+  { code: "SW105", title: "Sociology: Basic Concepts", credit: 4, year: "1st" },
+  { code: "SW106", title: "English", credit: 4, year: "1st" },
+  { code: "SW107", title: "Bangladesh Studies", credit: 4, year: "1st" },
+
+  // ২য় বর্ষ
+  { code: "SW201", title: "Social Work Methods: Case Work and Group Work", credit: 4, year: "2nd" },
+  { code: "SW202", title: "Social Work Methods: Community Organization and Social Action", credit: 4, year: "2nd" },
+  { code: "SW203", title: "Social Statistics", credit: 4, year: "2nd" },
+  { code: "SW204", title: "Psychology and Social Work", credit: 4, year: "2nd" },
+  { code: "SW205", title: "Social Work and Social Legislation", credit: 4, year: "2nd" },
+  { code: "SW206", title: "Field Work (non-credit but compulsory)", credit: 0, year: "2nd" },
+
+  // ৩য় বর্ষ
+  { code: "SW301", title: "Social Work Research and Statistics", credit: 4, year: "3rd" },
+  { code: "SW302", title: "Social Policy and Planning", credit: 4, year: "3rd" },
+  { code: "SW303", title: "Development Studies", credit: 4, year: "3rd" },
+  { code: "SW304", title: "Criminology and Correctional Services", credit: 4, year: "3rd" },
+  { code: "SW305", title: "Medical and Psychiatric Social Work", credit: 4, year: "3rd" },
+  { code: "SW306", title: "Field Work (non-credit but compulsory)", credit: 0, year: "3rd" },
+
+  // ৪র্থ বর্ষ
+  { code: "SW401", title: "Social Welfare Administration", credit: 4, year: "4th" },
+  { code: "SW402", title: "Human Rights and Social Justice", credit: 4, year: "4th" },
+  { code: "SW403", title: "Rural and Urban Community Development", credit: 4, year: "4th" },
+  { code: "SW404", title: "Industrial Social Work", credit: 4, year: "4th" },
+  { code: "SW405", title: "Gender and Development", credit: 4, year: "4th" },
+  { code: "SW406", title: "Viva-Voce", credit: 2, year: "4th" },
+  { code: "SW407", title: "Field Work (compulsory, with report submission)", credit: 0, year: "4th" },
+
+  // মাস্টার্স (১ বছর)
+  { code: "SWM501", title: "Advanced Social Work Theories", credit: 4, year: "Masters" },
+  { code: "SWM502", title: "Contemporary Social Problems in Bangladesh", credit: 4, year: "Masters" },
+  { code: "SWM503", title: "Social Work and Development", credit: 4, year: "Masters" },
+  { code: "SWM504", title: "Social Work Research", credit: 4, year: "Masters" },
+  { code: "SWM505", title: "Field Work & Viva", credit: 2, year: "Masters" },
+  { code: "SWM506", title: "Dissertation (for thesis group)", credit: 4, year: "Masters" }
+    ];
+
+    function renderTable(year) {
+      const courses = banglaCourses.filter(c => c.year === year);
+      let html = `
+        <div class="overflow-x-auto">
+          <table class="min-w-full bg-gray-100 text-gray-900 rounded">
+            <thead>
+              <tr>
+                <th class="px-3 py-2 border-b">কোর্স কোড</th>
+                <th class="px-3 py-2 border-b">কোর্স শিরোনাম</th>
+                <th class="px-3 py-2 border-b">ক্রেডিট</th>
+              </tr>
+            </thead>
+            <tbody>
+      `;
+      courses.forEach(c => {
+        html += `<tr>
+          <td class="px-3 py-2 border-b">${c.code}</td>
+          <td class="px-3 py-2 border-b">${c.title}</td>
+          <td class="px-3 py-2 border-b">${c.credit}</td>
+        </tr>`;
+      });
+      html += `</tbody></table></div>`;
+      document.getElementById('course-table-container').innerHTML = html;
+    }
+
+    function showYear(year) {
+      ['1st','2nd','3rd','4th'].forEach(y=>{
+        document.getElementById('btn-'+y).className = "px-4 py-2 " + (y===year ? "bg-blue-600" : "bg-gray-700") + " text-white rounded";
+      });
+      renderTable(year);
+    }
+    showYear('1st');
+  </script>
+
+
+
+
+<body class="bg-gray-100 text-gray-800">
+
+  <section class="py-10 px-4 max-w-7xl mx-auto">
+    <h2 class="text-2xl md:text-4xl font-bold text-center mb-8">ব্যাচ ১৯-২০ এর কিছু অসাধারণ মুহুর্ত</h2>
+
+    <div id="gallery" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
+  </section>
+
+  <!-- Image Preview Modal -->
+  <div id="modal" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50">
+    <img id="modal-img" src="" alt="Preview" class="max-w-full max-h-[90vh] rounded-lg shadow-lg">
+  </div>
+
+  <script>
+    const imageUrls = [
+      "https://i.postimg.cc/hhRJhfz8/IMG-20250728-WA0019.jpg",
+      "https://i.postimg.cc/qMKZNRZN/IMG-20250728-WA0020.jpg",
+      "https://i.postimg.cc/nL33yQMP/IMG-20250728-WA0021.jpg",
+      "https://i.postimg.cc/MTX9qKQK/IMG-20250728-WA0022.jpg",
+      "https://i.postimg.cc/13Z7wQLJ/IMG-20250728-WA0024.jpg",
+      "https://i.postimg.cc/v8kN89XR/IMG-20250728-WA0025.jpg",
+      "https://i.postimg.cc/PxNv7GnD/IMG-20250728-WA0026.jpg",
+      "https://i.postimg.cc/cLM3gMcv/IMG-20250728-WA0027.jpg",
+      "https://i.postimg.cc/wMmy6hvT/IMG-20250728-WA0028.jpg",
+      "https://i.postimg.cc/tTfnQr9M/IMG-20250728-WA0029.jpg",
+      "https://i.postimg.cc/596rMpBq/IMG-20250728-WA0030.jpg",
+      "https://i.postimg.cc/cJF8Tx2Z/IMG-20250728-WA0031.jpg",
+      "https://i.postimg.cc/fbz9xtHB/IMG-20250728-WA0032.jpg",
+      "https://i.postimg.cc/8CpyXbkv/IMG-20250728-WA0023.jpg"
+    ];
+
+    const gallery = document.getElementById("gallery");
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modal-img");
+
+    imageUrls.forEach(url => {
+      const img = document.createElement("img");
+      img.src = url;
+      img.alt = "Batch moment";
+      img.className = "rounded-lg shadow-md hover:scale-105 transition-transform cursor-pointer";
+      img.onclick = () => {
+        modal.classList.remove("hidden");
+        modalImg.src = url;
+      };
+      gallery.appendChild(img);
+    });
+
+    modal.onclick = () => {
+      modal.classList.add("hidden");
+      modalImg.src = "";
+    };
+  </script>
+
+<!--- section end --->
+
+
+
+
+
+
+<!-- Official Community Section (Updated Design) -->
+<section id="community" class="py-12 bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl shadow-inner my-6">
+  <div class="max-w-5xl mx-auto text-center px-6">
+    <h2 class="text-3xl font-bold mb-4 text-blue-800 flex items-center justify-center gap-2">
+      📢 <span>অফিসিয়াল কমিউনিটি</span>
+    </h2>
+    <p class="text-gray-700 mb-6 leading-relaxed">
+      আমরা আছি <strong class="text-blue-900">Social Work, Govt BM College, Barishal</strong> এর ফেসবুক গ্রুপে — শিক্ষার্থী, শিক্ষক ও প্রাক্তন শিক্ষার্থীদের তথ্য বিনিময়, নোটিশ, রুটিন ও ইভেন্টের এক কেন্দ্রবিন্দু।
+    </p>
+    <a href="https://www.facebook.com/groups/996281274531009/" target="_blank"
+       class="inline-block bg-blue-700 hover:bg-blue-800 text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition-all duration-300">
+      🔗 Facebook গ্রুপ দেখুন
+    </a>
+  </div>
+</section>
+
+<!-- Routine Tabs Section (Updated with Subject + Teacher Combo) -->
+<section id="routine" class="py-16 bg-gradient-to-r from-green-50 via-green-100 to-green-50">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-8 text-green-800 text-center flex items-center justify-center gap-2">
+      📅 <span>ক্লাস রুটিন</span>
+    </h2>
+
+       <h5 class=" text-center mb-6 text-danger-700"> এই তথ্যগুলো সমাজকর্ম বিভাগের  নয় । তথ্য সংগ্রহ করে আপডেট করা হবে</h5>
+
+    <!-- Tabs -->
+    <div class="flex flex-wrap justify-center gap-4 mb-6">
+      <button class="tab-btn px-4 py-2 bg-green-700 text-white rounded-lg" data-tab="year1">১ম বর্ষ</button>
+      <button class="tab-btn px-4 py-2 bg-green-200 text-green-800 rounded-lg" data-tab="year2">২য় বর্ষ</button>
+      <button class="tab-btn px-4 py-2 bg-green-200 text-green-800 rounded-lg" data-tab="year3">৩য় বর্ষ</button>
+      <button class="tab-btn px-4 py-2 bg-green-200 text-green-800 rounded-lg" data-tab="year4">৪র্থ বর্ষ</button>
+    </div>
+
+    <!-- Template for Routine Table -->
+    <template id="routine-template">
+      <div class="overflow-x-auto rounded-lg shadow-lg bg-white mb-8">
+        <table class="min-w-full text-sm text-left border-collapse">
+          <thead class="bg-green-700 text-white text-base">
+            <tr>
+              <th class="px-5 py-3">দিন</th>
+              <th class="px-5 py-3">১০:০০ - ১০:৪৫</th>
+              <th class="px-5 py-3">১১:০০ - ১১:৪৫</th>
+              <th class="px-5 py-3">১২:১৫ - ১:০০</th>
+              <th class="px-5 py-3">১:৩০ - ২:১৫</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-700 routine-body"></tbody>
+        </table>
+      </div>
+    </template>
+
+    <!-- All Routines -->
+    <div id="year1" class="routine-tab"></div>
+    <div id="year2" class="routine-tab hidden"></div>
+    <div id="year3" class="routine-tab hidden"></div>
+    <div id="year4" class="routine-tab hidden"></div>
+  </div>
+</section>
+
+<!-- JS: Tab & Routine Generator -->
+<script>
+  const routineData = {
+
+  year1: {
+    "রবিবার": [
+      ["ব্যবসায় প্রশাসন", "মোঃ রফিকুল ইসলাম"],
+      ["বাংলা ভাষা", "মোছা. হালিমা ইয়াসমিন"],
+      ["-", "-"],
+      ["কম্পিউটার শিক্ষা", "মোঃ শামীম হাসান"]
+    ],
+    "সোমবার": [
+      ["ব্যবসায় গণিত", "মোঃ রফিকুল ইসলাম"],
+      ["-", "-"],
+      ["কম্পিউটার শিক্ষা", "মোঃ শামীম হাসান"],
+      ["-", "-"]
+    ],
+    "মঙ্গলবার ": [
+      ["ব্যবসায় প্রশাসন", "মোঃ রফিকুল ইসলাম"],
+      ["বাংলা ভাষা", "মোছা. হালিমা ইয়াসমিন"],
+      ["-", "-"],
+      ["কম্পিউটার শিক্ষা", "মোঃ শামীম হাসান"]
+    ],
+    "বুধবার ": [
+      ["ব্যবসায় প্রশাসন", "মোঃ রফিকুল ইসলাম"],
+      ["বাংলা ভাষা", "মোছা. হালিমা ইয়াসমিন"],
+      ["-", "-"],
+      ["কম্পিউটার শিক্ষা", "মোঃ শামীম হাসান"]
+    ],
+    "বৃহস্পতিবার ": [
+      ["ব্যবসায় গণিত", "মোঃ রফিকুল ইসলাম"],
+      ["-", "-"],
+      ["কম্পিউটার শিক্ষা", "মোঃ শামীম হাসান"],
+      ["-", "-"]
+    ]
+  },
+
+  year2: {
+    "রবিবার": [
+      ["অর্থনীতি", "মোঃ কামরুজ্জামান"],
+      ["অংক", "মোঃ রাকিব হাসান"],
+      ["-", "-"],
+      ["প্রজেক্ট ম্যানেজমেন্ট", "মোছা. রুবিনা ইয়াসমিন"]
+    ],
+    "সোমবার": [
+      ["ফিনান্স", "মোঃ কামরুজ্জামান"],
+      ["অর্থনীতি", "মোঃ কামরুজ্জামান"],
+      ["-", "-"],
+      ["প্রজেক্ট ম্যানেজমেন্ট", "মোছা. রুবিনা ইয়াসমিন"]
+    ],
+    "মঙ্গলবার": [
+      ["অংক", "মোঃ রাকিব হাসান"],
+      ["ফিনান্স", "মোঃ কামরুজ্জামান"],
+      ["-", "-"],
+      ["-", "-"]
+    ],
+    "বুধবার": [
+      ["অর্থনীতি", "মোঃ কামরুজ্জামান"],
+      ["অংক", "মোঃ রাকিব হাসান"],
+      ["প্রজেক্ট ম্যানেজমেন্ট", "মোছা. রুবিনা ইয়াসমিন"],
+      ["-", "-"]
+    ],
+    "বৃহস্পতিবার": [
+      ["ফিনান্স", "মোঃ কামরুজ্জামান"],
+      ["-", "-"],
+      ["অংক", "মোঃ রাকিব হাসান"],
+      ["-", "-"]
+    ]
+  },
+
+  year3: {
+    "রবিবার": [
+      ["মার্কেটিং", "মোঃ আসিফ ইকবাল"],
+      ["ম্যানেজমেন্ট", "মোঃ সোহেল রানা"],
+      ["-", "-"],
+      ["ব্যবসায় গবেষণা", "মোছা. রুবিনা ইয়াসমিন"]
+    ],
+    "সোমবার": [
+      ["ম্যানেজমেন্ট", "মোঃ সোহেল রানা"],
+      ["মার্কেটিং", "মোঃ আসিফ ইকবাল"],
+      ["-", "-"],
+      ["ব্যবসায় গবেষণা", "মোছা. রুবিনা ইয়াসমিন"]
+    ],
+    "মঙ্গলবার": [
+      ["মার্কেটিং", "মোঃ আসিফ ইকবাল"],
+      ["ম্যানেজমেন্ট", "মোঃ সোহেল রানা"],
+      ["ব্যবসায় গবেষণা", "মোছা. রুবিনা ইয়াসমিন"],
+      ["-", "-"]
+    ],
+    "বুধবার": [
+      ["ম্যানেজমেন্ট", "মোঃ সোহেল রানা"],
+      ["মার্কেটিং", "মোঃ আসিফ ইকবাল"],
+      ["-", "-"],
+      ["-", "-"]
+    ],
+    "বৃহস্পতিবার": [
+      ["ব্যবসায় গবেষণা", "মোছা. রুবিনা ইয়াসমিন"],
+      ["-", "-"],
+      ["মার্কেটিং", "মোঃ আসিফ ইকবাল"],
+      ["-", "-"]
+    ]
+  },
+
+  year4: {
+    "রবিবার": [
+      ["স্ট্র্যাটেজিক ম্যানেজমেন্ট", "ড. নাসির উদ্দিন"],
+      ["ই-বিজনেস", "মোঃ তানভীর আহমেদ"],
+      ["-", "-"],
+      ["ব্যবসায় নীতি", "মোছা. রুবিনা ইয়াসমিন"]
+    ],
+    "সোমবার": [
+      ["স্ট্র্যাটেজিক ম্যানেজমেন্ট", "ড. নাসির উদ্দিন"],
+      ["ই-বিজনেস", "মোঃ তানভীর আহমেদ"],
+      ["ব্যবসায় নীতি", "মোছা. রুবিনা ইয়াসমিন"],
+      ["-", "-"]
+    ],
+    "মঙ্গলবার": [
+      ["ই-বিজনেস", "মোঃ তানভীর আহমেদ"],
+      ["স্ট্র্যাটেজিক ম্যানেজমেন্ট", "ড. নাসির উদ্দিন"],
+      ["-", "-"],
+      ["ব্যবসায় নীতি", "মোছা. রুবিনা ইয়াসমিন"]
+    ],
+    "বুধবার": [
+      ["স্ট্র্যাটেজিক ম্যানেজমেন্ট", "ড. নাসির উদ্দিন"],
+      ["ই-বিজনেস", "মোঃ তানভীর আহমেদ"],
+      ["-", "-"],
+      ["-", "-"]
+    ],
+    "বৃহস্পতিবার": [
+      ["ব্যবসায় নীতি", "মোছা. রুবিনা ইয়াসমিন"],
+      ["-", "-"],
+      ["স্ট্র্যাটেজিক ম্যানেজমেন্ট", "ড. নাসির উদ্দিন"],
+      ["-", "-"]
+    ]
+  }
+};
+
+  const routineTabs = document.querySelectorAll(".tab-btn");
+  const tabContents = document.querySelectorAll(".routine-tab");
+  const template = document.getElementById("routine-template").content;
+
+  function generateRoutine(yearKey) {
+    const routine = routineData[yearKey];
+    const container = document.getElementById(yearKey);
+    container.innerHTML = ""; // Clear existing
+
+    const table = template.cloneNode(true);
+    const tbody = table.querySelector(".routine-body");
+
+    for (const [day, periods] of Object.entries(routine)) {
+      const row = document.createElement("tr");
+      const dayCell = document.createElement("td");
+      dayCell.className = "px-5 py-3 font-semibold text-green-800";
+      dayCell.textContent = day;
+      row.appendChild(dayCell);
+
+      periods.forEach(([subject, teacher]) => {
+        const cell = document.createElement("td");
+        cell.className = "px-5 py-3";
+        if (subject === "-") {
+          cell.innerHTML = "<span class='text-gray-400'>-</span>";
+        } else {
+          cell.innerHTML = `<div class="font-medium">${subject}</div><div class="text-sm text-gray-500">${teacher}</div>`;
+        }
+        row.appendChild(cell);
+      });
+
+      tbody.appendChild(row);
+    }
+
+    container.appendChild(table);
+  }
+
+  // Initial load for all
+  ["year1", "year2", "year3", "year4"].forEach(year => generateRoutine(year));
+
+  // Tab switching
+  routineTabs.forEach(btn => {
+    btn.addEventListener("click", () => {
+      routineTabs.forEach(b => b.classList.remove("bg-green-700", "text-white"));
+      btn.classList.add("bg-green-700", "text-white");
+
+      tabContents.forEach(tab => tab.classList.add("hidden"));
+      document.getElementById(btn.dataset.tab).classList.remove("hidden");
+    });
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+<!--- second type --
+
+
+
+
+
+
+- Routine Tabs Section --
+<section id="routine" class="py-16 bg-gradient-to-r from-green-50 via-green-100 to-green-50">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-8 text-green-800 text-center flex items-center justify-center gap-2">
+      📅 <span>ক্লাস রুটিন</span>
+    </h2>
+
+    
+    <div class="flex flex-wrap justify-center gap-4 mb-6">
+      <button class="tab-btn px-4 py-2 bg-green-700 text-white rounded-lg" data-tab="year1">১ম বর্ষ</button>
+      <button class="tab-btn px-4 py-2 bg-green-200 text-green-800 rounded-lg" data-tab="year2">২য় বর্ষ</button>
+      <button class="tab-btn px-4 py-2 bg-green-200 text-green-800 rounded-lg" data-tab="year3">৩য় বর্ষ</button>
+      <button class="tab-btn px-4 py-2 bg-green-200 text-green-800 rounded-lg" data-tab="year4">৪র্থ বর্ষ</button>
+    </div>
+
+   
+    <div id="year1" class="routine-tab">
+      <div class="overflow-x-auto rounded-lg shadow-lg bg-white">
+        <table class="min-w-full text-sm text-left border-collapse">
+          <thead class="bg-green-700 text-white text-base">
+            <tr>
+              <th class="px-5 py-3">দিন</th>
+              <th class="px-5 py-3">সময়</th>
+              <th class="px-5 py-3">বিষয়</th>
+              <th class="px-5 py-3">শিক্ষক</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-700">
+            <tr class="hover:bg-green-50 border-b">
+              <td class="px-5 py-3">রবিবার</td>
+              <td class="px-5 py-3">১০:০০ - ১২:০০</td>
+              <td class="px-5 py-3">ইন্ট্রো টু সোশ্যাল ওয়ার্ক</td>
+              <td class="px-5 py-3">ড. রুবিনা আক্তার</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+   
+    <div id="year2" class="routine-tab hidden">
+      <div class="overflow-x-auto rounded-lg shadow-lg bg-white">
+        <table class="min-w-full text-sm text-left border-collapse">
+          <thead class="bg-green-700 text-white text-base">
+            <tr>
+              <th class="px-5 py-3">দিন</th>
+              <th class="px-5 py-3">সময়</th>
+              <th class="px-5 py-3">বিষয়</th>
+              <th class="px-5 py-3">শিক্ষক</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-700">
+            <tr class="hover:bg-green-50 border-b">
+              <td class="px-5 py-3">রবিবার</td>
+              <td class="px-5 py-3">১০:০০ - ১২:০০</td>
+              <td class="px-5 py-3">ইন্ট্রো টু সোশ্যাল ওয়ার্ক</td>
+              <td class="px-5 py-3">ড. রুবিনা আক্তার</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+    <div id="year3" class="routine-tab hidden">
+      <div class="overflow-x-auto rounded-lg shadow-lg bg-white">
+        <table class="min-w-full text-sm text-left border-collapse">
+          <thead class="bg-green-700 text-white text-base">
+            <tr>
+              <th class="px-5 py-3">দিন</th>
+              <th class="px-5 py-3">সময়</th>
+              <th class="px-5 py-3">বিষয়</th>
+              <th class="px-5 py-3">শিক্ষক</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-700">
+            <tr class="hover:bg-green-50 border-b">
+              <td class="px-5 py-3">রবিবার</td>
+              <td class="px-5 py-3">১০:০০ - ১২:০০</td>
+              <td class="px-5 py-3">ইন্ট্রো টু সোশ্যাল ওয়ার্ক</td>
+              <td class="px-5 py-3">ড. রুবিনা আক্তার</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+    <div id="year4" class="routine-tab hidden">
+<div class="overflow-x-auto rounded-lg shadow-lg bg-white">
+  <table class="min-w-full text-sm text-left border-collapse">
+    <thead class="bg-green-700 text-white text-base">
+      <tr>
+        <th class="px-5 py-3">দিন</th>
+        <th class="px-5 py-3">সময়</th>
+        <th class="px-5 py-3">বিষয়</th>
+        <th class="px-5 py-3">শিক্ষক</th>
+      </tr>
+    </thead>
+    <tbody class="text-gray-700">
+      <tr class="hover:bg-green-50 border-b">
+        <td class="px-5 py-3">রবিবার</td>
+        <td class="px-5 py-3">১০:০০ - ১২:০০</td>
+        <td class="px-5 py-3">ইন্ট্রো টু সোশ্যাল ওয়ার্ক</td>
+        <td class="px-5 py-3">ড. রুবিনা আক্তার</td>
+      </tr>
+      <tr class="hover:bg-green-50 border-b">
+        <td class="px-5 py-3">সোমবার</td>
+        <td class="px-5 py-3">৯:০০ - ১১:০০</td>
+        <td class="px-5 py-3">কমিউনিটি অর্গানাইজেশন</td>
+        <td class="px-5 py-3">প্রফেসর আনোয়ার হোসেন</td>
+      </tr>
+      <tr class="hover:bg-green-50 border-b">
+        <td class="px-5 py-3">মঙ্গলবার</td>
+        <td class="px-5 py-3">১১:০০ - ১:০০</td>
+        <td class="px-5 py-3">সোশ্যাল পলিসি</td>
+        <td class="px-5 py-3">লেকচারার ফারহানা ইয়াসমিন</td>
+      </tr>
+      <tr class="hover:bg-green-50 border-b">
+        <td class="px-5 py-3">বুধবার</td>
+        <td class="px-5 py-3">১:০০ - ৩:০০</td>
+        <td class="px-5 py-3">হিউম্যান বিহেভিয়ার</td>
+        <td class="px-5 py-3">ড. শামীম আরা</td>
+      </tr>
+      <tr class="hover:bg-green-50 border-b">
+        <td class="px-5 py-3">বৃহস্পতিবার</td>
+        <td class="px-5 py-3">১০:৩০ - ১২:৩০</td>
+        <td class="px-5 py-3">সোশ্যাল কেস ওয়ার্ক</td>
+        <td class="px-5 py-3">মোঃ মাহবুব হাসান</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+    </div>
+
+  </div>
+</section>
+
+
+<script>
+  const tabs = document.querySelectorAll(".tab-btn");
+  const tabContents = document.querySelectorAll(".routine-tab");
+
+  tabs.forEach(btn => {
+    btn.addEventListener("click", () => {
+      tabs.forEach(b => b.classList.remove("bg-green-700", "text-white"));
+      btn.classList.add("bg-green-700", "text-white");
+
+      tabContents.forEach(tab => tab.classList.add("hidden"));
+      document.getElementById(btn.dataset.tab).classList.remove("hidden");
+    });
+  });
+</script--->
+
+
+
+
+
+<!-- Admission Section (Updated Design with Highlight Theme) -->
+<section id="admission" class="py-16 bg-gradient-to-br from-green-50 via-green-100 to-green-50 rounded-xl shadow-inner">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center text-green-800 mb-10">🎓 ভর্তি তথ্য</h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold text-green-700 mb-3">📝 ভর্তি যোগ্যতা</h3>
+        <ul class="text-gray-700 list-disc list-inside space-y-1 text-sm">
+          <li>জাতীয় বিশ্ববিদ্যালয়ের অধীনে HSC/সমমান উত্তীর্ণ।</li>
+          <li>বিভিন্ন বিভাগ অনুযায়ী অনার্স ভর্তির নিয়ম প্রযোজ্য।</li>
+          <li>ভর্তি আবেদনের সময়সীমা জুন–জুলাই (NU নোটিশ অনুসারে)।</li>
+        </ul>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold text-green-700 mb-3">💳 ফি ও ডকুমেন্ট</h3>
+        <ul class="text-gray-700 list-disc list-inside space-y-1 text-sm">
+          <li>ফি: কলেজ নোটিশ অনুসারে নির্ধারিত।</li>
+          <li>প্রয়োজনীয় ডকুমেন্ট: ছবি, মার্কশিট, NID/জন্ম নিবন্ধন, ব্যাংক চালান ইত্যাদি।</li>
+          <li>অনলাইনে আবেদন ও প্রিন্ট কপি জমা দিতে হবে।</li>
+        </ul>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold text-green-700 mb-3">📲 আবেদন প্রক্রিয়া</h3>
+        <ul class="text-gray-700 list-disc list-inside space-y-1 text-sm">
+          <li>NU Admission Portal-এ অ্যাপ্লাই করুন (www.nu.ac.bd/admissions)</li>
+          <li>ফরম পূরণ, সাবমিশন এবং স্লিপ প্রিন্ট</li>
+          <li>সকল কাগজপত্র নির্ধারিত সময়ে কলেজে জমা দিন</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="text-center mt-10">
+      <a href="#contact" class="bg-green-800 text-white px-6 py-3 rounded-lg shadow-md hover:bg-green-900 transition">
+        আরও তথ্যের জন্য যোগাযোগ করুন
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Office Assistant Section (Updated Design) -->
+<section id="office" class="py-16 bg-gray-100">
+  <div class="max-w-5xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-green-800 text-center mb-8">👨‍💼 অফিস সহকারী</h2>
+
+    <div class="flex flex-col md:flex-row items-center bg-white rounded-lg shadow-lg overflow-hidden">
+      <img src="https://i.postimg.cc/Y2y467b1/IMG-20250728-WA0016.jpg"
+           alt="অফিস সহকারী"
+           class="w-full md:w-1/2 h-80 object-cover object-center">
+      <div class="p-6 text-center md:text-left md:w-1/2">
+        <h3 class="text-2xl font-semibold text-gray-800">মিজানুর রহমান (বাচ্চু)</h3>
+        <p class="text-gray-600 mt-2">অফিস সহকারী, সমাজকর্ম বিভাগ</p>
+        <p class="mt-2 text-gray-600">📞 ফোন: 01700-000000</p>
+        <p class="mt-2 italic text-gray-500">"শিক্ষার্থীদের সহায়তায় সবসময় পাশে আছি।"</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Gallery -->
+  <section id="gallery" class="max-w-6xl mx-auto p-6 mt-14 bg-green-50 rounded-lg shadow-md">
+    <h2 class="text-2xl font-semibold mb-4 text-green-800 text-center">ছবি গ্যালারি</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-5">
+      <img src="https://i.postimg.cc/L627fGkw/IMG-20250728-WA0004.jpg" alt="Image 1" class="w-full h-48 object-cover rounded-xl shadow-md hover:scale-105 transition-transform duration-300" />
+      <img src="https://i.postimg.cc/Gp8SdRr8/IMG-20250728-WA0005.jpg" alt="Image 2" class="w-full h-48 object-cover rounded-xl shadow-md hover:scale-105 transition-transform duration-300" />
+      <img src="https://i.postimg.cc/L800c5dF/IMG-20250728-WA0006.jpg" alt="Image 3" class="w-full h-48 object-cover rounded-xl shadow-md hover:scale-105 transition-transform duration-300" />
+      <img src="https://i.postimg.cc/Dy6Nc5BZ/IMG-20250728-WA0007.jpg" alt="Image 4" class="w-full h-48 object-cover rounded-xl shadow-md hover:scale-105 transition-transform duration-300" />
+      <img src="https://i.postimg.cc/fRbrqXrv/IMG-20250728-WA0008.jpg" alt="Image 5" class="w-full h-48 object-cover rounded-xl shadow-md hover:scale-105 transition-transform duration-300" />
+      <img src="https://i.postimg.cc/V6XG0FJz/IMG-20250728-WA0009.jpg" alt="Image 6" class="w-full h-48 object-cover rounded-xl shadow-md hover:scale-105 transition-transform duration-300" />
+      <img src="https://i.postimg.cc/6qwHrGZn/IMG-20250728-WA0010.jpg" alt="Image 7" class="w-full h-48 object-cover rounded-xl shadow-md hover:scale-105 transition-transform duration-300" />
+      <img src="https://i.postimg.cc/GtQXqhPN/IMG-20250728-WA0011.jpg" alt="Image 8" class="w-full h-48 object-cover rounded-xl shadow-md hover:scale-105 transition-transform duration-300" />
+      <img src="https://i.postimg.cc/N03C0nfN/IMG-20250728-WA0012.jpg" alt="Image 9" class="w-full h-48 object-cover rounded-xl shadow-md hover:scale-105 transition-transform duration-300" />
+      <img src="https://i.postimg.cc/sf9HVwFc/IMG-20250728-WA0013.jpg" alt="Image 10" class="w-full h-48 object-cover rounded-xl shadow-md hover:scale-105 transition-transform duration-300" />
+      <img src="https://i.postimg.cc/02kWrDPq/IMG-20250728-WA0014.jpg" alt="Image 11" class="w-full h-48 object-cover rounded-xl shadow-md hover:scale-105 transition-transform duration-300" />
+      <img src="https://i.postimg.cc/zXxdhvGH/IMG-20250728-WA0015.jpg" alt="Image 12" class="w-full h-48 object-cover rounded-xl shadow-md hover:scale-105 transition-transform duration-300" />
+  
+  <!-- Image 13 -->
+  <img src="https://i.postimg.cc/Wb7kH4LC/FB-IMG-1753669469552.jpg" alt="Image 13" class="w-full h-48 object-cover rounded-xl shadow-md hover:scale-105 transition-transform duration-300" />
+
+  <!-- Image 14 -->
+  <img src="https://i.postimg.cc/ZKmNHdg6/FB-IMG-1753669472169.jpg" alt="Image 14" class="w-full h-48 object-cover rounded-xl shadow-md hover:scale-105 transition-transform duration-300" />
+
+  <!-- Image 15 -->
+  <img src="https://i.postimg.cc/cL4nyNdH/FB-IMG-1753669477279.jpg" alt="Image 15" class="w-full h-48 object-cover rounded-xl shadow-md hover:scale-105 transition-transform duration-300" />
+
+  <!-- Image 16 -->
+  <img src="https://i.postimg.cc/fR20Mgbv/FB-IMG-1753669482727.jpg" alt="Image 16" class="w-full h-48 object-cover rounded-xl shadow-md hover:scale-105 transition-transform duration-300" />
+
+
+  </div>
+  </section>
+
+
+
+
+  <section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4 fw-bold">📌 গুরুত্বপূর্ণ লিংকসমূহ</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+      
+      <!-- Card 1 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body d-flex align-items-start">
+            <i class="bi bi-globe fs-3 text-primary me-3"></i>
+            <div>
+              <h5 class="card-title">জাতীয় বিশ্ববিদ্যালয়</h5>
+              <p class="card-text small">জাতীয় বিশ্ববিদ্যালয়ের অফিসিয়াল ওয়েবসাইট।</p>
+              <a href="https://www.nu.ac.bd" class="btn btn-sm btn-outline-primary">ভিজিট করুন</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body d-flex align-items-start">
+            <i class="bi bi-megaphone fs-3 text-success me-3"></i>
+            <div>
+              <h5 class="card-title">NU নোটিশ বোর্ড</h5>
+              <p class="card-text small">সর্বশেষ সকল নোটিশ ও সার্কুলার।</p>
+              <a href="https://www.nu.ac.bd/recent-news-notice.php" class="btn btn-sm btn-outline-success">দেখুন</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body d-flex align-items-start">
+            <i class="bi bi-award fs-3 text-danger me-3"></i>
+            <div>
+              <h5 class="card-title">ফলাফল (Result)</h5>
+              <p class="card-text small">জাতীয় বিশ্ববিদ্যালয়ের রেজাল্ট চেক করুন।</p>
+              <a href="https://www.nu.ac.bd/results" class="btn btn-sm btn-outline-danger">রেজাল্ট দেখুন</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body d-flex align-items-start">
+            <i class="bi bi-facebook fs-3 text-danger me-3"></i>
+            <div>
+              <h5 class="card-title"> ফেইসবুক গ্রুপ </h5>
+              <p class="card-text small">ডিপার্টমেন্টের সকল তথ্য পাওয়া যাবে একসাথে।</p>
+              <a href="https://www.facebook.com/groups/996281274531009/" class="btn btn-sm btn-outline-danger"> ফেইসবুক গ্রুপ </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add More Cards as Needed -->
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- Contact Section --
+<section id="contact" class="max-w-4xl mx-auto p-6 mt-14 bg-white rounded-2xl shadow-lg">
+  <h2 class="text-2xl font-bold mb-6 text-green-800 flex items-center gap-2">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 10c0-4.97-4.03-9-9-9S3 5.03 3 10c0 7.5 9 13 9 13s9-5.5 9-13z" /></svg>
+    যোগাযোগ করুন
+  </h2>
+
+
+  <div class="mt-6 text-gray-700">
+    <p><strong>ঠিকানা:</strong> সরকারি ব্রজমোহন কলেজ, বরিশাল</p>
+    <p><strong>ফোন:</strong> +880 1234-567890</p>
+    <p><strong>ইমেইল:</strong> socialwork@bmcollege.edu.bd</p>
+  </div>
+
+
+</section>
+
+<script>
+  function sendEmail() {
+    const name = encodeURIComponent(document.getElementById('name').value);
+    const email = encodeURIComponent(document.getElementById('email').value);
+    const subject = encodeURIComponent(document.getElementById('subject').value);
+    const message = encodeURIComponent(document.getElementById('message').value);
+
+    const mailtoLink = `mailto:socialwork@bmcollege.edu.bd?subject=${subject}&body=Name: ${name}%0AEmail: ${email}%0A%0AMessage:%0A${message}`;
+
+    window.location.href = mailtoLink;
+  }
+</script>
+
+
+
+  <!-- Footer -->
+<footer id="contact"  class="bg-green-900 text-white pt-6 pb-4">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- কলেজ ও ডিপার্টমেন্ট পরিচিতি -->
+      <div>
+        <h5 class="text-lg font-semibold mb-2">সমাজকর্ম বিভাগ</h5>
+        <p class="text-gray-200">সরকারি ব্রজমোহন কলেজ, বরিশাল<br>জাতীয় বিশ্ববিদ্যালয়ের অধীনে অনার্স ও মাস্টার্স কোর্স।</p>
+        <p class="mt-2"><i class="bi bi-envelope-fill"></i> socialwork@bmcollege.edu.bd</p>
+        <p><i class="bi bi-telephone-fill"></i> +88024788-65946</p>
+      </div>
+
+      <!-- গুরুত্বপূর্ণ লিংক -->
+      <div>
+        <h5 class="text-lg font-semibold mb-2">গুরুত্বপূর্ণ লিংক</h5>
+        <ul class="space-y-2 text-gray-200">
+          <li><a href="#routine" class="hover:text-green-300">রুটিন</a></li>
+          <li><a href="#admission" class="hover:text-green-300">ভর্তি তথ্য</a></li>
+          <li><a href="#chairman" class="hover:text-green-300">চেয়ারম্যান</a></li>
+          <li><a href="#community" class="hover:text-green-300">কমিউনিটি</a></li>
+          <li><a href="https://www.nu.ac.bd/results" target="_blank" class="hover:text-green-300">NU ফলাফল</a></li>
+          <li><a href="https://www.nu.ac.bd/notice" target="_blank" class="hover:text-green-300">NU নোটিশ</a></li>
+        </ul>
+      </div>
+
+      <!-- সোশ্যাল মিডিয়া ও ম্যাপ -->
+      <div>
+        <h5 class="text-lg font-semibold mb-2">আমাদের সাথে যুক্ত থাকুন</h5>
+        <div class="flex space-x-4 mb-4">
+          <a href="https://www.facebook.com/groups/996281274531009/" target="_blank" class="text-white text-2xl hover:text-green-300"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white text-2xl hover:text-green-300"><i class="bi bi-youtube"></i></a>
+          <a href="#" class="text-white text-2xl hover:text-green-300"><i class="bi bi-globe2"></i></a>
+        </div>
+        <h6 class="font-semibold mb-1">আমাদের অবস্থান:</h6>
+        <!-- Google Maps Embed -->
+        <div class="w-full h-40 overflow-hidden rounded-lg shadow-inner">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3689.561292481226!2d90.36843371496018!3d22.7010025851226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30aaf4b414af2099%3A0xb9a6d4507b048205!2sBM%20College!5e0!3m2!1sen!2sbd!4v1700000000000"
+            width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+    <hr class="border-green-700 my-4">
+
+    <div class="text-center text-sm text-gray-300">
+      © ২০২৫ সমাজকর্ম বিভাগ, সরকারি ব্রজমোহন কলেজ, বরিশাল | Developed by <a href="#" class="hover:text-green-300">MD Hasan Mahmud</a>
+    </div>
+  </div>
+</footer>
+    
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    // Swiper initialization
+    const swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: { delay: 3000, disableOnInteraction: false },
+      pagination: { el: ".swiper-pagination", clickable: true },
+      navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+      loop: true,
+      effect: 'slide',
+      speed: 800,
+    });
+
+    // Mobile menu toggle
+    const hamburger = document.getElementById('hamburgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Teachers
+    let teachers = [];
+    let grid = true;
+
+    async function loadCSV() {
+      try {
+        const res = await fetch('https://bm-c.vercel.app/teacher.csv');
+        const text = await res.text();
+        const rows = text.trim().split('\n').slice(1);
+        teachers = rows
+          .map(row => row.split(','))
+          .filter(cols => cols[6] && cols[6].trim() === "সমাজকল্যাণ/ সমাজকর্ম");
+        displayTeachers(teachers);
+      } catch (e) {
+        console.error('Teacher CSV load failed:', e);
+      }
+    }
+
+    function displayTeachers(data) {
+      const list = document.getElementById("teacherList");
+      list.innerHTML = '';
+
+      data.forEach(cols => {
+        const [
+          id, district, batch, nameEn, nameBn, designation, department,
+          mobile, email, joiningDate, imageUrl
+        ] = cols;
+
+        const card = document.createElement("div");
+        card.className = grid
+          ? "teacher-card bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center hover:shadow-lg transition-all duration-300"
+          : "teacher-card bg-white rounded-lg shadow-md p-4 flex items-start gap-4 hover:shadow-lg transition-all duration-300";
+
+        card.innerHTML = `
+          <img src="${imageUrl || 'https://bm-c.vercel.app/paeson.png'}"
+               onerror="this.src='https://bm-c.vercel.app/paeson.png'"
+               class="${grid ? 'w-24 h-24' : 'w-20 h-20'} rounded-full object-cover border-4 border-indigo-100" />
+          <div class="${grid ? 'mt-3' : ''}">
+            <h3 class="text-lg font-bold text-indigo-800">${nameEn || "নাম নেই"}</h3>
+            <p class="text-indigo-600">${designation || "পদবী নেই"} | ${batch || "N/A"} BCS</p>
+            <p class="text-sm text-gray-600 mt-1">নিজ জেলাঃ ${district || "N/A"}</p>
+            <p class="text-sm text-gray-600">ফোনঃ ${mobile ? '0' + mobile : "N/A"}</p>
+            <p class="text-sm text-gray-600">ইমেইলঃ ${email || "N/A"}</p>
+            <p class="text-xs text-gray-500 mt-1">যোগদানের তারিখঃ ${(joiningDate || "N/A").replace("'", "")}</p>
+          </div>
+        `;
+        list.appendChild(card);
+      });
+    }
+
+    function toggleView() {
+      grid = !grid;
+      displayTeachers(teachers);
+    }
+
+    document.getElementById("searchBox").addEventListener("input", (e) => {
+      const keyword = e.target.value.toLowerCase();
+      const filtered = teachers.filter(t =>
+        t[3]?.toLowerCase().includes(keyword) ||
+        t[4]?.toLowerCase().includes(keyword) ||
+        t[5]?.toLowerCase().includes(keyword) ||
+        t[1]?.toLowerCase().includes(keyword)
+      );
+      displayTeachers(filtered);
+    });
+
+    document.addEventListener('DOMContentLoaded', loadCSV);
+  </script>
+</body>
+</html>

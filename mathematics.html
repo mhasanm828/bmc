@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <title>গণিত বিভাগ</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    .animate-fadeIn {
+      animation: fadeIn 1s ease-in-out both;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+
+  <script>
+// Disable right click (context menu)
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+
+// Disable key combinations like F12, Ctrl+Shift+I, Ctrl+U
+document.addEventListener('keydown', function(e) {
+  if (
+    e.key === 'F12' ||
+    (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) ||
+    (e.ctrlKey && e.key === 'U')
+  ) {
+    e.preventDefault();
+  }
+});
+
+// Prevent video download
+document.querySelectorAll("video").forEach(function(video) {
+  video.setAttribute("controlsList", "nodownload");
+  video.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+  });
+});
+</script>
+
+  
+<body class="font-sans text-gray-700">
+
+  <!-- Navbar -->
+  <nav class="bg-purple-700 text-white px-4 py-3 flex items-center justify-between shadow-md sticky top-0 z-50">
+    <div class="flex items-center gap-2">
+      <img src="https://i.postimg.cc/Qdb9Vnk2/image.png" alt="Logo" class="w-8 h-8 rounded" />
+      <span class="font-bold text-lg">গণিত বিভাগ</span>
+    </div>
+    <div class="hidden md:flex gap-6">
+      <a href="index.html" class="hover:text-yellow-300">মূল পাতা</a>
+      <a href="#about" class="hover:text-yellow-300">বিভাগ পরিচিতি</a>
+      <a href="#teachers" class="hover:text-yellow-300">শিক্ষকবৃন্দ</a>
+      <a href="#contact" class="hover:text-yellow-300">যোগাযোগ</a>
+    </div>
+    <button class="md:hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="bg-purple-50 py-16 text-center animate-fadeIn">
+    <h1 class="text-3xl md:text-5xl font-bold text-purple-700 mb-4 animate-pulse">গণিত বিভাগে স্বাগতম</h1>
+    <p class="max-w-2xl mx-auto text-lg text-gray-600">বিশ্বমানের শিক্ষার মাধ্যমে জ্ঞানের জগতে নতুন দিগন্ত উন্মোচন করুন।</p>
+  </header>
+
+  <!-- Stats Section -->
+  <section class="bg-purple-600 text-white py-8">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+      <div class="flex flex-col items-center animate-fadeIn">
+        <h2 class="text-3xl font-bold">৩০০+</h2>
+        <p>সক্রিয় শিক্ষার্থী</p>
+      </div>
+      <div class="flex flex-col items-center animate-fadeIn animate-delay-100">
+        <h2 class="text-3xl font-bold">৩০+</h2>
+        <p>অভিজ্ঞ শিক্ষক</p>
+      </div>
+      <div class="flex flex-col items-center animate-fadeIn animate-delay-200">
+        <h2 class="text-3xl font-bold">২০+</h2>
+        <p>গবেষণা প্রকল্প</p>
+      </div>
+      <div class="flex flex-col items-center animate-fadeIn animate-delay-300">
+        <h2 class="text-3xl font-bold">১২+</h2>
+        <p>অ্যাডভান্সড ল্যাব</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slider Section -->
+  <div class="swiper mySwiper max-w-6xl mx-auto mt-8 rounded-lg shadow overflow-hidden animate-fadeIn">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="https://images.unsplash.com/photo-1581091012184-7a61f1d13f1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Math Class" class="w-full h-96 object-cover">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://images.unsplash.com/photo-1621891337671-f82b8be9e6b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Students solving math" class="w-full h-96 object-cover">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Research Lab" class="w-full h-96 object-cover">
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- About Section -->
+  <section id="about" class="max-w-6xl mx-auto p-6 mt-12 bg-white rounded shadow animate-fadeIn">
+    <h2 class="text-2xl font-semibold mb-4 text-purple-700 border-b-2 border-purple-200 pb-2">বিভাগ পরিচিতি</h2>
+    <p class="text-gray-700 leading-relaxed">গণিত বিভাগটি তাত্ত্বিক ও ব্যবহারিক শিক্ষার জন্য বিখ্যাত। এখানে শিক্ষার্থীরা উন্নত গণিত, অংকন, এবং অ্যালগরিদম নিয়ে গবেষণা করতে পারে। আমাদের লক্ষ্য হলো আন্তর্জাতিক মানের গণিতবিদ তৈরি করা এবং শিক্ষার্থীদের বিশ্লেষণাত্মক চিন্তাশক্তি বৃদ্ধি করা।</p>
+  </section>
+
+  <!-- Section: Teachers -->
+  <section id="teachers" class="max-w-6xl mx-auto p-6 mt-8 bg-white rounded-lg shadow-md">
+    <h2 class="text-2xl font-semibold mb-6 text-cyan-800 border-b-2 border-cyan-200 pb-2 animate-fadeIn">আমাদের শিক্ষকবৃন্দ</h2>
+
+    <!-- Filters -->
+    <div class="flex flex-col sm:flex-row items-center justify-between mb-6 gap-4 animate-fadeIn animate-delay-100">
+      <input id="searchBox" type="text" placeholder="শিক্ষকের নাম লিখুন..." 
+             class="p-2 rounded border w-full sm:w-1/3 focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500" />
+      <button onclick="toggleView()" 
+              class="bg-cyan-600 text-white px-4 py-2 rounded shadow hover:bg-cyan-700 transition">
+        <i class="bi bi-grid"></i> ভিউ পরিবর্তন
+      </button>
+    </div>
+
+    <!-- Teachers Container -->
+    <div id="teacherList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 transition">
+      <!-- Cards will be inserted here -->
+    </div>
+  </section>
+  
+  
+  
+
+  <!-- Contact Section -->
+  <section id="contact" class="max-w-6xl mx-auto p-6 mt-12 bg-white rounded shadow animate-fadeIn">
+    <h2 class="text-2xl font-semibold mb-4 text-purple-700 border-b-2 border-purple-200 pb-2">যোগাযোগ</h2>
+    <p class="text-gray-700 mb-4">যেকোনো প্রয়োজনের জন্য আমাদের সাথে যোগাযোগ করুন:</p>
+    <p class="text-gray-700"><strong>ইমেইল:</strong> mathematics@college.edu.bd</p>
+    <p class="text-gray-700"><strong>ফোন:</strong> +৮৮০ ১৭১১ ০০০০০০</p>
+    <p class="text-gray-700"><strong>ঠিকানা:</strong> একাডেমিক ভবন, গণিত বিভাগ, ৩য় তলা</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-purple-700 text-white text-center py-4 mt-12">
+    &copy; ২০২৫ গণিত বিভাগ, সকল স্বত্ব সংরক্ষিত।
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: { delay: 3000, disableOnInteraction: false },
+      pagination: { el: ".swiper-pagination", clickable: true },
+      loop: true
+    });
+ 
+    
+    
+    
+    
+   
+    
+    
+    <!-- Script for Teachers -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    // Initialize Swiper
+    const swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      loop: true,
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
+      speed: 1000,
+    });
+
+    let teachers = [];
+    let grid = true;
+
+    async function loadCSV() {
+      const res = await fetch('https://bm-c.vercel.app/teacher.csv');
+      const text = await res.text();
+      const rows = text.trim().split('\n').slice(1);
+      teachers = rows
+        .map(row => row.split(','))
+        .filter(cols => cols[6] && cols[6].trim() ===  "গণিত");
+
+      // If no teachers found in CSV, use sample data
+      if (teachers.length === 0) {
+       teachers = [
+          ["1", "বরিশাল", "25th", "ড. আহসান হাবীব", "ড. আহসান হাবীব", "অধ্যাপক", "অর্থনীতি", "01712345678", "ahsan.habib@bmcollege.edu.bd", "2010-05-15", "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"],
+          ["2", "ঢাকা", "28th", "ড. ফারহানা ইসলাম", "ড. ফারহানা ইসলাম", "সহযোগী অধ্যাপক", "অর্থনীতি", "01787654321", "farhana.islam@bmcollege.edu.bd", "2012-08-22", "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb- 4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80"],
+          ["3", "খুলনা", "30th", "ড. রিয়াদ হোসেন", "ড. রিয়াদ হোসেন", "সহকারী অধ্যাপক", "অর্থনীতি", "01811223344", "riad.hossain@bmcollege.edu.bd", "2015-03-10", "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"]
+        ];
+      }
+
+      displayTeachers(teachers);
+    }
+
+    function displayTeachers(data) {
+      const list = document.getElementById("teacherList");
+      list.innerHTML = '';
+
+      data.forEach(cols => {
+        const [
+          id, district, batch, nameEn, nameBn, designation, department,
+          mobile, email, joiningDate, imageUrl
+        ] = cols;
+
+        const card = document.createElement("div");
+        card.className = grid
+          ? "teacher-card bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center hover:shadow-lg transition-all duration-300 animate-fadeIn"
+          : "teacher-card bg-white rounded-lg shadow-md p-4 flex items-start gap-4 hover:shadow-lg transition-all duration-300 animate-fadeIn";
+
+        card.innerHTML = `
+          <img src="${imageUrl || 'https://bm-c.vercel.app/paeson.png'}" 
+               onerror="this.src='https://bm-c.vercel.app/paeson.png'" 
+               class="${grid ? 'w-24 h-24' : 'w-20 h-20'} rounded-full object-cover border-4 border-blue-100" />
+          <div class="${grid ? 'mt-3' : ''}">
+            <h3 class="text-lg font-bold text-blue-800">${nameEn || "নাম নেই"}</h3>
+            <p class="text-blue-600">${designation || "পদবী নেই"} | ${batch || "N/A"} BCS</p>
+            <p class="text-sm text-gray-600 mt-1">নিজ জেলাঃ ${district || "N/A"}</p>
+            <p class="text-sm text-gray-600">ফোনঃ 0${mobile || "N/A"}</p>
+            <p class="text-sm text-gray-600">ইমেইলঃ ${email || "N/A"}</p>
+            <p class="text-xs text-gray-500 mt-1">যোগদানের তারিখঃ ${joiningDate?.replace("'", "") || "N/A"}</p>
+          </div>
+        `;
+        list.appendChild(card);
+      });
+    }
+
+    function toggleView() {
+      grid = !grid;
+      displayTeachers(teachers);
+    }
+
+    document.getElementById("searchBox").addEventListener("input", (e) => {
+      const keyword = e.target.value.toLowerCase();
+      const filtered = teachers.filter(t => 
+        t[3]?.toLowerCase().includes(keyword) || 
+        t[4]?.toLowerCase().includes(keyword) ||
+        t[5]?.toLowerCase().includes(keyword) ||
+        t[1]?.toLowerCase().includes(keyword)
+      );
+      displayTeachers(filtered);
+    });
+
+    // Load teachers on page load
+    document.addEventListener('DOMContentLoaded', loadCSV);
+  </script>
+</body>
+</html>
